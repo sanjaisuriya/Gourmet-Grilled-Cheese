@@ -28,7 +28,7 @@
   </script>
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.3">
 </head>
 <body>
 
@@ -372,7 +372,7 @@
         <div class="catering-enquiry-grid reveal-on-scroll">
           
           <!-- Left Column: Event Types & Bespoke Catering Image -->
-          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div class="catering-left-column">
             <div class="catering-event-badge-list">
               <div class="catering-badge-item">
                 <span style="font-size:1.5rem;display:inline-block;margin-bottom:0.25rem;" aria-hidden="true">💍</span>
@@ -399,16 +399,21 @@
               </div>
             </div>
 
-            <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md);border:1.5px solid var(--border-color);">
+            <div class="catering-img-card">
               <img src="assets/images/contact-delicious-happen.jpg" 
                    alt="The Melt District artisan food truck chef serving freshly grilled sourdough cheese melts to event guests" 
-                   style="width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover;"
+                   class="catering-img"
                    loading="lazy">
+              <div style="position:absolute;bottom:1.15rem;inset-inline-start:1.15rem;background:rgba(22,19,17,0.85);backdrop-filter:blur(10px);padding:0.6rem 1.15rem;border-radius:var(--radius-sm);color:#FAF7F2;font-size:0.85rem;border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;gap:0.6rem;box-shadow:0 8px 20px rgba(0,0,0,0.35);">
+                <span style="color:var(--cheddar);font-weight:700;letter-spacing:0.04em;">★ LIVE GRIDDLE CATERING</span>
+                <span style="color:rgba(255,255,255,0.3);">|</span>
+                <span>Serving 140+ Hot Melts / Hr</span>
+              </div>
             </div>
           </div>
 
           <!-- Right Column: Dedicated Catering Quote Form -->
-          <div style="background:var(--bg-card);padding:clamp(1.75rem, 4vw, 2.75rem);border-radius:var(--radius-lg);border:1.5px solid var(--border-color);box-shadow:var(--shadow-md);">
+          <div class="catering-form-card">
             <div style="margin-bottom:1.5rem;">
               <span class="badge badge-chef" style="margin-bottom:0.4rem;display:inline-block;">CUSTOM ESTIMATE</span>
               <h3 style="font-size:1.45rem;margin-bottom:0.35rem;font-family:var(--font-display);">Request A Catering Quote</h3>

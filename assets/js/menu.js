@@ -140,7 +140,7 @@
       isVeg: true,
       isChefSpecial: false,
       isSpicy: false,
-      image: 'assets/images/home2-melt-fourcheese.jpg',
+      image: 'assets/images/menu-four-cheese-mac.jpg',
       description: 'Elbow macaroni folded in velvety Mornay cheese sauce, topped with garlic panko crumbs and oven-baked golden.',
       cheeses: 'Cheddar, Fontina, Gruyère & Pecorino',
       bread: 'None',

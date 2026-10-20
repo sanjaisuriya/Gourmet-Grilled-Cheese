@@ -28,7 +28,7 @@
   </script>
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.3">
 </head>
 <body>
 
@@ -239,7 +239,7 @@
 
     <!-- LIVE CURBSIDE RADAR & SCHEDULE FILTER -->
     <section class="section-spacing" style="padding-top:clamp(2.5rem, 4vw, 4rem);">
-      <div class="container">
+      <div class="container schedule-container">
         
         <!-- Verified Location Details & Sample Schedule Demonstration Notice -->
         <div class="schedule-demo-disclaimer reveal-on-scroll" style="max-width:760px;margin:0 auto 2.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.85rem 1.25rem;display:flex;align-items:center;gap:0.85rem;box-shadow:var(--shadow-sm);font-size:0.86rem;color:var(--text-secondary);line-height:1.45;">
@@ -262,13 +262,13 @@
           <button class="schedule-day-btn" data-day="sun" role="tab" aria-selected="false">Sunday</button>
         </div>
 
-        <!-- Schedule Cards Grid -->
-        <div class="grid-3" id="schedule-cards-grid">
+        <!-- Schedule Cards Grid (4 & 4 Balanced Layout - 8 Total Stops) -->
+        <div class="schedule-grid-4" id="schedule-cards-grid">
           
           <!-- Monday Card: Bagmane Tech Park North -->
           <div class="truck-schedule-card reveal-on-scroll delay-1" data-day="mon">
             <div class="card-img-wrap">
-              <img src="assets/images/journal-street-culture.jpg" alt="The Melt District food truck curbside at Bagmane Tech Park North" loading="lazy">
+              <img src="assets/images/stop-bagmane-techpark.jpg" alt="The Wisconsin 3-Cheese Gold Melt with San Marzano Bisque Cup served curbside at Bagmane Tech Park North" loading="lazy">
               <div style="position:absolute;top:12px;inset-inline-start:12px;">
                 <span class="badge" style="background:#FEF3C7;color:#92400E;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🥪 MONDAY LUNCH</span>
               </div>
@@ -276,25 +276,25 @@
                 <span>🕒</span><span>11:30 AM – 3:30 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>The Melt District Cruiser #1</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Bagmane Tech Park North</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Bagmane Tech Park North</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>65/2, Byrasandra, CV Raman Nagar, Bengaluru, Karnataka 560093</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">The Wisconsin 3-Cheese Gold Melt with San Marzano Bisque Cup</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=Bagmane+Tech+Park+CV+Raman+Nagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=Bagmane+Tech+Park+CV+Raman+Nagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="bagmane" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="bagmane" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -312,25 +312,25 @@
                 <span>🕒</span><span>12:00 PM – 9:00 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>The Golden Griddle Unit #2</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">International Tech Park (ITPL) Promenade</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">International Tech Park (ITPL) Promenade</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>Pattandur Agrahara, Whitefield Main Rd, Bengaluru, Karnataka 560066</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">Buffalo Buttermilk Fried Chicken Melt &amp; Crispy Garlic Tots</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=ITPL+Whitefield+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=ITPL+Whitefield+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="whitefield" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="whitefield" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -348,25 +348,25 @@
                 <span>🕒</span><span>12:00 PM – 9:30 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>The Melt District Cruiser #1</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">HSR Layout Sector 4 Park Greens</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">HSR Layout Sector 4 Park Greens</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>27th Main Rd, Sector 4, Opposite Park Gate, Bengaluru, Karnataka 560102</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">Wild Sautéed Truffle Shroom Melt &amp; Cold Blackberry Lemonade</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=Sector+4+HSR+Layout+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=Sector+4+HSR+Layout+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="hsr" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="hsr" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -384,25 +384,25 @@
                 <span>🕒</span><span>11:30 AM – 4:00 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>The Golden Griddle Unit #2</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">RMZ Ecoworld Lakeside Amphitheatre</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">RMZ Ecoworld Lakeside Amphitheatre</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>Outer Ring Rd, Devarabisanahalli, Bellandur, Bengaluru, Karnataka 560103</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">Smoked Gouda &amp; Caramelized Onion Melt with Roasted Garlic Aioli</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=RMZ+Ecoworld+Bellandur+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=RMZ+Ecoworld+Bellandur+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="ecoworld" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="ecoworld" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -420,25 +420,25 @@
                 <span>🕒</span><span>4:30 PM – 10:30 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>Sizzle Wagon Express #3</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Church Street Pedestrian Promenade</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Church Street Pedestrian Promenade</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>Church St, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">4-Cheese Quattro Formaggi Melt &amp; Griddled Herb Dippers</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=Church+Street+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=Church+Street+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="church-street" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="church-street" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -459,25 +459,25 @@
                 <span>🕒</span><span>12:00 PM – 10:00 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>The Melt District Flagship</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Cyber City Business Plaza</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Cyber City Business Plaza</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>Gate 4, Sector 24, Cyber Hub Promenade, Gurugram, Haryana 122002</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--tomato);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--tomato);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--tomato);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">Jalapeño Bacon Popper Melt &amp; Hot Spiced Apple Cider Float</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=Cyber+Hub+Gurugram+Sector+24" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=Cyber+Hub+Gurugram+Sector+24" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="cyber-city" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="cyber-city" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -495,25 +495,25 @@
                 <span>🕒</span><span>1:00 PM – 11:00 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>Sizzle Wagon Express #3</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Toit Microbrewery Courtyard</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Toit Microbrewery Courtyard</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>298, 100 Feet Rd, Indiranagar Stage 1, Bengaluru, Karnataka 560038</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Weekend Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">14-Hour Smoked Texas Brisket Melt &amp; Truffle Parmesan Fries</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=Toit+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=Toit+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="indiranagar" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="indiranagar" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
@@ -531,25 +531,25 @@
                 <span>🕒</span><span>11:00 AM – 9:00 PM</span>
               </div>
             </div>
-            <div style="padding:1.5rem;display:flex;flex-direction:column;flex:1;">
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
               <div style="flex:1;">
                 <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
                   <span>🚚</span> <span>The Melt District Flagship</span>
                 </div>
-                <h3 style="font-size:1.3rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Koramangala 4th Block Open Grounds</h3>
-                <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Koramangala 4th Block Open Grounds</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
                   <span style="flex-shrink:0;">📍</span> <span>80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034</span>
                 </p>
-                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.85rem;margin-bottom:1.25rem;line-height:1.5;">
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
                   <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Festival Grilled Cheese Special:</strong>
                   <span style="color:var(--text-primary);font-weight:500;">French Double-Cream Brie with Hot Honey Drizzle &amp; Salted Caramel Shakes</span>
                 </div>
               </div>
               <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:auto;">
-                <a href="https://maps.google.com/?q=Koramangala+4th+Block+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:130px;justify-content:center;font-weight:700;">
+                <a href="https://maps.google.com/?q=Koramangala+4th+Block+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Get Directions ↗
                 </a>
-                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="koramangala" style="min-width:110px;justify-content:center;">
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="koramangala" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
                   Show on Map 📍
                 </button>
               </div>
