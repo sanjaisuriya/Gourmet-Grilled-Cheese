@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Mobile Story | The Melt District</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Poppins', 'sans-serif'],
+            heading: ['Poppins', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            cream: {
+              DEFAULT: '#FFF7EA',
+              light: '#FFFCF7',
+              dark: '#F5ECDB',
+            },
+            cheddar: {
+              DEFAULT: '#F8B735',
+              hover: '#EBA725',
+              dark: '#8A5200',
+            },
+            charcoal: {
+              DEFAULT: '#252525',
+              light: '#404040',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-[#FFF7EA] text-[#252525] min-h-screen selection:bg-[#F8B735] selection:text-[#252525] font-sans antialiased">
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useEffect, useState, useRef } = React;
+
+    // --- Lucide Icon SVGs ---
+    const IconFlame = ({ className = "w-4 h-4" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+    );
+    const IconTruck = ({ className = "w-4 h-4" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+    );
+    const IconClock = ({ className = "w-4 h-4" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    );
+    const IconChefHat = ({ className = "w-5 h-5" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 13.8a4.4 4.4 0 0 1-2.8-4.2 4.5 4.5 0 0 1 6-4.2 4.8 4.8 0 0 1 8.8 1.4A4.5 4.5 0 0 1 20.8 11a4.5 4.5 0 0 1-2.8 4.2"/><path d="m4 17h16"/><path d="M5 21h14"/><path d="m19 17v4"/><path d="m5 17v4"/></svg>
+    );
+    const IconSparkles = ({ className = "w-3.5 h-3.5" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+    );
+    const IconArrowRight = ({ className = "w-4 h-4" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    );
+    const IconShieldCheck = ({ className = "w-4 h-4" }) => (
+      <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    );
+
+    function App() {
+      const [isVisible, setIsVisible] = useState(false);
+      const sectionRef = useRef(null);
+
+      useEffect(() => {
+        setIsVisible(true);
+      }, []);
+
+      return (
+        <div className="min-h-screen">
+          {/* Header Navigation Bar */}
+          <nav className="border-b border-amber-900/10 px-6 py-4 bg-[#FFF7EA]">
+            <div className="max-w-7xl mx-auto flex items-center justify-between">
+              <a href="index.html" className="flex items-center gap-2">
+                <span className="text-2xl">🚚</span>
+                <span className="text-xl font-black uppercase tracking-tight text-[#252525]">
+                  The Melt District
+                </span>
+              </a>
+              <div className="flex items-center gap-3">
+                <a href="index.html" className="text-xs sm:text-sm font-semibold text-neutral-600 hover:text-neutral-950 px-3 py-1.5 rounded-lg hover:bg-white/60 transition-colors">
+                  ← Back to Home
+                </a>
+                <a href="find-the-truck.html" className="px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold bg-[#F8B735] hover:bg-[#EBA725] text-[#252525] shadow-sm transition-all">
+                  Find Our Truck
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          {/* ================= SECTION: OUR MOBILE STORY ================= */}
+          <section
+            ref={sectionRef}
+            className="relative py-16 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 font-sans overflow-hidden"
+            style={{ backgroundColor: '#FFF7EA' }}
+          >
+            {/* Ambient Background Accents */}
+            <div 
+              className="absolute top-1/4 -left-20 w-80 h-80 rounded-full pointer-events-none opacity-40 blur-3xl"
+              style={{ backgroundColor: '#F8B735' }}
+            />
+            <div 
+              className="absolute bottom-10 -right-20 w-80 h-80 rounded-full pointer-events-none opacity-30 blur-3xl"
+              style={{ backgroundColor: '#F8B735' }}
+            />
+
+            <div className="max-w-7xl mx-auto relative z-10">
+              <div 
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center transition-all duration-1000 ease-out transform ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              >
+                
+                {/* ================= LEFT COLUMN: LARGE ROUNDED FOOD TRUCK KITCHEN PHOTOGRAPH ================= */}
+                <div className="lg:col-span-6 order-1">
+                  <div className="relative group">
+                    
+                    {/* Outer Glow / Shadow Accent */}
+                    <div 
+                      className="absolute -inset-2 rounded-3xl opacity-30 group-hover:opacity-50 blur-xl transition-opacity duration-500"
+                      style={{ backgroundColor: '#F8B735' }}
+                    />
+
+                    {/* Main Image Frame with Thin White Border & Shadow */}
+                    <div className="relative rounded-3xl overflow-hidden border-4 border-white shadow-[0_20px_50px_rgba(37,37,37,0.12)] bg-neutral-100">
+                      <img
+                        src="assets/images/mobile-story-chef.jpg"
+                        alt="Professional head chef and team preparing gourmet grilled cheese on flat top griddle in mobile kitchen"
+                        className="w-full h-auto aspect-[4/3] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        loading="lazy"
+                      />
+
+                      {/* Overlaid Bottom Pill: Live Griddle Station Badge */}
+                      <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg border border-amber-900/10 flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-[#FFF2D6] text-[#8A5200] flex items-center justify-center shrink-0">
+                          <IconChefHat />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                            <strong className="text-xs sm:text-sm font-extrabold text-[#252525]">
+                              Live Flat-Top Cooking
+                            </strong>
+                          </div>
+                          <p className="text-[11px] text-neutral-500 font-medium">
+                            375°F Chrome Steel • 36-Hr Sourdough
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Top-Right Floater Badge: Vintage Step-Van */}
+                    <div className="hidden sm:flex absolute -top-4 -right-4 bg-white px-4 py-2 rounded-full shadow-md border border-neutral-200/80 items-center gap-2">
+                      <IconTruck className="w-4 h-4 text-[#8A5200]" />
+                      <span className="text-xs font-bold text-[#252525] tracking-wide">
+                        1974 Vintage Step-Van Kitchen
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* ================= RIGHT COLUMN: EDITORIAL STORYTELLING CONTENT ================= */}
+                <div className="lg:col-span-6 order-2">
+                  
+                  {/* Small Rounded Label above Heading */}
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase mb-5 shadow-sm border border-[#F0CA75]/60 bg-[#FFF2D6] text-[#8A5200]">
+                    <IconSparkles />
+                    <span>OUR MOBILE STORY</span>
+                  </div>
+
+                  {/* Large Bold Uppercase Heading with Line Breaks */}
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#252525] uppercase leading-[1.1] mb-6">
+                    BORN ON THE CURBSIDE,
+                    <span className="block mt-1 text-[#252525]">
+                      PERFECTED ON THE GRIDDLE
+                    </span>
+                  </h2>
+
+                  {/* Decorative Golden-Yellow Accent Divider */}
+                  <div className="flex items-center gap-2 mb-6">
+                    <span className="w-14 h-1 rounded-full bg-[#F8B735]" />
+                    <span className="w-2.5 h-1 rounded-full bg-[#F8B735]/60" />
+                    <span className="w-1.5 h-1 rounded-full bg-[#F8B735]/40" />
+                  </div>
+
+                  {/* Content Paragraphs */}
+                  <div className="space-y-4 text-base sm:text-lg text-[#252525]/85 leading-relaxed font-normal">
+                    <p>
+                      The Melt District started with a simple belief: nostalgic comfort food deserves Michelin-level culinary care. We transformed a vintage 1974 step-van into a mobile high-heat kitchen, equipped with commercial chrome steel griddles and steam dome stations.
+                    </p>
+                    <p>
+                      Every morning at 5:00 AM, our crew collects freshly baked 36-hour fermented sourdough from artisan bakers, grates aged cheese wheels by hand, and slow-roasts San Marzano tomatoes into a rich tomato bisque before heading out to city streets, office plazas, and festival rallies.
+                    </p>
+                    <p className="font-semibold text-[#252525]">
+                      Our mission is simple: serve unforgettable gourmet melts made with premium ingredients, handcrafted with passion, and grilled to golden perfection.
+                    </p>
+                  </div>
+
+                  {/* Craftsmanship Feature Pills */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8 pt-6 border-t border-amber-900/10">
+                    <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/70 border border-amber-900/5 shadow-xs">
+                      <IconClock className="w-4 h-4 text-[#8A5200] shrink-0" />
+                      <span className="text-xs font-bold text-[#252525]">5:00 AM Fresh Prep</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/70 border border-amber-900/5 shadow-xs">
+                      <IconFlame className="w-4 h-4 text-[#8A5200] shrink-0" />
+                      <span className="text-xs font-bold text-[#252525]">375°F Cast Griddle</span>
+                    </div>
+                    <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white/70 border border-amber-900/5 shadow-xs">
+                      <IconShieldCheck className="w-4 h-4 text-[#8A5200] shrink-0" />
+                      <span className="text-xs font-bold text-[#252525]">100% Real Cheeses</span>
+                    </div>
+                  </div>
+
+                  {/* CTA Button Group */}
+                  <div className="mt-8 flex flex-wrap items-center gap-4">
+                    <a
+                      href="find-the-truck.html"
+                      className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-extrabold text-[#252525] bg-[#F8B735] hover:bg-[#EBA725] shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 group"
+                    >
+                      <IconTruck className="w-4 h-4" />
+                      <span>Find Our Truck Today</span>
+                      <IconArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                    </a>
+
+                    <a
+                      href="menu.html"
+                      className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-sm font-bold text-[#252525] bg-white/80 hover:bg-white border border-neutral-300 hover:border-neutral-900 shadow-sm transition-all duration-200 active:scale-95"
+                    >
+                      <span>View Daily Menu</span>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* Footer Note */}
+          <footer className="py-8 text-center text-xs text-neutral-500 border-t border-amber-900/10 flex flex-col items-center gap-3">
+            <div className="flex items-center gap-3">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-neutral-200/80 hover:bg-[#F8B735] text-neutral-800 flex items-center justify-center transition-colors" aria-label="Instagram">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-neutral-200/80 hover:bg-[#F8B735] text-neutral-800 flex items-center justify-center transition-colors" aria-label="Facebook">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-neutral-200/80 hover:bg-[#F8B735] text-neutral-800 flex items-center justify-center transition-colors" aria-label="Twitter">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-neutral-200/80 hover:bg-[#FF0000] hover:text-white text-neutral-800 flex items-center justify-center transition-colors" aria-label="YouTube">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+              </a>
+            </div>
+            <span>© 2026 The Melt District • Gourmet Grilled Cheese & Comfort Food Truck</span>
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

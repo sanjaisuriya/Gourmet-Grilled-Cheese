@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Story & Crew | The Melt District</title>
+  <meta name="description" content="Learn how The Melt District was born from two friends obsessed with crafting the ultimate grilled cheese. Meet our crew, explore our mission, and discover our food philosophy.">
+  <meta name="keywords" content="about food truck, grilled cheese story, street food team, artisanal comfort food">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4.0">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link active">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="page-hero-banner hero-bg-about">
+      <div class="container">
+        <div class="page-hero-inner reveal-on-scroll">
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="active-crumb">About Us</span>
+          </nav>
+          <div>
+            <span class="eyebrow">Handcrafted On Wheels</span>
+          </div>
+          <h1 class="heading-hero">
+            OUR STORY, SERVED WARM
+          </h1>
+          <p class="lead-text" style="margin-bottom:1.15rem;">
+            Born from a lifelong passion for gourmet grilled cheese, wholesome fresh ingredients, handcrafted sandwiches, and the pure joy of nostalgic comfort food on wheels.
+          </p>
+          <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
+            <a href="#about-story" class="btn btn-primary btn-sm">Explore Our Story ↓</a>
+            <a href="menu.html" class="btn btn-outline btn-sm">View The Menu →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN STORY SPLIT: ABOUT US SECTION -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);" id="about-story">
+      <div class="container">
+        <div class="about-split-grid reveal-on-scroll">
+          
+          <!-- Left Column: Realistic Artisan Griddle Photography -->
+          <div style="position:relative;">
+            <div class="about-story-img-wrapper">
+              <img src="assets/images/about-artisan-griddle.jpg" 
+                   alt="Artisan sourdough grilled cheese sandwich sizzling with bubbling melted Wisconsin cheddar on a hot commercial griddle inside a food truck" 
+                   class="about-story-img">
+            </div>
+          </div>
+
+          <!-- Right Column: Brand Story Content -->
+          <div class="about-story-text-col">
+            <span class="eyebrow eyebrow-red" style="margin-bottom:1rem;align-self:flex-start;">THE PASSION BEHIND THE MELT</span>
+            <h2 class="heading-section" style="font-size:clamp(2rem, 3.8vw, 3rem);margin-bottom:1.35rem;line-height:1.15;text-transform:uppercase;">
+              HANDCRAFTING COMFORT FOOD, ONE MELT AT A TIME
+            </h2>
+            <p>
+              Our journey started with a simple belief: grilled cheese deserves to be more than an ordinary sandwich. We bring comfort food to life with perfectly toasted sourdough, rich melted cheese, and thoughtfully crafted flavor combinations.
+            </p>
+            <p>
+              Every sandwich is made with quality ingredients, carefully selected cheeses, freshly prepared fillings, and the perfect golden crust. From classic comfort favorites to creative signature melts, every bite is made with care.
+            </p>
+            <p>
+              More than just food, we create moments worth savoring. Whether you find us on the street or at your favorite local event, we're here to serve handcrafted comfort food with genuine passion.
+            </p>
+
+            <!-- Craftsmanship Key Metrics -->
+            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid var(--border-color);">
+              <div>
+                <h4 style="font-family:var(--font-display);font-size:2.2rem;color:var(--cheddar-hover);margin-bottom:0.1rem;line-height:1;">350,000+</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Handcrafted Melts</p>
+              </div>
+              <div style="border-inline-start:1px solid var(--border-color);padding-inline-start:1.5rem;">
+                <h4 style="font-family:var(--font-display);font-size:2.2rem;color:var(--tomato);margin-bottom:0.1rem;line-height:1;">100%</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Fresh Natural Cheeses</p>
+              </div>
+              <div style="border-inline-start:1px solid var(--border-color);padding-inline-start:1.5rem;">
+                <h4 style="font-family:var(--font-display);font-size:2.2rem;color:var(--sage);margin-bottom:0.1rem;line-height:1;">375°F</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Precision Flattop Heat</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE HIGHLIGHTS: FRESH INGREDIENTS, MADE TO ORDER, COMFORT IN EVERY BITE -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Our Core Pillars</span>
+          <h2 class="heading-section">The Hallmarks of Our Food Truck</h2>
+          <p class="lead-text">Craftsmanship and uncompromising quality in every single serving.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Highlight 1: Fresh Ingredients -->
+          <div class="feature-box reveal-on-scroll delay-1" style="text-align:left;padding:2.25rem;">
+            <div class="feature-icon-circle" style="margin-inline:0;">
+              <span style="font-size:2rem;">🌱</span>
+            </div>
+            <h3 style="font-size:1.4rem;margin-bottom:0.75rem;">Fresh Ingredients</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;">
+              We source daily from trusted regional creamers and bakeries: genuine cave-aged cheddar, sweet French brie, whole milk curds, and slow-fermented sourdough without artificial preservatives or fillers.
+            </p>
+          </div>
+
+          <!-- Highlight 2: Made to Order -->
+          <div class="feature-box reveal-on-scroll delay-2" style="text-align:left;padding:2.25rem;">
+            <div class="feature-icon-circle" style="margin-inline:0;background-color:var(--tomato-light);color:var(--tomato);">
+              <span style="font-size:2rem;">🔥</span>
+            </div>
+            <h3 style="font-size:1.4rem;margin-bottom:0.75rem;">Made to Order</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;">
+              No heat lamps. No pre-cooked sandwiches sitting on trays. Every single melt hits our 375°F flattop griddle only when you order, ensuring a scorching crisp crust and liquid gold molten cheese center.
+            </p>
+          </div>
+
+          <!-- Highlight 3: Comfort in Every Bite -->
+          <div class="feature-box reveal-on-scroll delay-3" style="text-align:left;padding:2.25rem;">
+            <div class="feature-icon-circle" style="margin-inline:0;background-color:var(--sage-light);color:var(--sage);">
+              <span style="font-size:2rem;">🥪</span>
+            </div>
+            <h3 style="font-size:1.4rem;margin-bottom:0.75rem;">Comfort in Every Bite</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;">
+              From nostalgic childhood cheddar memories to smoky barbecue short rib and velvety tomato bisque dips, our comfort food is crafted to warm your soul and put an instant smile on your face.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: THE SCIENCE OF THE MELT (GRIDDLE CRAFT & ALCHEMY)
+         ========================================================================= -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Culinary Science On Wheels</span>
+          <h2 class="heading-section">The Secret Behind Our Golden Crunch</h2>
+          <p class="lead-text" style="max-width:720px;margin-inline:auto;">
+            Achieving an ear-shattering crispy crust while maintaining a luscious, molten core is pure culinary chemistry. Here are the four rules of griddle alchemy behind every melt we serve.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Pillar 1 -->
+          <div class="feature-box reveal-on-scroll delay-1" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-sourdough-levain.jpg" 
+                   alt="36-Hour Wild Fermented Sourdough Bread with Golden Blistered Crust" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                🍞 Rule 01
+              </span>
+            </div>
+            <div style="padding:1.5rem 1.65rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+              <span style="font-size:0.75rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--cheddar-hover);display:block;margin-bottom:0.35rem;">Rule 01 • The Foundation</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.65rem;">36-Hour Wild Levain</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;margin:0;">
+                Our country sourdough ferments slowly with wild sourdough cultures. This open, airy crumb creates millions of micro-pockets that crisp without collapsing or getting soggy under heavy cheese.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="feature-box reveal-on-scroll delay-2" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-clarified-butter.jpg" 
+                   alt="Clarified Sweet Pasture Butter in Copper Pot with Pastry Brush" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                🧈 Rule 02
+              </span>
+            </div>
+            <div style="padding:1.5rem 1.65rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+              <span style="font-size:0.75rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--tomato);display:block;margin-bottom:0.35rem;">Rule 02 • Maillard Reaction</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.65rem;">Clarified Sweet Butter</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;margin:0;">
+                Brushed edge-to-edge with pasture-raised churned butter. Removing the milk solids elevates the smoke point, delivering a glass-like golden toast without burning or leaving a greasy residue.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="feature-box reveal-on-scroll delay-3" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-tri-cheese-matrix.jpg" 
+                   alt="Aged Wisconsin Cheddar, Gruyère, Mozzarella and Stretchy Molten Cheese Pull" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                🧀 Rule 03
+              </span>
+            </div>
+            <div style="padding:1.5rem 1.65rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+              <span style="font-size:0.75rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--sage);display:block;margin-bottom:0.35rem;">Rule 03 • Flavor &amp; Pull</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.65rem;">Tri-Melt Cheese Matrix</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;margin:0;">
+                Every melt is formulated with three cheese roles: 18-month Wisconsin cheddar for sharp tang, aged Gruyère for nutty complexity, and whole-milk mozzarella for our signature 24-inch stretch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="feature-box reveal-on-scroll delay-4" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-steam-dome-sear.jpg" 
+                   alt="Stainless Steel Steam Dome Searing Melt on Commercial Flat Top Griddle with Billowing Steam" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                ⚡ Rule 04
+              </span>
+            </div>
+            <div style="padding:1.5rem 1.65rem 1.75rem;flex:1;display:flex;flex-direction:column;">
+              <span style="font-size:0.75rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#EA580C;display:block;margin-bottom:0.35rem;">Rule 04 • Thermodynamic Sear</span>
+              <h3 style="font-size:1.25rem;margin-bottom:0.65rem;">375°F Steam Domes</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.65;margin:0;">
+                We trap sandwiches beneath heavy chrome steam domes with a targeted mist of water. The flash vapor melts thick artisan cheese blocks uniformly in 90 seconds while the flat-top crust crisps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE CREW -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">The Griddle Masters</span>
+          <h2 class="heading-section">Meet Our Food Truck Crew</h2>
+          <p class="lead-text">The passionate humans flipping bread and pulling cheese every day.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Member 1 -->
+          <div class="food-card reveal-on-scroll delay-1" style="text-align:center;">
+            <div style="aspect-ratio:1/1;overflow:hidden;background-color:#1E1915;position:relative;">
+              <img src="assets/images/crew-chef-kabir.jpg" alt="Chef Kabir Saxena - Co-Founder &amp; Head of Flavor" style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.3rem;margin-bottom:0.2rem;">Chef Kabir Saxena</h3>
+              <span style="color:var(--cheddar-hover);font-weight:700;font-size:0.85rem;text-transform:uppercase;margin-bottom:0.75rem;display:block;">
+                Co-Founder &amp; Head of Flavor
+              </span>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">
+                Trained in Lyon and Milan before falling in love with American street food truck culture. Obsessed with cheese fermentation chemistry.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="food-card reveal-on-scroll delay-2" style="text-align:center;">
+            <div style="aspect-ratio:1/1;overflow:hidden;background-color:#1E1915;position:relative;">
+              <img src="assets/images/crew-devika-sen.jpg" alt="Devika Sen - Co-Founder &amp; Operations Captain" style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.3rem;margin-bottom:0.2rem;">Devika Sen</h3>
+              <span style="color:var(--tomato);font-weight:700;font-size:0.85rem;text-transform:uppercase;margin-bottom:0.75rem;display:block;">
+                Co-Founder &amp; Operations Captain
+              </span>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">
+                Former tech logistics manager who keeps our mobile fleet calibrated, on schedule, and stocked with freshest morning bakery batches.
+              </p>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="food-card reveal-on-scroll delay-3" style="text-align:center;">
+            <div style="aspect-ratio:1/1;overflow:hidden;background-color:#1E1915;position:relative;">
+              <img src="assets/images/crew-rohan-mathur.jpg" alt="Rohan Mathur - Lead Griddle Sear Master" style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.3rem;margin-bottom:0.2rem;">Rohan Mathur</h3>
+              <span style="color:var(--sage);font-weight:700;font-size:0.85rem;text-transform:uppercase;margin-bottom:0.75rem;display:block;">
+                Lead Griddle Sear Master
+              </span>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">
+                Has executed over 100,000 diagonal cuts with surgical precision. Can tell the cheese core temperature simply by listening to the steam sizzle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND TIMELINE -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container container-narrow">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Our Milestones</span>
+          <h2 class="heading-section">The Journey So Far</h2>
+          <p class="lead-text">From one curbside griddle to a celebrated food truck brand.</p>
+        </div>
+
+        <div style="position:relative;border-inline-start:3px solid var(--cheddar);padding-inline-start:2rem;margin-inline-start:1.5rem;" class="reveal-on-scroll">
+          
+          <!-- Event 1 -->
+          <div style="position:relative;margin-bottom:2.5rem;">
+            <div style="position:absolute;inset-inline-start:-2.65rem;top:0;width:20px;height:20px;border-radius:50%;background:var(--cheddar);border:4px solid var(--bg-card);box-shadow:0 0 0 2px var(--cheddar);"></div>
+            <span style="color:var(--cheddar-hover);font-weight:800;font-size:1rem;display:block;margin-bottom:0.25rem;">2021 — The Spark</span>
+            <h4 style="font-size:1.25rem;margin-bottom:0.4rem;">The First 1974 Step-Van Rollout</h4>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">
+              Kabir and Dev bought "Old Cheddar" (our first truck), renovated the interior by hand, and served the first 100 melts outside Indiranagar.
+            </p>
+          </div>
+
+          <!-- Event 2 -->
+          <div style="position:relative;margin-bottom:2.5rem;">
+            <div style="position:absolute;inset-inline-start:-2.65rem;top:0;width:20px;height:20px;border-radius:50%;background:var(--tomato);border:4px solid var(--bg-card);box-shadow:0 0 0 2px var(--tomato);"></div>
+            <span style="color:var(--tomato);font-weight:800;font-size:1rem;display:block;margin-bottom:0.25rem;">2023 — Street Food Crown</span>
+            <h4 style="font-size:1.25rem;margin-bottom:0.4rem;">Voted "Best Street Food Experience"</h4>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">
+              Awarded Best Mobile Vendor at the National Food Carnival. The 24-inch cheese pull video went viral with 4 million views.
+            </p>
+          </div>
+
+          <!-- Event 3 -->
+          <div style="position:relative;margin-bottom:2.5rem;">
+            <div style="position:absolute;inset-inline-start:-2.65rem;top:0;width:20px;height:20px;border-radius:50%;background:var(--sage);border:4px solid var(--bg-card);box-shadow:0 0 0 2px var(--sage);"></div>
+            <span style="color:var(--sage);font-weight:800;font-size:1rem;display:block;margin-bottom:0.25rem;">2024 — Private Catering Launch</span>
+            <h4 style="font-size:1.25rem;margin-bottom:0.4rem;">Rolling Up To Weddings & Corporate Bashes</h4>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">
+              Equipped our second truck with high-output griddles specifically for large private events, corporate lunches, and festival rallies.
+            </p>
+          </div>
+
+          <!-- Event 4 -->
+          <div style="position:relative;">
+            <div style="position:absolute;inset-inline-start:-2.65rem;top:0;width:20px;height:20px;border-radius:50%;background:var(--gold);border:4px solid var(--bg-card);box-shadow:0 0 0 2px var(--gold);"></div>
+            <span style="color:var(--cheddar-hover);font-weight:800;font-size:1rem;display:block;margin-bottom:0.25rem;">2026 — Present & Future</span>
+            <h4 style="font-size:1.25rem;margin-bottom:0.4rem;">The Melt District Digital Ordering & Daily Tracking</h4>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">
+              Live mobile route tracking, digital front-end ordering, and curated seasonal tasting menus bringing comfort food to the entire metropolitan area.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: FARM-TO-TRUCK & EARTH-FIRST PROMISE
+         ========================================================================= -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Conscious Comfort Food</span>
+          <h2 class="heading-section">Our Farm-To-Truck &amp; Earth-First Promise</h2>
+          <p class="lead-text" style="max-width:700px;margin-inline:auto;">
+            Great comfort food tastes even better when it honors the farmers who grow our ingredients and protects the neighborhoods our trucks visit every day.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <div class="feature-box reveal-on-scroll delay-1" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-pasture-dairy.jpg" 
+                   alt="Grass-Fed Pasture Dairy Cows Grazing on Green Farmland" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                🐄 Pasture Grazed
+              </span>
+            </div>
+            <div style="padding:1.75rem;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-size:1.35rem;margin-bottom:0.75rem;">Small-Batch Dairy Partners</h3>
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                We partner directly with 4 independent family creameries that raise grass-fed, pasture-grazing herds without synthetic hormones or antibiotics. This ethical sourcing directly yields richer milk fats and unbelievable melted textures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-box reveal-on-scroll delay-2" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-compostable-packaging.jpg" 
+                   alt="Eco-Friendly Unbleached Kraft Paper Food Takeout Packaging Boxes" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                ♻️ 100% Plant-Based
+              </span>
+            </div>
+            <div style="padding:1.75rem;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-size:1.35rem;margin-bottom:0.75rem;">100% Compostable Packaging</h3>
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                Every sandwich wrapper, fry cone, dip ramekin, and utensil handed out of our service window is 100% plant-based or made from unbleached kraft paper. Our serviceware naturally breaks down within 90 days in commercial compost.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-box reveal-on-scroll delay-3" style="text-align:left;padding:0;overflow:hidden;border-radius:var(--radius-lg);background:var(--bg-card);box-shadow:var(--shadow-sm);border:1px solid var(--border-color);display:flex;flex-direction:column;">
+            <div style="aspect-ratio:16/10;width:100%;overflow:hidden;position:relative;background-color:#1E1915;">
+              <img src="assets/images/about-zero-waste-prep.jpg" 
+                   alt="Fresh Fire-Roasted Tomato Bisque Topped with Golden Sourdough Garlic Croutons" 
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-smooth);" 
+                   loading="lazy">
+              <span style="position:absolute;top:12px;inset-inline-start:12px;background:rgba(255,255,255,0.92);color:#1A1305;font-weight:800;font-size:0.75rem;padding:0.25rem 0.65rem;border-radius:var(--radius-full);box-shadow:var(--shadow-sm);backdrop-filter:blur(4px);">
+                🥣 5:00 AM Scratch Prep
+              </span>
+            </div>
+            <div style="padding:1.75rem;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-size:1.35rem;margin-bottom:0.75rem;">Zero-Waste Scratch Commissary</h3>
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                Every morning at 5:00 AM in our central kitchen depot, artisan bread ends are roasted into garlic butter croutons for our tomato soup, and organic vegetable trimmings simmer into rich aromatics. Zero edible food ever goes into waste bins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Customer Voices</span>
+          <h2 class="heading-section">Why Our Community Returns</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="testimonial-card reveal-on-scroll delay-1">
+            <div class="stars-rating">★★★★★</div>
+            <p style="font-style:italic;color:var(--text-secondary);margin-bottom:1rem;">
+              "You can taste the craft. The fact that they use real artisanal sourdough instead of pre-sliced grocery bread changes everything."
+            </p>
+            <div class="customer-info">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Ananya Rao" class="customer-avatar">
+              <div>
+                <strong>Ananya Rao</strong>
+                <span style="display:block;font-size:0.8rem;color:var(--text-muted);">Loyal Curbside Regular</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-2">
+            <div class="stars-rating">★★★★★</div>
+            <p style="font-style:italic;color:var(--text-secondary);margin-bottom:1rem;">
+              "Our office team literally plans our Thursdays around where The Melt District truck is parked. That truffle shroom melt is pure heaven."
+            </p>
+            <div class="customer-info">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Vikram Bose" class="customer-avatar">
+              <div>
+                <strong>Vikram Bose</strong>
+                <span style="display:block;font-size:0.8rem;color:var(--text-muted);">Engineering Director</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal-on-scroll delay-3">
+            <div class="stars-rating">★★★★★</div>
+            <p style="font-style:italic;color:var(--text-secondary);margin-bottom:1rem;">
+              "The founders are always smiling behind the window, even in the middle of a massive dinner rush. Food made with real joy."
+            </p>
+            <div class="customer-info">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Meera Nair" class="customer-avatar">
+              <div>
+                <strong>Meera Nair</strong>
+                <span style="display:block;font-size:0.8rem;color:var(--text-muted);">Graphic Designer & Foodie</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: FREQUENTLY ASKED QUESTIONS (FAQ)
+         ========================================================================= -->
+    <section class="section-spacing">
+      <div class="container container-narrow">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Curbside Curiosity</span>
+          <h2 class="heading-section">Frequently Asked Questions</h2>
+          <p class="lead-text">Everything you want to know about our grilled cheese truck, ingredients, and catering.</p>
+        </div>
+
+        <div class="reveal-on-scroll">
+          <!-- FAQ 1 -->
+          <div class="accordion-item active">
+            <button class="accordion-header" aria-expanded="true">
+              <span>What makes The Melt District different from regular grilled cheese?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                We treat grilled cheese with fine-dining culinary respect. Rather than standard processed sandwich singles and grocery bread, we use 36-hour wild fermented sourdough, artisanal aged cheese wheels (Gruyère, sharp Wisconsin cheddar, fontina, fresh mozzarella) hand-shredded every morning, and slow-churned sweet butter seared on a 375°F chrome griddle.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Do you offer vegetarian and dietary-friendly comfort options?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                Yes! More than 70% of our core menu is 100% vegetarian, including our Classic Cheddar Melt, Three-Cheese Deluxe, and Fire-Roasted Jalapeño Melt. Our signature San Marzano tomato bisque is also vegetarian-friendly. For guests with gluten sensitivities, we offer gluten-free artisan bread alternatives upon request at our truck window.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>How do I know where The Melt District truck is parked today?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                We post our live GPS coordinates and curbside route schedule every morning by 7:00 AM on our <a href="find-the-truck.html" style="color:var(--cheddar-hover);font-weight:700;text-decoration:underline;">Find The Truck</a> radar page. You can see our exact parking pin, operating hours, and upcoming weekly festival rallies.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Can I book your food truck for a private wedding, corporate lunch, or party?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                Yes! We have a dedicated catering truck equipped to serve groups from 40 to 500+ guests. We provide customized melt menus, piping hot tomato bisque shooters, crispy herb fries, and craft refreshments. Check our full packages on our <a href="service-details.html" style="color:var(--cheddar-hover);font-weight:700;text-decoration:underline;">Catering &amp; Events</a> page or get in touch through our <a href="contact.html" style="color:var(--cheddar-hover);font-weight:700;text-decoration:underline;">Contact Form</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Can I place orders online for speedy pickup at the truck?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin:0;">
+                Absolutely! You can browse our complete live digital menu on our <a href="menu.html" style="color:var(--cheddar-hover);font-weight:700;text-decoration:underline;">Food Menu</a> page, customize your melts, and place your order ahead of time to skip the curbside line during peak lunch hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVITATION CTA -->
+    <section class="section-spacing" style="background: radial-gradient(circle at 50% 50%, var(--cheddar-light) 0%, transparent 65%), var(--bg-secondary);text-align:center;">
+      <div class="container container-narrow reveal-on-scroll">
+        <span class="eyebrow eyebrow-red">Taste The Magic</span>
+        <h2 class="heading-section" style="margin-bottom:1rem;">READY TO TASTE THE DIFFERENCE?</h2>
+        <p class="lead-text" style="margin-bottom:2rem;">
+          Find our food truck on the road today, or book us to pull up at your next private event.
+        </p>
+        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+          <a href="menu.html" class="btn btn-primary btn-lg">Explore Menu</a>
+          <a href="find-the-truck.html" class="btn btn-outline btn-lg">Find The Truck</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF;margin-bottom:1rem;">
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck website.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>
