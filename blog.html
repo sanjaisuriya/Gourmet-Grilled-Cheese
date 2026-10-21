@@ -283,16 +283,7 @@
     <section class="section-spacing" id="latest-stories" style="padding-top:clamp(2rem, 4vw, 3.5rem);">
       <div class="container">
         
-        <!-- Section Header -->
-        <div class="section-header text-center reveal-on-scroll" style="margin-bottom:2.25rem;">
-          <span class="journal-eyebrow-red" style="margin-bottom:0.6rem;">FROM THE TRUCK GRILL</span>
-          <h2 style="font-size:clamp(2rem, 3.5vw, 2.75rem);margin-top:0.4rem;text-transform:uppercase;">FRESH FROM THE GRILL</h2>
-          <p style="color:var(--text-secondary);max-width:620px;margin:0 auto;font-size:1.05rem;">
-            Fresh ideas, delicious discoveries, and stories from our world of grilled cheese.
-          </p>
-        </div>
-
-        <!-- 5. Explore by Category Block -->
+        <!-- Explore by Category Block -->
         <div class="explore-by-category-block reveal-on-scroll" style="margin-bottom:2.5rem;text-align:center;">
           <span class="journal-eyebrow-red" style="margin-bottom:0.4rem;">FILTER BY TOPIC</span>
           <h3 style="font-size:clamp(1.5rem, 2.6vw, 2rem);margin-bottom:0.5rem;text-transform:uppercase;">EXPLORE YOUR CRAVINGS</h3>
@@ -300,17 +291,23 @@
             Explore our stories by the topics you love most—from cheese melt science and griddle tips to behind-the-scenes food truck life and comfort food recipes.
           </p>
 
-          <div class="category-tabs" role="tablist" aria-label="Explore by Category">
+          <div class="category-tabs blog-category-tabs" role="tablist" aria-label="Explore by Category" style="justify-content:center;flex-wrap:wrap;gap:0.6rem 0.75rem;margin:0 auto;max-width:820px;overflow:visible;">
+            <!-- Top Row: All Stories + 3 Categories -->
             <button class="blog-tab-btn tab-btn active" data-category="all">All Stories</button>
             <button class="blog-tab-btn tab-btn" data-category="science">Cheese Melt Science</button>
             <button class="blog-tab-btn tab-btn" data-category="tips">Grilled Cheese Tips</button>
             <button class="blog-tab-btn tab-btn" data-category="behind-the-scenes">Behind the Scenes</button>
+
+            <!-- Line break for 2 balanced rows -->
+            <div class="tab-row-break" aria-hidden="true" style="flex-basis:100%;height:0;margin:0;"></div>
+
+            <!-- Bottom Row: 3 Categories -->
             <button class="blog-tab-btn tab-btn" data-category="cheese-flavor">Cheese &amp; Flavor</button>
             <button class="blog-tab-btn tab-btn" data-category="culture">Street Food Culture</button>
             <button class="blog-tab-btn tab-btn" data-category="inspiration">Food &amp; Inspiration</button>
           </div>
 
-          <div class="menu-search-wrapper" style="margin-top:1.25rem;">
+          <div class="menu-search-wrapper blog-search-wrapper" style="margin:1.6rem auto 0 auto;max-width:590px;width:100%;">
             <span class="menu-search-icon" aria-hidden="true">🔍</span>
             <input type="search" id="blog-search-input" class="menu-search-input" placeholder="Search stories, tips &amp; recipes..." aria-label="Search stories">
           </div>
@@ -394,7 +391,7 @@
           <!-- Article 4: Finding Your Perfect Cheese Combination (Cheese & Flavor) -->
           <article class="food-card blog-card reveal-on-scroll delay-1" data-category="cheese-flavor">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-cheese-flavor-tasting.jpg" alt="Crispy gourmet grilled cheese sandwiches diagonally sliced with savory dipping sauces on a dark slate board" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-cheese-flavor-combinations.jpg" alt="Artisanal cheese board featuring wedges of aged cheddar, gouda, brie, and gruyere with walnuts and cheese slicer" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-flavor" style="font-weight:700;">CHEESE &amp; FLAVOR</span>
               </div>
@@ -418,7 +415,7 @@
           <!-- Article 5: The Street Food Moments We Love (Street Food Culture) -->
           <article class="food-card blog-card reveal-on-scroll delay-2" data-category="culture">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-curbside-truck-vibe.jpg" alt="Vibrant outdoor curbside food truck under lush green trees with marquee lighting and wooden dining tables" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-street-food-moments.jpg" alt="Vibrant outdoor food truck gathering at twilight with community dining at wooden picnic tables under string lights" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-culture" style="font-weight:700;">STREET FOOD CULTURE</span>
               </div>
@@ -442,7 +439,7 @@
           <!-- Article 6: Comfort Food for Every Occasion (Food & Inspiration) -->
           <article class="food-card blog-card reveal-on-scroll delay-3" data-category="inspiration">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-comfort-soup-dip.jpg" alt="Golden crispy grilled sourdough melt with gooey melted cheese paired with a steaming bowl of tomato soup dip" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-comfort-food-pairings.jpg" alt="Golden crispy artisanal sourdough grilled cheese melt with gooey cheese pull served with steaming roasted tomato bisque" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-inspiration" style="font-weight:700;">FOOD &amp; INSPIRATION</span>
               </div>
@@ -466,7 +463,7 @@
           <!-- Article 7: The Crust Chemistry (Cheese Melt Science) -->
           <article class="food-card blog-card reveal-on-scroll delay-1" data-category="science">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-crust-sourdough-batard.jpg" alt="Artisan sourdough bread loaf with a crispy flour-dusted scored crust resting on a rustic wooden board with wheat stalks" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-crust-sourdough-brioche.jpg" alt="Artisan rustic sourdough loaf with aerated crumb slices beside golden braided brioche on a baker table" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-science" style="font-weight:700;">CHEESE MELT SCIENCE</span>
               </div>
@@ -490,7 +487,7 @@
           <!-- Article 8: Mastering the Flattop Griddle (Grilled Cheese Tips) -->
           <article class="food-card blog-card reveal-on-scroll delay-2" data-category="tips">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-flattop-griddle-chef.jpg" alt="Food truck chef expertly searing handcrafted melts on a commercial flat-top steel griddle using metal spatulas" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-flattop-steam-dome.jpg" alt="Stainless steel steam melting dome on a commercial flattop griddle with steaming sizzling artisan grilled cheese" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-tips" style="font-weight:700;">GRILLED CHEESE TIPS</span>
               </div>
@@ -514,7 +511,7 @@
           <!-- Article 9: From Farm to Griddle (Behind the Scenes) -->
           <article class="food-card blog-card reveal-on-scroll delay-3" data-category="behind-the-scenes">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-farm-cheese-wheels.jpg" alt="Rows of large handcrafted artisanal cheese wheels aging on wooden shelves in a climate-controlled aging cellar" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-farm-small-batch-cheese.jpg" alt="Artisan cheesemaker inspecting a golden aged farmhouse cheddar wheel in a rustic cheese cave aging cellar" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-bts" style="font-weight:700;">BEHIND THE SCENES</span>
               </div>
@@ -538,7 +535,7 @@
           <!-- Article 10: Alpine Melts & Forest Truffles (Cheese & Flavor) -->
           <article class="food-card blog-card reveal-on-scroll delay-1" data-category="cheese-flavor">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-alpine-mushroom-melt.jpg" alt="Gourmet grilled panini melt loaded with sautéed forest mushrooms and melted Alpine cheese served with fresh green salad" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-alpine-truffle-melt.jpg" alt="Artisan grilled sourdough melt stuffed with sautéed forest mushrooms and molten Gruyere and Fontina cheese with truffle glaze" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-flavor" style="font-weight:700;">CHEESE &amp; FLAVOR</span>
               </div>
@@ -562,7 +559,7 @@
           <!-- Article 11: Midnight Griddle Runs (Street Food Culture) -->
           <article class="food-card blog-card reveal-on-scroll delay-2" data-category="culture">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-foodtruck-street-rodeo.jpg" alt="Vibrant outdoor street food rally with lively crowds gathered around food trucks under colorful festival umbrellas" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-midnight-griddle-vibes.jpg" alt="Glowing late-night food truck curbside under illuminated marquee lights with friends enjoying hot melts at midnight" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-culture" style="font-weight:700;">STREET FOOD CULTURE</span>
               </div>
@@ -586,7 +583,7 @@
           <!-- Article 12: The Science of Tomato Bisque & Melts (Food & Inspiration) -->
           <article class="food-card blog-card reveal-on-scroll delay-3" data-category="inspiration">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-tomato-bisque-creamy.jpg" alt="Overhead view of a ceramic bowl filled with velvety rich roasted tomato bisque garnished with a fresh cream swirl and green basil leaf" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-perfect-pair-bisque-melt.jpg" alt="Golden grilled cheese melt being dipped into a steaming ceramic bowl of roasted tomato bisque with molten cheese pull" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-inspiration" style="font-weight:700;">FOOD &amp; INSPIRATION</span>
               </div>
@@ -610,7 +607,7 @@
           <!-- Article 13: The Chemistry of the Cheese Skirt (Cheese Melt Science) -->
           <article class="food-card blog-card reveal-on-scroll delay-1" data-category="science">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-fresh-grill.jpg" alt="Gourmet grilled cheese sandwiches searing on a commercial flat-top griddle with a sizzling golden frico lace cheese skirt and steam" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-cheese-skirt-frico.jpg" alt="Gourmet sourdough grilled cheese sizzling on a hot commercial steel flattop griddle with an expansive crispy golden lace cheese skirt" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-science" style="font-weight:700;">CHEESE MELT SCIENCE</span>
               </div>
@@ -634,7 +631,7 @@
           <!-- Article 14: Crisp Pressing Secrets (Grilled Cheese Tips) -->
           <article class="food-card blog-card reveal-on-scroll delay-2" data-category="tips">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-panini-press-crisp.jpg" alt="Artisan grilled sandwich sliced diagonally showing golden grill press ridges and melted cheese in a rustic paper serving dish" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-panini-ribs-pressing.jpg" alt="Cast-iron panini press lifted to show bold caramelized grill ridges and molten cheese dripping from a hot gourmet sandwich" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-tips" style="font-weight:700;">GRILLED CHEESE TIPS</span>
               </div>
@@ -658,7 +655,7 @@
           <!-- Article 15: The Window Connection (Behind the Scenes) -->
           <article class="food-card blog-card reveal-on-scroll delay-3" data-category="behind-the-scenes">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-foodtruck-service-window.jpg" alt="Gourmet grilled cheese food truck with its vibrant yellow exterior and ordering service window open at an outdoor food festival" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-window-hospitality-truck.jpg" alt="Warm and friendly chef smiling at an illuminated food truck service window handing a hot wrapped grilled cheese melt to a smiling customer" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-bts" style="font-weight:700;">BEHIND THE SCENES</span>
               </div>
@@ -682,7 +679,7 @@
           <!-- Article 16: The Umami Equilibrium (Cheese & Flavor) -->
           <article class="food-card blog-card reveal-on-scroll delay-1" data-category="cheese-flavor">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/blog-umami-cheddar-gruyere.jpg" alt="Artisan sourdough grilled cheese pulled apart showing molten sharp Wisconsin cheddar and creamy Gruyere blend on a slate board with cheese wedges and thyme" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-umami-cheddar-gruyere.jpg" alt="Gourmet sourdough grilled cheese pulled apart with molten sharp Wisconsin cheddar and creamy alpine Gruyère stretch on a rustic wood board with cheese wedges" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-flavor" style="font-weight:700;">CHEESE &amp; FLAVOR</span>
               </div>
@@ -706,7 +703,7 @@
           <!-- Article 17: The Evolution of Food Truck Culture (Street Food Culture) -->
           <article class="food-card blog-card reveal-on-scroll delay-2" data-category="culture">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-foodtruck-culture-rally.jpg" alt="Bustling sunny city street food festival with festival tents, flags, and hungry crowds celebrating street cuisine" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-foodtruck-culture-gourmet.jpg" alt="Vibrant urban food truck rally with artisan mobile kitchens, festival crowds, and street food culture in a bustling city plaza" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-culture" style="font-weight:700;">STREET FOOD CULTURE</span>
               </div>
@@ -730,7 +727,7 @@
           <!-- Article 18: Curating a Gourmet Melt Bar (Food & Inspiration) -->
           <article class="food-card blog-card reveal-on-scroll delay-3" data-category="inspiration">
             <div class="food-card-thumb-wrap">
-              <img src="assets/images/journal-catering-sandwich-platter.jpg" alt="Large gourmet event catering platter filled with neatly arranged artisanal mini sandwich wedges and garnishes" class="food-card-img" loading="lazy">
+              <img src="assets/images/journal-event-catering-melt-bar.jpg" alt="Event catering platter loaded with freshly grilled gourmet melt sliders with melted cheese, tomato, and skewers on silver party trays" class="food-card-img" loading="lazy">
               <div class="food-card-tags">
                 <span class="badge badge-inspiration" style="font-weight:700;">FOOD &amp; INSPIRATION</span>
               </div>

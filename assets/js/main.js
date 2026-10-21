@@ -92,13 +92,15 @@
     // --- 4. STICKY HEADER SCROLL EFFECT ---
     const header = document.querySelector('.site-header');
     if (header) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
+      const handleHeaderScroll = () => {
+        if (window.scrollY > 20) {
           header.classList.add('scrolled');
         } else {
           header.classList.remove('scrolled');
         }
-      }, { passive: true });
+      };
+      window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+      handleHeaderScroll();
     }
 
     // --- 5. MOBILE NAVIGATION DRAWER ---
