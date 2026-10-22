@@ -28,7 +28,7 @@
   </script>
 
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.9">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.7">
 </head>
 <body>
 
@@ -244,12 +244,12 @@
             </p>
 
             <!-- Call to Actions -->
-            <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:1.5rem;">
-              <a href="#signature-collection" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-cheese);">
+            <div class="hero-home2-cta-group">
+              <a href="#signature-collection" class="btn btn-primary" style="box-shadow:var(--shadow-cheese);">
                 <span>Explore Signature Melts</span>
                 <span style="font-size:1.1rem;display:inline-block;transition:transform 0.2s;">↓</span>
               </a>
-              <a href="#byo-builder" class="btn btn-outline btn-lg">
+              <a href="#byo-builder" class="btn btn-outline">
                 <span>Build Your Own Melt</span>
                 <span style="font-size:1.1rem;">🛠️</span>
               </a>
@@ -270,29 +270,10 @@
                 <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;">Elastic Pull Tech</span>
               </div>
             </div>
-
-            <!-- Interactive Cheese Profile Selector -->
-            <div class="interactive-cheese-meter" style="margin-top:1.25rem;padding:1.15rem 1.25rem;">
-              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
-                <span style="font-size:0.82rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;">
-                  🧀 Sample A Cheese Flavor Profile:
-                </span>
-                <span class="handwritten-tag" style="font-size:1.1rem;">Click to taste notes ➔</span>
-              </div>
-              <div class="cheese-pills" style="margin-top:0.6rem;">
-                <button class="cheese-pill active" data-flavor="aged-cheddar">18-Month Vermont Cheddar</button>
-                <button class="cheese-pill" data-flavor="smoked-gouda">Beechwood Smoked Gouda</button>
-                <button class="cheese-pill" data-flavor="french-brie">Normandy Double-Cream Brie</button>
-                <button class="cheese-pill" data-flavor="fontina">Swiss Alps Fontina</button>
-              </div>
-              <p id="cheese-flavor-desc" style="font-size:0.88rem;color:var(--text-secondary);margin-top:0.75rem;padding-top:0.75rem;border-top:1px dashed var(--border-color);line-height:1.45;">
-                <strong>18-Month Vermont Cheddar:</strong> Bold, crumbly, and crystallized with natural tyrosine umami notes that slice through rich buttered crust.
-              </p>
-            </div>
           </div>
 
           <!-- Right Cinematic Sandwich Hero Visual with Handwritten Labels -->
-          <div class="hero-home2-media" style="align-self: flex-start; margin-top: 0.25rem; max-width: 520px;">
+          <div class="hero-home2-media" style="align-self: flex-start; margin-top: 0.25rem; max-width: 630px;">
             <div class="hero-cinematic-card">
               
               <!-- Floating Handwritten Badges / Stickers -->
@@ -303,7 +284,7 @@
               </div>
 
               <div class="hero-sticker-2">
-                <span class="handwritten-sticker" style="background:#FEF3C7;color:#92400E;border-color:#F59E0B;">
+                <span class="handwritten-sticker">
                   🧈 100% Grass-Fed Butter Sear
                 </span>
               </div>
@@ -348,6 +329,25 @@
               </div>
 
             </div>
+          </div>
+
+          <!-- Full Width Interactive Cheese Flavor Profile Selector -->
+          <div class="interactive-cheese-meter" style="grid-column: 1 / -1; margin-top: 2rem; width: 100%;">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
+              <span style="font-size:0.85rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">
+                🧀 Sample A Cheese Flavor Profile:
+              </span>
+              <span class="handwritten-tag" style="font-size:1.2rem;">Click to taste notes ➔</span>
+            </div>
+            <div class="cheese-pills">
+              <button class="cheese-pill active" data-flavor="aged-cheddar">18-Month Vermont Cheddar</button>
+              <button class="cheese-pill" data-flavor="smoked-gouda">Beechwood Smoked Gouda</button>
+              <button class="cheese-pill" data-flavor="french-brie">Normandy Double-Cream Brie</button>
+              <button class="cheese-pill" data-flavor="fontina">Swiss Alps Fontina</button>
+            </div>
+            <p id="cheese-flavor-desc" style="font-size:0.92rem;color:var(--text-secondary);margin-top:0.85rem;padding-top:0.85rem;border-top:1px dashed var(--border-color);line-height:1.5;">
+              <strong>18-Month Vermont Cheddar:</strong> Bold, crumbly, and crystallized with natural tyrosine umami notes that slice through rich buttered crust.
+            </p>
           </div>
 
         </div>

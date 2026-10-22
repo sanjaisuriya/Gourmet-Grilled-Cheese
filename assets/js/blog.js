@@ -19,8 +19,8 @@
       title: 'The Art of the Perfect Cheese Pull',
       lead: 'The physics and temperature dynamics behind achieving an elastic, 24-inch cheese pull with Wisconsin cheddar and alpine gruyere.',
       image: 'assets/images/journal-cheese-pull-molten.jpg',
-      featureImage: 'assets/images/journal-cheese-pull-molten.jpg',
-      featureCaption: 'A continuous, elastic 24-inch cheese pull achieved by balancing whole-milk mozzarella and Wisconsin aged cheddar.',
+      featureImage: 'assets/images/perfect-cheese-melt-feature.jpg',
+      featureCaption: 'Golden toasted artisan sourdough cut on rustic oak with thick, velvety melted cheese stretch and gentle steam.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Always grate cheese from cold whole blocks. Pre-shredded cheese contains potato starch and cellulose anti-caking dust that interferes with casein protein strands from fusing into a glossy, uninterrupted 24-inch ribbon.',
@@ -49,8 +49,8 @@
       title: 'The Ultimate Butter-Toasting Guide: Butter vs. Mayo Decoded',
       lead: 'We subjected 100 test melts to scientific heat testing on our food truck griddle to see which spread creates the crispiest bite.',
       image: 'assets/images/journal-butter-guide.jpg',
-      featureImage: 'assets/images/journal-butter-guide.jpg',
-      featureCaption: 'Searing artisan sourdough melts with whipped cultured compound butter on the 375°F commercial flat-top.',
+      featureImage: 'assets/images/about-clarified-butter.jpg',
+      featureCaption: 'Our signature hybrid compound butter: European cultured butter whipped with extra-virgin olive oil and roasted garlic confit, brushed evenly before hitting the steel.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Always use room-temperature, cultured salted butter. Cold butter tears the delicate crumb of your artisan sourdough, creating uneven contact pockets on the flat-top.',
@@ -79,8 +79,8 @@
       title: 'Behind the Scenes at Our Food Truck',
       lead: 'A 5:00 AM look into our commissary prep kitchen—sourcing rustic sourdough loaves and staging small-batch dairy.',
       image: 'assets/images/journal-behind-scenes.jpg',
-      featureImage: 'assets/images/journal-behind-scenes.jpg',
-      featureCaption: 'Early morning flat-top calibration and small-batch cheese prep inside the commissary mobile kitchen.',
+      featureImage: 'assets/images/journal-flattop-griddle-chef.jpg',
+      featureCaption: 'Chef Kabir Saxena calibrating morning griddle temperatures and staging small-batch cheese prep inside the commissary truck.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Maintaining strict commissary temperature control ensures our cheese blends retain their delicate aromatic fats before hitting the 375°F griddle.',
@@ -109,8 +109,8 @@
       title: 'Finding Your Perfect Cheese Combination',
       lead: 'Balancing sharp, nutty, and creamy flavor profiles across fontina, taleggio, and aged farmhouse cheddars.',
       image: 'assets/images/journal-cheese-flavor-combinations.jpg',
-      featureImage: 'assets/images/journal-cheese-flavor-combinations.jpg',
-      featureCaption: 'An artisanal cheese board featuring wedges of aged cheddar, nutty gruyère, creamy brie, and gouda with walnuts and cheese slicer.',
+      featureImage: 'assets/images/journal-cheese-flavor-tasting.jpg',
+      featureCaption: 'Balancing sharp 18-month Wisconsin cheddar with nutty Gruyère, creamy fontina, and gouda for optimal melt dynamics.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Never use more than three cheeses in a single sandwich. Too many varieties muddle the flavor profile into indistinct saltiness.',
@@ -139,8 +139,8 @@
       title: 'The Street Food Moments We Love',
       lead: 'Late-night pop-ups, curbside laughs, and the wonderful neighborhood regulars that make our truck feel like home.',
       image: 'assets/images/journal-street-food-moments.jpg',
-      featureImage: 'assets/images/journal-street-food-moments.jpg',
-      featureCaption: 'A lively curbside food truck gathering at twilight with community dining at wooden picnic tables under warm glowing festoon lights.',
+      featureImage: 'assets/images/journal-curbside-truck-vibe.jpg',
+      featureCaption: 'Late-night street food vibes and neighborhood diners sharing hot gourmet melts under glowing string lights.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Eating street food curbside while it is piping hot from the steel delivers 10x the crunch compared to takeout trapped in steam boxes.',
@@ -169,8 +169,8 @@
       title: 'Comfort Food for Every Occasion',
       lead: 'Why piping hot tomato bisque and griddled cheese remains the undisputed king of soul-warming comfort combos.',
       image: 'assets/images/journal-comfort-food-pairings.jpg',
-      featureImage: 'assets/images/journal-comfort-food-pairings.jpg',
-      featureCaption: 'A golden crispy artisanal sourdough grilled cheese melt with gooey molten cheese paired with velvety roasted tomato bisque and crispy potato wedges.',
+      featureImage: 'assets/images/journal-comfort-soup-dip.jpg',
+      featureCaption: 'The quintessential comfort dip: golden triangular sourdough points plunged into velvety, sweet-tart roasted San Marzano tomato bisque.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Cut your grilled cheese diagonally! Triangular cuts provide two sharp corners that fit perfectly into narrow soup cups for the ultimate dip.',
@@ -199,8 +199,8 @@
       title: 'The Crust Chemistry: Sourdough vs Brioche',
       lead: 'Analyzing crumb porosity, sugar caramelization, and structure to see which bread withstands heavy molten fillings.',
       image: 'assets/images/journal-crust-sourdough-brioche.jpg',
-      featureImage: 'assets/images/journal-crust-sourdough-brioche.jpg',
-      featureCaption: 'Artisan rustic sourdough loaf with aerated crumb slices beside golden braided brioche on a baker table.',
+      featureImage: 'assets/images/journal-crust-sourdough-batard.jpg',
+      featureCaption: 'Artisan wild-fermented sourdough batards sliced thick with open crumb pockets for maximum crunch and butter absorption.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Brush bread with fat right up to the very crust edges. Bare edges dry out and become tough rather than shattering crisp.',
@@ -229,8 +229,8 @@
       title: 'Mastering the Flattop Griddle: Heat Zones & Steam Domes',
       lead: 'How a dual-temperature sear zone and stainless steam cover achieves gooey core melts without scorching bread.',
       image: 'assets/images/journal-flattop-steam-dome.jpg',
-      featureImage: 'assets/images/journal-flattop-steam-dome.jpg',
-      featureCaption: 'Stainless steel steam melting dome on a commercial flattop griddle with steaming sizzling artisan grilled cheese.',
+      featureImage: 'assets/images/about-steam-dome-sear.jpg',
+      featureCaption: 'High-heat sear zone paired with stainless steam domes to melt dense cheese cores without scorching the crust.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Never press down forcefully on a grilled cheese! Gentle, even weight gives edge-to-edge golden browning without squeezing out the melted cheese.',
@@ -259,8 +259,8 @@
       title: 'From Farm to Griddle: Sourcing Small-Batch Cheeses',
       lead: 'Partnering with regional dairy farms to bring grass-fed curd, alpine wheels, and artisanal provolone to street food.',
       image: 'assets/images/journal-farm-small-batch-cheese.jpg',
-      featureImage: 'assets/images/journal-farm-small-batch-cheese.jpg',
-      featureCaption: 'Artisan cheesemaker inspecting a golden aged farmhouse cheddar wheel in a rustic cheese cave cellar.',
+      featureImage: 'assets/images/journal-farm-cheese-wheels.jpg',
+      featureCaption: 'Farmstead cheddar wheels aging on spruce boards in small-batch family dairy cellars.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Grass-fed dairy cheeses have a rich golden hue naturally caused by beta-carotene in fresh pasture grasses.',
@@ -289,8 +289,8 @@
       title: 'Alpine Melts & Forest Truffles: Elevating Comfort',
       lead: 'Pairing pungent earthy black truffle glaze with creamy fontina and sautéed cremini for a decadent street bite.',
       image: 'assets/images/journal-alpine-truffle-melt.jpg',
-      featureImage: 'assets/images/journal-alpine-truffle-melt.jpg',
-      featureCaption: 'Pan-seared thyme cremini mushrooms, white truffle oil, and molten fontina on country sourdough.',
+      featureImage: 'assets/images/journal-alpine-mushroom-melt.jpg',
+      featureCaption: 'Sautéed forest thyme cremini mushrooms layered with molten fontina and drizzled with fragrant truffle glaze.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Add truffle oil or glaze only at the very end of cooking. Excessive heat destroys delicate truffle aroma volatiles.',
@@ -319,8 +319,8 @@
       title: 'Midnight Griddle Runs: Late-Night Food Truck Vibes',
       lead: 'The curbside energy after concerts and night shifts—serving hungry crowds under warm string lights.',
       image: 'assets/images/journal-midnight-griddle-vibes.jpg',
-      featureImage: 'assets/images/journal-midnight-griddle-vibes.jpg',
-      featureCaption: 'The vibrant hum of late-night crowds gathered curbside under ambient festoon lights after hours.',
+      featureImage: 'assets/images/journal-foodtruck-street-rodeo.jpg',
+      featureCaption: 'Midnight rally crowds gathered around the food truck hatch craving hot comfort food after concerts and night shifts.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Our late-night grilled cheese wraps feature double-thick parchment to keep melts steaming hot down to the final bite.',
@@ -349,8 +349,8 @@
       title: 'The Perfect Pair: Why Tomato Bisque & Melts Belong Together',
       lead: 'The gastronomic science of contrasting rich dairy lipids with bright, acid-forward roasted San Marzano tomatoes.',
       image: 'assets/images/journal-perfect-pair-bisque-melt.jpg',
-      featureImage: 'assets/images/journal-perfect-pair-bisque-melt.jpg',
-      featureCaption: 'Balancing bright roasted tomato acidity with rich cultured butterfat and aged melted cheese.',
+      featureImage: 'assets/images/journal-tomato-bisque-creamy.jpg',
+      featureCaption: 'Our slow-simmered roasted San Marzano tomato bisque finished with garlic cream, olive oil, and fresh micro-basil.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'A touch of heavy cream in tomato bisque rounds off high acid edges without dulling the bright tomato punch.',
@@ -379,8 +379,8 @@
       title: 'The Chemistry of the Cheese Skirt: Perfecting Griddled Frico',
       lead: 'Discover how allowing overflow cheese to sizzle directly on the hot steel flattop creates a crisp, deeply savory frico lace skirt.',
       image: 'assets/images/journal-cheese-skirt-frico.jpg',
-      featureImage: 'assets/images/journal-cheese-skirt-frico.jpg',
-      featureCaption: 'Deliberate cheese overhang sizzling into a brittle, umami-packed golden lace frico skirt.',
+      featureImage: 'assets/images/journal-fresh-grill.jpg',
+      featureCaption: 'Molten cheese spilling onto the 375°F commercial chrome flat-top to create a shatteringly crisp golden frico skirt.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Use an aged, low-moisture hard cheese like Parmesan or 2-year Cheddar for the crispiest, longest-lasting frico skirt.',
@@ -409,8 +409,8 @@
       title: 'Crisp Pressing Secrets: Panini Ribs vs Flat-Top Searing',
       lead: 'Understand the textural differences between ridged contact grills and heavy cast-iron presses when melting multi-layer gourmet sandwiches.',
       image: 'assets/images/journal-panini-ribs-pressing.jpg',
-      featureImage: 'assets/images/journal-panini-ribs-pressing.jpg',
-      featureCaption: 'Applying calibrated cast-iron weight for complete flat-top sear contact without crushing the crumb.',
+      featureImage: 'assets/images/journal-panini-press-crisp.jpg',
+      featureCaption: 'Heavy ribbed cast-iron panini press delivering bold caramelized grill marks while sealing in molten cheese.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Always preheat your sandwich weight! A cold press pulls heat away from the top bread slice, doubling cooking time.',
@@ -439,8 +439,8 @@
       title: 'The Window Connection: Why Food Truck Hospitality Feels Personal',
       lead: 'There is no dining room wall separating cook from guest—just an open service window where friendships and warm smiles are shared.',
       image: 'assets/images/journal-window-hospitality-truck.jpg',
-      featureImage: 'assets/images/journal-window-hospitality-truck.jpg',
-      featureCaption: 'Eye-to-eye hospitality and personal connections forged over hot melts passed through the service window.',
+      featureImage: 'assets/images/journal-foodtruck-service-window.jpg',
+      featureCaption: 'Genuine hospitality and personal smiles as hot parchment-wrapped artisan melts are handed through the window.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Greeting guests by name and remembering their favorite melt combination is the secret sauce of food truck hospitality.',
@@ -469,8 +469,8 @@
       title: 'The Umami Equilibrium: Blending Sharp Cheddar with Gruyère',
       lead: 'Why pairing high-tang lactic acidity with a nutty, elastic alpine cheese delivers the deepest, most well-rounded gourmet melt profile.',
       image: 'assets/images/journal-umami-cheddar-gruyere.jpg',
-      featureImage: 'assets/images/journal-umami-cheddar-gruyere.jpg',
-      featureCaption: 'The 60/40 golden ratio: punchy sharp cheddar married with nutty, silky cave-aged Gruyère.',
+      featureImage: 'assets/images/journal-four-cheese-craft.jpg',
+      featureCaption: 'The golden ratio: 60% sharp 18-month Wisconsin cheddar for savory punch paired with 40% cave-aged Gruyère for elastic fondue stretch.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Add a pinch of fresh thyme leaves directly onto the cheese layer before closing the sandwich. Thymes herbal aroma cuts through the deep dairy umami.',
@@ -499,8 +499,8 @@
       title: 'The Evolution of Food Truck Culture: From Novelty to Gourmet',
       lead: 'How modern street food transformed from quick grab-and-go into artisan culinary hubs where chefs craft high-technique comfort foods on wheels.',
       image: 'assets/images/journal-foodtruck-culture-gourmet.jpg',
-      featureImage: 'assets/images/journal-foodtruck-culture-gourmet.jpg',
-      featureCaption: 'Modern mobile culinary hubs bringing artisan technique and communal gathering to city streets.',
+      featureImage: 'assets/images/journal-foodtruck-culture-rally.jpg',
+      featureCaption: 'Mobile food truck gatherings redefining street food into culinary destinations with high-technique artisanal cooking.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'Food trucks allow chefs to focus 100% of their energy on food quality rather than table settings and formal dining service.',
@@ -529,8 +529,8 @@
       title: 'Curating a Gourmet Melt Bar: Food Truck Catering for Events',
       lead: 'Why couples, private parties, and corporate events are swapping traditional catering buffets for interactive, made-to-order curbside grilled cheese bars.',
       image: 'assets/images/journal-event-catering-melt-bar.jpg',
-      featureImage: 'assets/images/journal-event-catering-melt-bar.jpg',
-      featureCaption: 'Fresh-to-order interactive grilled cheese bars elevating weddings, corporate galas, and private parties.',
+      featureImage: 'assets/images/journal-catering-sandwich-platter.jpg',
+      featureCaption: 'Interactive gourmet melt bars and artisan slider platters styled for weddings, private parties, and corporate catering.',
       author: 'Chef Kabir Saxena',
       authorImg: 'assets/images/mobile-story-chef.jpg',
       chefTip: 'When booking a food truck for private catering, allocate 3 standard parking spaces on level ground for smooth kitchen operation.',
@@ -669,20 +669,31 @@
               </div>
             `;
           }
+
+          // Dedicated in-article photo break (placed after Section 2 before final takeaway)
+          if (idx === 1 && article.featureImage) {
+            bodyHtml += `
+              <div style="border-radius:var(--radius-md);overflow:hidden;margin-block:2rem;box-shadow:var(--shadow-md);">
+                <img src="${article.featureImage}" alt="${article.featureCaption || article.title}" style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block;">
+                <div style="background:var(--bg-card);padding:0.75rem 1.25rem;font-size:0.88rem;color:var(--text-muted);font-style:italic;border-top:1px solid var(--border-color);line-height:1.5;">
+                  ${article.featureCaption || `Inside The Melt District food truck — ${article.title}`}
+                </div>
+              </div>
+            `;
+          }
         });
 
-        // Dedicated live feature photo break (authentic local asset matching this specific article)
-        const featureImgSrc = article.featureImage || 'assets/images/perfect-cheese-melt-feature.jpg';
-        const featureImgCaption = article.featureCaption || `Inside The Melt District food truck — ${article.title}`;
-
-        bodyHtml += `
-          <div style="border-radius:var(--radius-md);overflow:hidden;margin-block:2.5rem;box-shadow:var(--shadow-md);">
-            <img src="${featureImgSrc}" alt="${featureImgCaption}" style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block;">
-            <div style="background:var(--bg-card);padding:0.75rem 1.25rem;font-size:0.88rem;color:var(--text-muted);font-style:italic;border-top:1px solid var(--border-color);line-height:1.5;">
-              ${featureImgCaption}
+        // Fallback for short articles with fewer than 2 sections
+        if (article.sections.length < 2 && article.featureImage) {
+          bodyHtml += `
+            <div style="border-radius:var(--radius-md);overflow:hidden;margin-block:2rem;box-shadow:var(--shadow-md);">
+              <img src="${article.featureImage}" alt="${article.featureCaption || article.title}" style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block;">
+              <div style="background:var(--bg-card);padding:0.75rem 1.25rem;font-size:0.88rem;color:var(--text-muted);font-style:italic;border-top:1px solid var(--border-color);line-height:1.5;">
+                ${article.featureCaption || `Inside The Melt District food truck — ${article.title}`}
+              </div>
             </div>
-          </div>
-        `;
+          `;
+        }
 
         // Author Signature Bio
         bodyHtml += `

@@ -1273,9 +1273,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 3.5vw, 2.75rem);
-  align-items: stretch;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: flex-start;
 }
 
 .hero-content {
@@ -1483,7 +1483,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  max-width: 660px;
+  align-self: flex-start;
+  margin-top: 1.5rem;
   margin-inline: auto;
   opacity: 1;
   animation: heroMediaEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -1495,14 +1497,13 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14), 0 4px 14px rgba(0, 0, 0, 0.06);
   border: 5px solid #FFFFFF;
-  transform: none;
   background-color: #1E1915;
   animation: heroMeltFloat 5s ease-in-out infinite;
   will-change: transform;
-  transition: box-shadow var(--transition-smooth);
-  height: 100%;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 440px;
+  max-height: 450px;
   width: 100%;
-  min-height: 100%;
   display: flex;
 }
 
@@ -1513,8 +1514,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-main-img-card:hover {
   animation-play-state: paused;
-  transform: none;
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.22);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.25);
 }
 
 .hero-main-img {
@@ -1524,6 +1525,11 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   object-position: center;
   display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-main-img-card:hover .hero-main-img {
+  transform: scale(1.04);
 }
 
 /* Floating Info Cards - Placed Inside Image Bounds at Corners */
@@ -1751,8 +1757,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-home2-layout {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: clamp(2rem, 3vw, 3rem);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
   align-items: start;
 }
 
@@ -1762,11 +1768,26 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: flex-start;
 }
 
+.hero-home2-cta-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-home2-cta-group .btn {
+  white-space: nowrap;
+  padding: 0.85rem 1.45rem;
+  font-size: 0.98rem;
+  flex-shrink: 0;
+}
+
 .hero-home2-media {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 520px;
+  max-width: 630px;
   margin-inline: auto;
   align-self: start;
   margin-top: 0.25rem;
@@ -1794,31 +1815,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .interactive-cheese-meter {
+  grid-column: 1 / -1;
+  width: 100%;
   background-color: var(--bg-card);
-  padding: 1.5rem;
+  padding: 1.35rem 1.65rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   box-shadow: var(--shadow-sm);
 }
 
 .cheese-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
   margin-top: 0.75rem;
+  width: 100%;
 }
 
 .cheese-pill {
-  padding: 0.45rem 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.65rem 1rem;
   border-radius: var(--radius-full);
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-fast);
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 .cheese-pill:hover,
@@ -1845,6 +1875,7 @@ h1, h2, h3, h4, h5, h6 {
 .handwritten-sticker {
   font-family: var(--font-handwritten);
   font-size: 1.25rem;
+  font-weight: 700;
   background-color: var(--cheddar-light);
   color: #854D0E;
   padding: 0.4rem 0.95rem;
@@ -1874,6 +1905,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #FCD34D;
   border: 1.5px solid rgba(245, 158, 11, 0.5);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode Overrides for Handwritten Stickers */
+[data-theme="dark"] .handwritten-sticker {
+  background-color: rgba(45, 25, 10, 0.88);
+  color: #FDE68A;
+  border-color: #F59E0B;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .handwritten-sticker-red {
+  background-color: rgba(69, 10, 10, 0.92);
+  color: #FECACA !important;
+  border-color: #EF4444;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Hero 2 Cinematic Card */
@@ -1907,7 +1954,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-photo-wrap {
   position: relative;
-  height: 420px;
+  height: 380px;
   overflow: hidden;
 }
 
@@ -1956,8 +2003,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-cinematic-card .handwritten-sticker {
-  font-size: 0.8rem;
-  padding: 0.32rem 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .hero-caption-bar {
@@ -3883,26 +3933,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-home2-media {
-    max-width: 480px;
+    max-width: 540px;
   }
 
   .hero-photo-wrap {
-    height: 400px;
+    height: 360px;
+  }
+
+  .cheese-pills {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero-media-wrapper {
     margin-top: 0;
     height: auto;
-    max-width: 540px;
+    max-width: 600px;
+    width: 100%;
   }
 
   .hero-main-img-card {
     height: auto;
+    max-height: 420px;
   }
 
   .hero-main-img {
     height: auto;
-    aspect-ratio: 4 / 3.2;
+    aspect-ratio: 4 / 3;
+    max-height: 420px;
   }
 
   .grid-4,
@@ -3975,6 +4032,19 @@ h1, h2, h3, h4, h5, h6 {
     padding-inline: 1rem;
   }
 
+  .hero-home2-cta-group {
+    flex-wrap: wrap;
+  }
+
+  .hero-home2-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cheese-pills {
+    grid-template-columns: 1fr;
+  }
+
   .hero-home2-media {
     max-width: 100%;
   }
@@ -4014,8 +4084,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero-cinematic-card .handwritten-sticker {
-    font-size: 0.72rem;
-    padding: 0.28rem 0.55rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
   }
 
   .hero-caption-bar {
