@@ -1,0 +1,18 @@
+2026-10-22 08:07:28.673: [INFO] CurrentProfilePath: c:\Users\Sanjai\Desktop\griled\scratch\edge_prof\Default
+2026-10-22 08:07:28.673: [INFO] Profiles total count: 1
+2026-10-22 08:07:28.673: [INFO] Profile: name=Profile 1 path=c:\Users\Sanjai\Desktop\griled\scratch\edge_prof\Default lastActive=2026-10-22T08:07:28.662Z
+2026-10-22 08:07:28.673: [INFO] LastUsedProfileDir: c:\Users\Sanjai\Desktop\griled\scratch\edge_prof\Default
+2026-10-22 08:07:28.673: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=c:\Users\Sanjai\Desktop\griled\scratch\edge_prof\Default lastActive=2026-10-22T08:07:28.662Z
+2026-10-22 08:07:28.673: [INFO] OnDoneLoading sync enabled: 0
+2026-10-22 08:07:28.673: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-22 08:07:28.673: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-22 08:07:28.673: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-22 08:07:28.736: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-22 08:07:28.859: [INFO] VisibilityChanged: 0
+2026-10-22 08:07:31.123: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-22 08:07:31.128: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-22 08:07:31.130: [INFO] Primary account changed.
+2026-10-22 08:07:31.130: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-10-22 08:07:31.145: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-22 08:07:31.165: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-22 08:07:34.699: [INFO] Sync initialization duration: 3442ms

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" dir="ltr" data-theme="light">
+<head><script>localStorage.setItem("melt_district_direction", "rtl");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Melt District | Gourmet Grilled Cheese & Comfort Food Truck</title>
+  <meta name="description" content="Big Cheese. Bigger Comfort. The Melt District serves artisanal grilled cheese sandwiches, fire-roasted tomato bisque, and legendary comfort foods from our mobile street food truck.">
+  <meta name="keywords" content="gourmet grilled cheese, food truck, comfort food, tomato bisque, classic cheddar melt, three-cheese deluxe, spicy jalapeno melt">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="../../assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/style.css?v=5.2">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item active" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#991B1B;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group open">
+        <button class="mobile-dropdown-toggle active" aria-expanded="true">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink active">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+
+  <!-- Drawer Backdrop -->
+  <div class="drawer-backdrop"></div>
+
+  <!-- ==================== SHOPPING CART DRAWER ==================== -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="cart-drawer-body">
+      <!-- Items dynamically populated via cart.js -->
+    </div>
+
+    <!-- Drawer Footer / Summary -->
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">
+        Proceed to Demo Checkout
+      </button>
+      <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.6rem;">
+        ⚡ Hot, fresh pickup straight off the griddle window.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- =========================================================================
+         SECTION 1: HERO SECTION
+         Heading: “MELTED CHEESE. HAPPY HEARTS.”
+         Buttons: “Explore Our Menu” and “Find Our Truck”
+         Image: Golden grilled cheese sandwich with visibly melted cheese
+         ========================================================================= -->
+    <section class="hero-home1" id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Content -->
+          <div class="hero-content">
+            <span class="hero-griddle-badge">
+              <span class="badge-fire" aria-hidden="true">🔥</span>
+              <span>HANDCRAFTED ON OUR MOBILE STEEL GRIDDLE</span>
+            </span>
+
+            <h1 id="hero-title" class="heading-hero" style="font-size:clamp(2.8rem, 6.5vw, 5.2rem);line-height:0.98;">
+              <span class="hero-title-black">MELTED CHEESE.</span>
+              <span class="hero-title-orange" style="color:var(--cheddar);">HAPPY HEARTS.</span>
+            </h1>
+
+            <p class="heading-sub" style="color:var(--text-primary);font-size:clamp(1.1rem, 1.6vw, 1.3rem);font-weight:700;margin-bottom:0.45rem;letter-spacing:-0.01em;">
+              Gourmet Grilled Cheese &amp; Comfort Food, Sizzled Fresh On Wheels.
+            </p>
+
+            <p class="lead-text hero-lead">
+              Step right up to our mobile griddle window for golden-brown, crispy grilled cheese sandwiches made with artisanal 36-hour sourdough, sweet churned butter, and molten aged cheeses that stretch with every bite. Paired with slow-roasted tomato bisque and piping hot comfort sides.
+            </p>
+
+            <div class="hero-cta-group two-cta-row">
+              <a href="menu.html" class="btn btn-hero-explore">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                  <polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"/>
+                </svg>
+                <span>Explore Our Menu</span>
+              </a>
+              <a href="find-the-truck.html" class="btn btn-hero-find">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>Find Our Truck</span>
+              </a>
+            </div>
+
+            <!-- Trust Stats -->
+            <div class="hero-stats-bar">
+              <div class="stat-item">
+                <h3>4.9★</h3>
+                <p>12,000+ Melt Lovers</p>
+              </div>
+              <div class="stat-item">
+                <h3>100%</h3>
+                <p>Real Aged Cheeses</p>
+              </div>
+              <div class="stat-item">
+                <h3>14+</h3>
+                <p>Daily Curbside Stops</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Image Composition -->
+          <div class="hero-media-wrapper">
+            <!-- Food Photograph Card with Badges Inside Corners -->
+            <div class="hero-main-img-card">
+              <img src="../../assets/images/home1-hero-melt.jpg" 
+                   alt="Golden toasted artisanal sourdough grilled cheese sandwich cut in half with dramatic molten cheese pull on a dark plate with tomato bisque dip" 
+                   class="hero-main-img" 
+                   fetchpriority="high">
+
+              <!-- Info Card 1: Inside Top-Start Corner of image (with safe margins so it doesn't touch borders or soup bowl) -->
+              <div class="floating-badge floating-badge-1">
+                <span class="floating-badge-icon" aria-hidden="true">🧀</span>
+                <div>
+                  <strong class="floating-badge-title">24-Inch Pull</strong>
+                  <span class="floating-badge-sub">Aged Wisconsin Cheddar</span>
+                </div>
+              </div>
+
+              <!-- Info Card 2: Inside Top-End Corner of image (safe margins, no touch on borders, plate, or soup bowl) -->
+              <div class="floating-badge floating-badge-2">
+                <span class="floating-badge-icon" aria-hidden="true">🍅</span>
+                <div>
+                  <strong class="floating-badge-title">Slow-Roasted Dip</strong>
+                  <span class="floating-badge-sub">San Marzano Bisque</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: SIGNATURE MELTS SECTION
+         Heading: “SIGNATURE MELTS”
+         Items: Classic Cheddar Melt, Three-Cheese Crunch, Spicy Jalapeño Melt, BBQ Cheese Melt
+         4 relevant food images, descriptions, working menu buttons
+         ========================================================================= -->
+    <section class="section-spacing signature-melts-section" id="signature-melts">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;gap:1.5rem;" class="reveal-on-scroll">
+          <div>
+            <span class="eyebrow eyebrow-red">Sizzling Off The Griddle</span>
+            <h2 class="heading-section signature-melts-title" style="margin-bottom:0.5rem;">SIGNATURE MELTS</h2>
+            <p class="lead-text" style="max-width:680px;">Handcrafted on our 375°F flat top with edge-to-edge buttered bread and molten centers.</p>
+          </div>
+          <a href="menu.html" class="btn-explore-menu-rounded">
+            <span>Explore Complete Menu</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="grid-4">
+          <!-- 1. Classic Cheddar Melt -->
+          <div class="food-card reveal-on-scroll delay-1">
+            <div class="food-card-thumb-wrap">
+              <img src="../../assets/images/signature-melt-1.jpg" 
+                   alt="Classic Cheddar Melt: Golden toasted sourdough topped with melted cheddar cheese and a sunny-side-up egg" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-egg">🟡 EGG</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Classic Cheddar Melt</h3>
+              <p class="food-card-desc">
+                Sharp 18-month Wisconsin yellow and white cheddar melted between thick slices of golden, butter-brushed artisanal brioche toast.
+              </p>
+              <div class="food-card-footer">
+                <div class="food-card-footer-top">
+                  <span class="food-card-price">₹249</span>
+                  <span class="food-card-portion-tag">🔥 Fresh Griddled</span>
+                </div>
+                <div class="food-card-actions">
+                  <a href="menu.html" class="btn btn-outline btn-sm">View in Menu</a>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                    style="background-color:#FFBB35;border-color:#FFBB35;color:#171717;font-weight:800;"
+                    data-id="melt-classic-curd" 
+                    data-name="Classic Cheddar Melt" 
+                    data-price="249" 
+                    data-image="assets/images/signature-melt-1.jpg" 
+                    data-category="Signature Melts">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Three-Cheese Crunch -->
+          <div class="food-card reveal-on-scroll delay-2">
+            <div class="food-card-thumb-wrap">
+              <img src="../../assets/images/signature-melt-2.jpg" 
+                   alt="Three-Cheese Crunch: Golden grilled sandwich triangles with visibly melted cheese, served on a white plate" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg">🟢 VEG</span>
+                <span class="badge badge-chef">🧀 24-INCH PULL</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Three-Cheese Crunch</h3>
+              <p class="food-card-desc">
+                An exquisite trio of nutty French Gruyère, aged sharp white cheddar, and whole-milk low-moisture mozzarella crisped inside garlic-herb sourdough.
+              </p>
+              <div class="food-card-footer">
+                <div class="food-card-footer-top">
+                  <span class="food-card-price">₹299</span>
+                  <span class="food-card-portion-tag">🧀 24-Inch Pull</span>
+                </div>
+                <div class="food-card-actions">
+                  <a href="menu.html" class="btn btn-outline btn-sm">View in Menu</a>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                    style="background-color:#FFBB35;border-color:#FFBB35;color:#171717;font-weight:800;"
+                    data-id="melt-wisconsin-gold" 
+                    data-name="Three-Cheese Crunch" 
+                    data-price="299" 
+                    data-image="assets/images/signature-melt-2.jpg" 
+                    data-category="Signature Melts">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Spicy Jalapeño Melt -->
+          <div class="food-card reveal-on-scroll delay-3">
+            <div class="food-card-thumb-wrap">
+              <img src="../../assets/images/signature-melt-3.jpg" 
+                   alt="Spicy Jalapeño Melt: Gourmet spicy grilled sandwich with roasted jalapeños, colorful fresh ingredients, and a rustic wooden serving board" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg">🟢 VEG</span>
+                <span class="badge badge-spicy">🌶️ SPICY POPPER</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Spicy Jalapeño Melt</h3>
+              <p class="food-card-desc">
+                Fire-roasted charred jalapeños, molten pepper jack, whipped scallion cream cheese, and a crunchy crushed tortilla crust on country sourdough.
+              </p>
+              <div class="food-card-footer">
+                <div class="food-card-footer-top">
+                  <span class="food-card-price">₹329</span>
+                  <span class="food-card-portion-tag">🌶️ Fiery Popper</span>
+                </div>
+                <div class="food-card-actions">
+                  <a href="menu.html" class="btn btn-outline btn-sm">View in Menu</a>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                    style="background-color:#FFBB35;border-color:#FFBB35;color:#171717;font-weight:800;"
+                    data-id="melt-jalapeno-popper" 
+                    data-name="Spicy Jalapeño Melt" 
+                    data-price="329" 
+                    data-image="assets/images/signature-melt-3.jpg" 
+                    data-category="Signature Melts">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. BBQ Cheese Melt -->
+          <div class="food-card reveal-on-scroll delay-4">
+            <div class="food-card-thumb-wrap">
+              <img src="../../assets/images/signature-melt-4-bbq.jpg" 
+                   alt="BBQ Cheese Melt: Perfectly toasted golden sourdough with charred grill lines, smoky barbecue caramelized onions, and molten yellow cheddar" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-smoky">🔥 SMOKY BBQ</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">BBQ Cheese Melt</h3>
+              <p class="food-card-desc">
+                Smoky barbecue glazed caramelized onions, slow-cooked savory fillings, and molten aged cheddar and smoked gouda on griddled sourdough with BBQ drizzle.
+              </p>
+              <div class="food-card-footer">
+                <div class="food-card-footer-top">
+                  <span class="food-card-price">₹349</span>
+                  <span class="food-card-portion-tag">🍖 Smoky Glaze</span>
+                </div>
+                <div class="food-card-actions">
+                  <a href="menu.html" class="btn btn-outline btn-sm">View in Menu</a>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                    style="background-color:#FFBB35;border-color:#FFBB35;color:#171717;font-weight:800;"
+                    data-id="melt-smoky-bbq" 
+                    data-name="BBQ Cheese Melt" 
+                    data-price="349" 
+                    data-image="assets/images/signature-melt-4-bbq.jpg" 
+                    data-category="Signature Melts">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: COMFORT FOOD FAVORITES SECTION
+         Heading: “COMFORT FOOD FAVORITES”
+         Description: “Every great grilled cheese deserves a delicious sidekick. Discover our cozy soups, crispy fries, and refreshing drinks.”
+         4 cards: Gourmet Sandwiches, Roasted Tomato Soup, Crispy Golden Fries, Refreshing Drinks
+         ========================================================================= -->
+    <section class="section-spacing" id="comfort-food-favorites" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">The Full Spread</span>
+          <h2 class="heading-section">COMFORT FOOD FAVORITES</h2>
+          <p class="lead-text">
+            Every great grilled cheese deserves a delicious sidekick. Discover our cozy soups, crispy fries, and refreshing drinks.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- 1. Gourmet Sandwiches -->
+          <div class="comfort-cat-card reveal-on-scroll delay-1">
+            <div class="comfort-cat-thumb">
+              <img src="../../assets/images/comfort-sandwiches.jpg" 
+                   alt="Appetizing platter of gourmet artisanal grilled sandwiches with melted cheeses on rustic wooden board" 
+                   loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:var(--cheddar);color:#12100E;font-weight:800;">MELT STARS</span>
+              </div>
+            </div>
+            <div class="comfort-cat-body">
+              <h3 style="font-size:1.25rem;margin-bottom:0.4rem;">Gourmet Sandwiches</h3>
+              <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;flex:1;">
+                Artisanal slow-fermented sourdough melts crafted with heritage cheeses, gourmet toppings, and edge-to-edge golden crunch.
+              </p>
+              <a href="menu.html" class="btn btn-outline btn-sm" style="width:100%;">
+                Explore Sandwiches →
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Roasted Tomato Soup -->
+          <div class="comfort-cat-card reveal-on-scroll delay-2">
+            <div class="comfort-cat-thumb">
+              <img src="../../assets/images/comfort-tomato-soup.jpg" 
+                   alt="Steaming rich roasted San Marzano tomato bisque in ceramic bowl drizzled with heavy cream swirl and sweet basil" 
+                   loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#B91C1C;color:#FFFFFF;font-weight:800;">ICONIC DIP</span>
+              </div>
+            </div>
+            <div class="comfort-cat-body">
+              <h3 style="font-size:1.25rem;margin-bottom:0.4rem;">Roasted Tomato Soup</h3>
+              <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;flex:1;">
+                Slow-simmered San Marzano tomatoes, roasted garlic cream, sweet basil, served with crunchy sourdough dipping soldiers.
+              </p>
+              <a href="menu.html" class="btn btn-outline btn-sm" style="width:100%;">
+                Explore Soups →
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Crispy Golden Fries -->
+          <div class="comfort-cat-card reveal-on-scroll delay-3">
+            <div class="comfort-cat-thumb">
+              <img src="../../assets/images/comfort-fries.jpg" 
+                   alt="Crispy golden skin-on french fries piled in wire basket dusted with parmesan and fresh chopped parsley" 
+                   loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#15803D;color:#FFFFFF;font-weight:800;">CRUNCH SIDES</span>
+              </div>
+            </div>
+            <div class="comfort-cat-body">
+              <h3 style="font-size:1.25rem;margin-bottom:0.4rem;">Crispy Golden Fries</h3>
+              <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;flex:1;">
+                Hand-cut Idaho russet potatoes fried to a brittle crunch, tossed in white truffle oil, grated Parmesan, and sea salt.
+              </p>
+              <a href="menu.html" class="btn btn-outline btn-sm" style="width:100%;">
+                Explore Sides →
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Refreshing Drinks -->
+          <div class="comfort-cat-card reveal-on-scroll delay-4">
+            <div class="comfort-cat-thumb">
+              <img src="../../assets/images/comfort-drinks.jpg" 
+                   alt="Refreshing craft sparkling lemonades and berry iced tea in frosted glasses with ice and fresh mint" 
+                   loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#4F46E5;color:#FFFFFF;font-weight:800;">COLD SIPS</span>
+              </div>
+            </div>
+            <div class="comfort-cat-body">
+              <h3 style="font-size:1.25rem;margin-bottom:0.4rem;">Refreshing Drinks</h3>
+              <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.25rem;flex:1;">
+                Sparkling blackberry mint lemonades, draft root beer floats, and churned salted butterscotch caramel thickshakes.
+              </p>
+              <a href="menu.html" class="btn btn-outline btn-sm" style="width:100%;">
+                Explore Drinks →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: OUR MOBILE STORY
+         Heading: “BORN ON THE CURBSIDE, PERFECTED ON THE GRIDDLE”
+         Subheading & storytelling paragraphs
+         Image: assets/images/mobile-story-chef.jpg
+         ========================================================================= -->
+    <section class="section-spacing mobile-story-section" id="our-mobile-story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="mobile-story-grid reveal-on-scroll">
+          
+          <!-- Left Column: Food Truck Kitchen Image -->
+          <div class="mobile-story-media-wrap">
+            <div class="mobile-story-img-frame">
+              <img src="../../assets/images/mobile-story-chef.jpg" 
+                   alt="Professional chef preparing gourmet grilled cheese on flat top griddle inside mobile kitchen" 
+                   class="mobile-story-img" 
+                   loading="lazy">
+            </div>
+
+            <!-- Pill Badge: Positioned cleanly BELOW image -->
+            <div class="mobile-story-bottom-badge">
+              <span class="mobile-story-bottom-badge-icon">👨‍🍳</span>
+              <div>
+                <strong class="mobile-story-bottom-badge-title">Live Flat-Top Cooking</strong>
+                <span class="mobile-story-bottom-badge-sub">375°F Chrome Steel &bull; 36-Hr Sourdough</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Storytelling Content -->
+          <div>
+            <span class="mobile-story-badge">
+              <span>✨</span>
+              <span>OUR MOBILE STORY</span>
+            </span>
+
+            <h2 id="story-heading" class="mobile-story-heading">
+              BORN ON THE CURBSIDE,<br>
+              <span style="color:var(--cheddar-hover);">PERFECTED ON THE GRIDDLE</span>
+            </h2>
+
+            <div class="mobile-story-divider">
+              <span class="mobile-story-divider-bar"></span>
+              <span class="mobile-story-divider-dot"></span>
+              <span class="mobile-story-divider-dot"></span>
+            </div>
+
+            <p class="mobile-story-p">
+              The Melt District started with a simple belief: nostalgic comfort food deserves fine-dining culinary respect. We transformed a vintage 1974 step-van into a mobile high-heat kitchen, equipped with mirror-finish chrome griddles and custom steam dome cloches.
+            </p>
+
+            <p class="mobile-story-p">
+              Every morning at 5:00 AM in our central commissary depot, our crew collects fresh 36-hour wild-fermented sourdough from independent artisan bakers, shreds whole wheels of Wisconsin cheddar and French Gruyère by hand, and slow-roasts San Marzano tomatoes for our signature dipping bisque.
+            </p>
+
+            <p class="mobile-story-p">
+              Our mission is simple: serve unforgettable gourmet melts made with premium ingredients, handcrafted with passion, and grilled to molten perfection right in front of your eyes.
+            </p>
+
+            <!-- Craftsmanship Feature Pills -->
+            <div class="mobile-story-pills">
+              <div class="mobile-story-pill">
+                <span>⏰</span>
+                <span>5:00 AM Fresh Prep</span>
+              </div>
+              <div class="mobile-story-pill">
+                <span>🔥</span>
+                <span>375°F Cast Griddle</span>
+              </div>
+              <div class="mobile-story-pill">
+                <span>🧀</span>
+                <span>100% Real Cheeses</span>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="two-cta-row" style="margin-top:2rem;">
+              <a href="find-the-truck.html" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>Find Our Truck Today</span>
+              </a>
+              <a href="menu.html" class="btn btn-outline">
+                <span>View Daily Menu →</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: THE SECRET TO THE PERFECT MELT
+         The 4 Rules of the Griddle
+         ========================================================================= -->
+    <section class="section-spacing griddle-craft-section" id="griddle-craft">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Artisan Griddle Alchemy</span>
+          <h2 class="heading-section">THE SECRET TO THE PERFECT MELT</h2>
+          <p class="lead-text">
+            Four non-negotiable rules our griddle masters follow for every single sandwich that rolls out of our service window.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Rule 1 -->
+          <div class="craft-step-card reveal-on-scroll delay-1">
+            <div class="craft-step-header">
+              <span class="craft-step-num">01</span>
+              <span class="craft-step-icon">🍞</span>
+            </div>
+            <h3 class="craft-step-title">36-Hr Wild Sourdough</h3>
+            <p class="craft-step-desc">
+              Fermented with wild starter for deep, complex tang. Sliced thick and buttered edge-to-edge for an audible crunch that stays crisp down to the last bite.
+            </p>
+            <div class="craft-step-tag">Crispy Golden Exterior</div>
+          </div>
+
+          <!-- Rule 2 -->
+          <div class="craft-step-card reveal-on-scroll delay-2">
+            <div class="craft-step-header">
+              <span class="craft-step-num">02</span>
+              <span class="craft-step-icon">🧀</span>
+            </div>
+            <h3 class="craft-step-title">Aged Cheese Alchemy</h3>
+            <p class="craft-step-desc">
+              Zero processed plastic singles. We hand-grate sharp Wisconsin cheddar, nutty Gruyère, and fresh whole-milk mozzarella to achieve the legendary 24-inch stretch.
+            </p>
+            <div class="craft-step-tag">Molten Core &bull; 24" Pull</div>
+          </div>
+
+          <!-- Rule 3 -->
+          <div class="craft-step-card reveal-on-scroll delay-3">
+            <div class="craft-step-header">
+              <span class="craft-step-num">03</span>
+              <span class="craft-step-icon">🔥</span>
+            </div>
+            <h3 class="craft-step-title">375°F Chrome Griddle</h3>
+            <p class="craft-step-desc">
+              Sizzled on high-output chrome steel and covered under our steam domes. The trapped heat melts the thick cheese layer without burning the buttery golden bread.
+            </p>
+            <div class="craft-step-tag">Steam Dome Sear</div>
+          </div>
+
+          <!-- Rule 4 -->
+          <div class="craft-step-card reveal-on-scroll delay-4">
+            <div class="craft-step-header">
+              <span class="craft-step-num">04</span>
+              <span class="craft-step-icon">🍅</span>
+            </div>
+            <h3 class="craft-step-title">Slow-Roasted Dip</h3>
+            <p class="craft-step-desc">
+              Halved diagonally and served alongside steaming San Marzano tomato bisque simmered with roasted garlic, fresh cream, and sweet garden basil for dipping.
+            </p>
+            <div class="craft-step-tag">The Ultimate Pairing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: FIND OUR TRUCK SECTION
+         Heading: “GOOD MELTS. GREAT STOPS.”
+         Short description & functional “Find Our Truck” button
+         Relevant food-truck image: assets/images/home1-foodtruck.jpg
+         ========================================================================= -->
+    <section class="section-spacing truck-showcase-section" id="find-our-truck">
+      <div class="container">
+        <div class="truck-showcase-grid reveal-on-scroll">
+          
+          <!-- Left Column: Food Truck Photograph Frame with Live Status -->
+          <div class="truck-showcase-img-wrap">
+            <img src="../../assets/images/home1-foodtruck.jpg" 
+                 alt="The Melt District modern gourmet food truck parked on city curbside with warm lighting, wooden accents and service window" 
+                 class="truck-showcase-img" 
+                 loading="lazy">
+            <div class="truck-live-status-pill">
+              <span class="pulse-dot"></span>
+              <span>TRUCK SIZZLING NOW</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Good Melts. Great Stops. Content -->
+          <div class="truck-showcase-details">
+            <span class="eyebrow eyebrow-red">Curbside Street Food</span>
+            <h2 class="heading-section" style="font-size:clamp(2.2rem, 4vw, 3.4rem);margin-bottom:1rem;line-height:1.05;">
+              GOOD MELTS. GREAT STOPS.
+            </h2>
+            <p class="lead-text" style="font-size:1.05rem;line-height:1.7;color:var(--text-secondary);margin-bottom:1.25rem;">
+              Follow the sizzling aroma of browned butter and melted cheese across the city! We roll into prime neighborhood spots, office plazas, and community festivals every single day. Track our live schedule, grab your warm sandwich fresh from the window, or plan your next curbside stop.
+            </p>
+
+            <!-- Rolling Schedule Card -->
+            <div class="truck-stop-card">
+              <div class="truck-stop-row">
+                <div class="truck-stop-icon">📍</div>
+                <div>
+                  <strong style="color:var(--text-primary);display:block;font-size:0.95rem;">Today's Rolling Location:</strong>
+                  <span style="font-size:0.88rem;color:var(--text-secondary);">Cyber City Tech Hub (Gate 4)</span>
+                </div>
+              </div>
+              <div class="truck-stop-row">
+                <div class="truck-stop-icon">⏰</div>
+                <div>
+                  <strong style="color:var(--text-primary);display:block;font-size:0.95rem;">Curbside Hours:</strong>
+                  <span style="font-size:0.88rem;color:var(--text-secondary);">Mon–Fri: 11:30 AM – 9:30 PM &bull; Sat–Sun: 12:00 PM – 11:00 PM</span>
+                </div>
+              </div>
+              <div class="truck-stop-row">
+                <div class="truck-stop-icon">⚡</div>
+                <div>
+                  <strong style="color:var(--text-primary);display:block;font-size:0.95rem;">Griddle Wait Time:</strong>
+                  <span style="font-size:0.88rem;color:var(--text-secondary);">Average 4–6 mins &bull; Fresh &amp; blistering hot</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="truck-showcase-actions two-cta-row">
+              <a href="find-the-truck.html" class="btn btn-primary btn-lg" style="box-shadow:0 6px 20px rgba(248,183,53,0.35);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>Find Our Truck</span>
+              </a>
+              <a href="find-the-truck.html" class="btn btn-outline btn-lg">
+                <span>View Route Schedule →</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: CURBSIDE MOMENTS & PHOTO GALLERY
+         High quality visual gallery of melts, trucks, and community
+         ========================================================================= -->
+    <section class="section-spacing curbside-gallery-section" id="curbside-gallery">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;gap:1.5rem;" class="reveal-on-scroll">
+          <div>
+            <span class="eyebrow eyebrow-red">Curbside Moments</span>
+            <h2 class="heading-section" style="margin-bottom:0.5rem;">FRESH OFF THE MOBILE GRIDDLE</h2>
+            <p class="lead-text" style="max-width:680px;">
+              Golden crusts, molten cheese pulls, and lively food truck energy captured straight from our service window.
+            </p>
+          </div>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="gap:0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Follow @MeltDistrictTruck</span>
+          </a>
+        </div>
+
+        <div class="grid-4">
+          <!-- Gallery Item 1: The 24-Inch Pull -->
+          <div class="gallery-photo-card reveal-on-scroll delay-1">
+            <div class="gallery-photo-wrap">
+              <img src="../../assets/images/gallery-cheese-pull.jpg" 
+                   alt="Close-up of golden toasted artisan sourdough grilled sandwich pulled apart with an extreme 24-inch steaming molten cheese pull" 
+                   class="gallery-photo-img" 
+                   loading="lazy">
+              <span class="gallery-photo-badge">🧀 24-INCH PULL</span>
+            </div>
+            <div class="gallery-photo-info">
+              <h4>The 24-Inch Pull</h4>
+              <p>Sharp Wisconsin white cheddar &amp; nutty Gruyère stretching fresh off our 375°F griddle.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2: Street Food Gathering -->
+          <div class="gallery-photo-card reveal-on-scroll delay-2">
+            <div class="gallery-photo-wrap">
+              <img src="../../assets/images/gallery-foodtruck-crowd.jpg" 
+                   alt="Friends gathered around wooden curbside tables enjoying warm melts and fries under glowing string lights beside the food truck" 
+                   class="gallery-photo-img" 
+                   loading="lazy">
+              <span class="gallery-photo-badge" style="background:#B91C1C;color:#FFFFFF;">🚚 CURBSIDE VIBE</span>
+            </div>
+            <div class="gallery-photo-info">
+              <h4>Street Food Gathering</h4>
+              <p>Our vintage mobile food truck serving hot curbside comfort to neighborhood crowds under evening lights.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3: Fire-Roasted Bisque Dip -->
+          <div class="gallery-photo-card reveal-on-scroll delay-3">
+            <div class="gallery-photo-wrap">
+              <img src="../../assets/images/gallery-tomato-bisque.jpg" 
+                   alt="Rustic ceramic bowl of steaming hot fire-roasted tomato basil bisque with cream swirl and toasted sourdough bread" 
+                   class="gallery-photo-img" 
+                   loading="lazy">
+              <span class="gallery-photo-badge" style="background:#B91C1C;color:#FFFFFF;">🍅 SAN MARZANO DIP</span>
+            </div>
+            <div class="gallery-photo-info">
+              <h4>Fire-Roasted Bisque Dip</h4>
+              <p>Crispy toasted sourdough melt served with slow-simmered San Marzano tomato bisque crafted for dunking.</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4: Blistered Artisanal Crust -->
+          <div class="gallery-photo-card reveal-on-scroll delay-4">
+            <div class="gallery-photo-wrap">
+              <img src="../../assets/images/gallery-golden-crust.jpg" 
+                   alt="Gourmet sourdough grilled sandwich sizzling on a cast iron griddle with blistered golden crust and lacy frico cheese skirt" 
+                   class="gallery-photo-img" 
+                   loading="lazy">
+              <span class="gallery-photo-badge" style="background:#15803D;color:#FFFFFF;">🔥 ARTISANAL CRUST</span>
+            </div>
+            <div class="gallery-photo-info">
+              <h4>Blistered Golden Crust</h4>
+              <p>36-hour wild fermented sourdough brushed with churned sweet butter and seared for an audible crunch.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: CUSTOMER REVIEWS & COMMUNITY LOVE
+         Testimonials with star ratings and real customer quotes
+         ========================================================================= -->
+    <section class="section-spacing testimonials-home-section" id="community-love" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">4.9★ Curbside Rating</span>
+          <h2 class="heading-section">WHY FOODIES LOVE THE MELT DISTRICT</h2>
+          <p class="lead-text">
+            Over 12,000+ satisfied comfort food lovers queue up by our truck window every single month.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Review 1 -->
+          <div class="testimonial-card reveal-on-scroll delay-1">
+            <div class="stars-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p style="font-style:italic;color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">
+              "You can taste the craftsmanship in every single bite. The fact that they use real artisanal sourdough and hand-shredded cheese instead of pre-sliced grocery singles elevates food truck street food into gourmet dining."
+            </p>
+            <div class="customer-info">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Ananya Rao" class="customer-avatar" loading="lazy">
+              <div>
+                <strong>Ananya Rao</strong>
+                <span>Loyal Curbside Regular &bull; Indiranagar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card reveal-on-scroll delay-2">
+            <div class="stars-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p style="font-style:italic;color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">
+              "Our engineering squad literally plans Thursday lunches around where The Melt District truck is parked. That Three-Cheese Crunch dipped in piping hot San Marzano tomato bisque is pure heaven on a rainy afternoon."
+            </p>
+            <div class="customer-info">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Vikram Bose" class="customer-avatar" loading="lazy">
+              <div>
+                <strong>Vikram Bose</strong>
+                <span>Engineering Director &bull; Cyber City Tech Hub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card reveal-on-scroll delay-3">
+            <div class="stars-rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p style="font-style:italic;color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">
+              "The 24-inch cheese pull is 100% real and not just an Instagram marketing trick! Perfectly blistered crust, molten center, and the friendliest culinary crew on wheels. Can't wait for our next curbside stop."
+            </p>
+            <div class="customer-info">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Meera Nair" class="customer-avatar" loading="lazy">
+              <div>
+                <strong>Meera Nair</strong>
+                <span>Food Stylist &bull; Koramangala</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION: PRIVATE CATERING & POP-UP EVENTS
+         Banner inviting catering bookings for weddings, corporate, parties
+         ========================================================================= -->
+    <section class="section-spacing private-catering-preview" id="curbside-catering">
+      <div class="container">
+        <div class="catering-cta-banner reveal-on-scroll">
+          <div class="catering-cta-content">
+            <span class="eyebrow eyebrow-red">Mobile Catering &bull; From ₹450 / Guest</span>
+            <h2 class="heading-section" style="font-size:clamp(2rem, 3.8vw, 3.2rem);margin-bottom:1rem;line-height:1.1;">
+              BRING OUR FOOD TRUCK TO YOUR CELEBRATION
+            </h2>
+            <p class="lead-text" style="font-size:1.05rem;line-height:1.7;color:var(--text-secondary);margin-bottom:1.5rem;">
+              Turn your wedding afterparty, corporate milestone, or private birthday bash into an unforgettable street food festival. We roll up with roaring flat-top griddles, artisanal cheese pulls, and zero cleanup stress.
+            </p>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;">
+              <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;font-weight:700;color:var(--text-primary);">
+                <span style="color:var(--cheddar-hover);font-size:1.2rem;">🚚</span>
+                <span>Zero On-Site Kitchen Needed</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;font-weight:700;color:var(--text-primary);">
+                <span style="color:var(--tomato);font-size:1.2rem;">⚡</span>
+                <span>300+ Melts / Hour Speed</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;font-weight:700;color:var(--text-primary);">
+                <span style="color:var(--sage);font-size:1.2rem;">♻️</span>
+                <span>100% Compostable Packaging</span>
+              </div>
+            </div>
+
+            <div class="catering-cta-actions two-cta-row">
+              <a href="service-details.html" class="btn btn-primary">
+                <span>View Catering Packages →</span>
+              </a>
+              <a href="find-the-truck.html" class="btn btn-outline">
+                <span>Check Available Dates</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="catering-cta-media-wrap">
+            <div class="catering-cta-media">
+              <img src="../../assets/images/catering-celebration.jpg" 
+                   alt="The Melt District food truck catering an elegant outdoor celebration event with guests enjoying hot gourmet melts" 
+                   class="catering-cta-img" 
+                   loading="lazy">
+            </div>
+            <!-- Badge positioned cleanly OUTSIDE the image -->
+            <div class="catering-bottom-badge">
+              <span class="catering-bottom-badge-icon">🎉</span>
+              <div class="catering-bottom-badge-text">
+                <strong>Curbside Party Packages</strong>
+                <small>30 to 1,000+ Guests &bull; Live Sizzling</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: FINAL CTA SECTION
+         Heading: “YOUR NEXT CHEESY OBSESSION STARTS HERE”
+         Short promotional description & “Explore Full Menu” button
+         ========================================================================= -->
+    <section class="section-spacing final-cta-section" id="final-cta">
+      <div class="container container-narrow reveal-on-scroll" style="position:relative;z-index:2;">
+        <span class="eyebrow eyebrow-red" style="background:rgba(220,38,38,0.25);color:#FCA5A5;border-color:rgba(220,38,38,0.4);margin-bottom:1.25rem;">
+          Fresh Hot Griddle Window Open Now
+        </span>
+        <h2 class="heading-section" style="color:#FFFFFF;margin-bottom:1.25rem;font-size:clamp(2.4rem, 5vw, 4rem);line-height:1.08;">
+          YOUR NEXT CHEESY OBSESSION STARTS HERE
+        </h2>
+        <p style="color:#D6D0C7;font-size:1.15rem;margin-bottom:2.5rem;line-height:1.7;max-width:680px;margin-inline:auto;">
+          Craving the ultimate golden crunch and molten cheese pull? Step up to our food truck window or dive into our complete handcrafted menu of signature melts, slow-cooked soups, and crispy sides.
+        </p>
+        <div class="banner-cta-group two-cta-row justify-center">
+          <a href="menu.html" class="btn btn-primary btn-lg" style="box-shadow:0 8px 24px rgba(248,183,53,0.35);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            <span>Explore Full Menu</span>
+          </a>
+          <a href="find-the-truck.html" class="btn btn-outline btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="12 8 8 12 12 16 16 12 12 8"/>
+            </svg>
+            <span>Find Our Truck</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       SECTION 8: COMPLETE FOOTER
+       Navigation links, contact information, social media links, copyright
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+            <a href="blog.html" class="footer-link">Food Stories & Blog</a>
+            <a href="contact.html" class="footer-link">Contact & Bookings</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Hours & Commissary Info -->
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru 560038</span>
+          </p>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.4rem;">
+            📞 Dispatch Hotline: <a href="tel:+919876543210" style="color:var(--cheddar);">+91 98765 43210</a>
+          </p>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins, festival alerts, and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing gourmet food truck brand.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Files -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/cart.js"></script>
+</body>
+</html>

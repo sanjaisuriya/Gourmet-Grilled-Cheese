@@ -132,6 +132,9 @@
   <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-drawer-header">
       <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
         <span>MELT<span class="logo-accent">DISTRICT</span></span>
       </div>
       <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
@@ -244,7 +247,7 @@
             </p>
 
             <!-- Call to Actions -->
-            <div class="hero-home2-cta-group">
+            <div class="hero-home2-cta-group two-cta-row">
               <a href="#signature-collection" class="btn btn-primary" style="box-shadow:var(--shadow-cheese);">
                 <span>Explore Signature Melts</span>
                 <span style="font-size:1.1rem;display:inline-block;transition:transform 0.2s;">↓</span>
@@ -723,7 +726,7 @@
                 Drag the slider below or click the quick stretch milestones to test our stretch threshold.
               </p>
             </div>
-            <div style="display:flex;gap:0.5rem;">
+            <div class="stretch-preset-group" style="display:flex;flex-wrap:wrap;gap:0.5rem;">
               <button class="btn btn-dark btn-sm stretch-preset-btn" data-inches="6">6" Warm Up</button>
               <button class="btn btn-dark btn-sm stretch-preset-btn" data-inches="14">14" The Ribbon</button>
               <button class="btn btn-tomato btn-sm stretch-preset-btn" data-inches="24">24" Legend</button>
@@ -917,21 +920,21 @@
                 </div>
 
                 <div class="byo-summary-card">
-                  <div style="font-size:0.9rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;">
-                    <span style="color:var(--text-muted);">Artisan Bread:</span>
-                    <strong id="byo-summary-bread">36-Hour Sourdough</strong>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Artisan Bread:</span>
+                    <strong class="byo-summary-value" id="byo-summary-bread">36-Hour Sourdough</strong>
                   </div>
-                  <div style="font-size:0.9rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;">
-                    <span style="color:var(--text-muted);">Cheese Duet:</span>
-                    <strong id="byo-summary-cheese">White Cheddar, Mozzarella</strong>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Cheese Duet:</span>
+                    <strong class="byo-summary-value" id="byo-summary-cheese">Sharp White Cheddar, Wisconsin Mozzarella</strong>
                   </div>
-                  <div style="font-size:0.9rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;">
-                    <span style="color:var(--text-muted);">Gourmet Add-Ons:</span>
-                    <strong id="byo-summary-addons">Caramelized Onion Jam</strong>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Gourmet Add-Ons:</span>
+                    <strong class="byo-summary-value" id="byo-summary-addons">Balsamic Caramelized Onions</strong>
                   </div>
-                  <div style="font-size:0.9rem;display:flex;justify-content:space-between;">
-                    <span style="color:var(--text-muted);">Dipping Sauce:</span>
-                    <strong id="byo-summary-dip">San Marzano Tomato Bisque</strong>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Dipping Sauce:</span>
+                    <strong class="byo-summary-value" id="byo-summary-dip">San Marzano Tomato Bisque</strong>
                   </div>
                 </div>
               </div>
@@ -973,7 +976,6 @@
                    alt="Bowl of creamy fire roasted San Marzano tomato bisque" 
                    class="food-card-img" 
                    loading="lazy">
-              <div class="food-card-price-tag">₹169</div>
             </div>
             <div class="food-card-body">
               <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">San Marzano Tomato Bisque</h3>
@@ -998,7 +1000,6 @@
                    alt="Crispy golden french fries dusted with rosemary and parmesan" 
                    class="food-card-img" 
                    loading="lazy">
-              <div class="food-card-price-tag">₹199</div>
             </div>
             <div class="food-card-body">
               <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">Rosemary Truffle Fries</h3>
@@ -1023,7 +1024,6 @@
                    alt="Artisanal aged cheese board with cheddar wedge and grapes" 
                    class="food-card-img" 
                    loading="lazy">
-              <div class="food-card-price-tag">₹289</div>
             </div>
             <div class="food-card-body">
               <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">Artisan Cheese & Honeycomb</h3>
@@ -1048,7 +1048,6 @@
                    alt="Fresh baked rustic sourdough bread loaves" 
                    class="food-card-img" 
                    loading="lazy">
-              <div class="food-card-price-tag">₹149</div>
             </div>
             <div class="food-card-body">
               <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">Charred Garlic Levain</h3>
@@ -1219,7 +1218,7 @@
         <p style="color:#D6D0C7;font-size:1.15rem;margin-bottom:2.25rem;line-height:1.65;">
           Elevate your wedding, corporate milestone, or private birthday with our mobile pop-up griddle bar. Guests customize their melts while our chefs sear them fresh under steam domes.
         </p>
-        <div style="display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;">
+        <div class="banner-cta-group two-cta-row justify-center">
           <a href="service-details.html" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-cheese);">
             View Catering Packages
           </a>
@@ -1239,7 +1238,10 @@
         
         <!-- Brand & Mission Column -->
         <div class="footer-col">
-          <a href="index.html" class="brand-logo" style="color:#FFFFFF;margin-bottom:1rem;">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
             <span>MELT<span class="logo-accent">DISTRICT</span></span>
           </a>
           <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">

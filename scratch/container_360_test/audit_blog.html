@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Melt Journal | Food Stories, Cheese Guides & Griddle Recipes</title>
+  <meta name="description" content="Explore stories from the road, cheese melting guides, butter-toasting secrets, and comforting soup recipes from the chefs behind The Melt District food truck.">
+  <meta name="keywords" content="grilled cheese recipes, cheese guide, food truck stories, comfort food blog">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4.2">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link active">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="page-hero-banner hero-bg-blog" id="journal-hero">
+      <div class="container">
+        <div class="page-hero-inner reveal-on-scroll">
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="active-crumb">The Melt Journal</span>
+          </nav>
+          <div>
+            <span class="eyebrow eyebrow-red">Stories &amp; Street Food Culture</span>
+          </div>
+          <h1 class="heading-hero">
+            THE MELT JOURNAL
+          </h1>
+          <p class="lead-text" style="margin-bottom:1.15rem;">
+            Good stories, great melts, and extra cheese. Discover the secrets behind golden buttery bread and street food culture.
+          </p>
+          <div class="page-hero-actions two-cta-row justify-center">
+            <a href="#featured-journal-story" class="btn btn-primary btn-sm">Explore Stories ↓</a>
+            <a href="menu.html" class="btn btn-outline btn-sm">Order Melts →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. FEATURED STORY SECTION ==================== -->
+    <section class="journal-featured-wrapper" id="featured-journal-story">
+      <div class="container">
+        <div class="journal-featured-card reveal-on-scroll">
+          
+          <!-- Left Column — Article Content -->
+          <div class="journal-featured-content">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+              <span class="journal-badge" style="background:#FFF0BD;color:#B65B00;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;font-size:0.75rem;padding:0.35rem 0.85rem;border-radius:var(--radius-full);">
+                FEATURED STORY · GRILLED CHEESE TIPS
+              </span>
+              <span style="font-size:0.85rem;color:var(--text-muted);font-weight:600;display:inline-flex;align-items:center;gap:0.35rem;">
+                ⏱️ 6 Min Read
+              </span>
+            </div>
+
+            <h2 class="journal-featured-headline">
+              <a href="blog-details.html?id=1">
+                The Secret to the Perfect Cheese Melt
+              </a>
+            </h2>
+
+            <p class="journal-featured-desc">
+              A great grilled cheese is more than bread and cheese. It’s about the right balance of buttery crispness, rich flavor, and that irresistible stretch of melted cheese. Discover how bread choice, cheese combinations, heat, and patience come together to create a perfectly golden sandwich.
+            </p>
+
+            <div style="display:flex;align-items:center;justify-content:flex-start;gap:1.25rem;margin-top:auto;padding-top:1.25rem;border-top:1px solid rgba(0,0,0,0.06);">
+              <a href="blog-details.html?id=1" class="btn btn-primary" style="font-weight:700;padding:0.75rem 1.6rem;border-radius:var(--radius-full);">
+                Read the Story →
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column — Featured Food Image -->
+          <div class="journal-featured-img-wrap">
+            <a href="blog-details.html?id=1" style="display:block;width:100%;height:100%;text-decoration:none;">
+              <img src="assets/images/perfect-cheese-melt-feature.jpg" 
+                   alt="Artisanal golden-brown sourdough grilled cheese sandwich cut diagonally on rustic wooden board with rich melted cheese stretch and gentle steam" 
+                   class="journal-featured-img" 
+                   loading="eager">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. LATEST STORIES & CATEGORY EXPLORATION ==================== -->
+    <section class="section-spacing" id="latest-stories" style="padding-top:clamp(2rem, 4vw, 3.5rem);">
+      <div class="container">
+        
+        <!-- Explore by Category Block -->
+        <div class="explore-by-category-block reveal-on-scroll" style="margin-bottom:2.5rem;text-align:center;">
+          <span class="journal-eyebrow-red" style="margin-bottom:0.4rem;">FILTER BY TOPIC</span>
+          <h3 style="font-size:clamp(1.5rem, 2.6vw, 2rem);margin-bottom:0.5rem;text-transform:uppercase;">EXPLORE YOUR CRAVINGS</h3>
+          <p style="color:var(--text-secondary);max-width:640px;margin:0 auto 1.5rem auto;font-size:0.95rem;">
+            Explore our stories by the topics you love most—from cheese melt science and griddle tips to behind-the-scenes food truck life and comfort food recipes.
+          </p>
+
+          <div class="category-tabs blog-category-tabs" role="tablist" aria-label="Explore by Category" style="justify-content:center;flex-wrap:wrap;gap:0.6rem 0.75rem;margin:0 auto;max-width:820px;overflow:visible;">
+            <!-- Top Row: All Stories + 3 Categories -->
+            <button class="blog-tab-btn tab-btn active" data-category="all">All Stories</button>
+            <button class="blog-tab-btn tab-btn" data-category="science">Cheese Melt Science</button>
+            <button class="blog-tab-btn tab-btn" data-category="tips">Grilled Cheese Tips</button>
+            <button class="blog-tab-btn tab-btn" data-category="behind-the-scenes">Behind the Scenes</button>
+
+            <!-- Line break for 2 balanced rows -->
+            <div class="tab-row-break" aria-hidden="true" style="flex-basis:100%;height:0;margin:0;"></div>
+
+            <!-- Bottom Row: 3 Categories -->
+            <button class="blog-tab-btn tab-btn" data-category="cheese-flavor">Cheese &amp; Flavor</button>
+            <button class="blog-tab-btn tab-btn" data-category="culture">Street Food Culture</button>
+            <button class="blog-tab-btn tab-btn" data-category="inspiration">Food &amp; Inspiration</button>
+          </div>
+
+          <div class="menu-search-wrapper blog-search-wrapper" style="margin:1.6rem auto 0 auto;max-width:590px;width:100%;">
+            <span class="menu-search-icon" aria-hidden="true">🔍</span>
+            <input type="search" id="blog-search-input" class="menu-search-input" placeholder="Search stories, tips &amp; recipes..." aria-label="Search stories">
+          </div>
+        </div>
+
+        <!-- BLOG CARDS GRID (3 Columns Desktop, 2 Columns Tablet, 1 Column Mobile) -->
+        <div class="grid-3" id="blog-posts-grid">
+          
+          <!-- Article 1: The Art of the Perfect Cheese Pull (Cheese Melt Science) -->
+          <article class="food-card blog-card reveal-on-scroll delay-1" data-category="science">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=1" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-cheese-pull-molten.jpg" alt="Gourmet grilled sourdough sandwich being gently pulled apart with golden crust and molten stretching cheese" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-science" style="font-weight:700;">CHEESE MELT SCIENCE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=1">The Art of the Perfect Cheese Pull</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Discover how cheese selection, moisture, temperature, and melting techniques help create that irresistible cheese pull in every grilled sandwich.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=1" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2: The Ultimate Butter-Toasting Guide (Grilled Cheese Tips) -->
+          <article class="food-card blog-card reveal-on-scroll delay-2" data-category="tips">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=2" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-butter-guide.jpg" alt="Hands spreading creamy butter on thick artisan sourdough bread before grilling" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-tips" style="font-weight:700;">GRILLED CHEESE TIPS</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 6 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=2">The Ultimate Butter-Toasting Guide</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Learn how butter, bread selection, and controlled heat work together to create a crispy golden crust with a soft, cheesy center.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=2" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3: Behind the Scenes at Our Food Truck (Behind the Scenes) -->
+          <article class="food-card blog-card reveal-on-scroll delay-3" data-category="behind-the-scenes">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=3" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-behind-scenes.jpg" alt="A cook preparing grilled cheese sandwiches on a professional flat-top griddle inside a food truck" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-bts" style="font-weight:700;">BEHIND THE SCENES</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=3">Behind the Scenes at Our Food Truck</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Take a closer look at food truck life, from ingredient preparation and sizzling griddles to the final sandwich served fresh to hungry customers.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=3" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4: Finding Your Perfect Cheese Combination (Cheese & Flavor) -->
+          <article class="food-card blog-card reveal-on-scroll delay-1" data-category="cheese-flavor">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=4" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-cheese-flavor-combinations.jpg" alt="Artisanal cheese board featuring wedges of aged cheddar, gouda, brie, and gruyere with walnuts and cheese slicer" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-flavor" style="font-weight:700;">CHEESE &amp; FLAVOR</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=4">Finding Your Perfect Cheese Combination</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Explore the flavors and textures of cheddar, mozzarella, Gouda, and other cheeses to discover combinations that bring richness, creaminess, and delicious flavor.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=4" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5: The Street Food Moments We Love (Street Food Culture) -->
+          <article class="food-card blog-card reveal-on-scroll delay-2" data-category="culture">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=5" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-street-food-moments.jpg" alt="Vibrant outdoor food truck gathering at twilight with community dining at wooden picnic tables under string lights" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-culture" style="font-weight:700;">STREET FOOD CULTURE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=5">The Street Food Moments We Love</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Discover the community, atmosphere, and memorable food moments that make street food culture special, from lively outdoor festivals to casual gatherings.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=5" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 6: Comfort Food for Every Occasion (Food & Inspiration) -->
+          <article class="food-card blog-card reveal-on-scroll delay-3" data-category="inspiration">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=6" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-comfort-food-pairings.jpg" alt="Golden crispy artisanal sourdough grilled cheese melt with gooey cheese pull served with steaming roasted tomato bisque" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-inspiration" style="font-weight:700;">FOOD &amp; INSPIRATION</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=6">Comfort Food for Every Occasion</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Find inspiration for relaxed lunches, friendly get-togethers, and special celebrations with delicious grilled cheese pairings and comforting food ideas.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=6" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 7: The Crust Chemistry (Cheese Melt Science) -->
+          <article class="food-card blog-card reveal-on-scroll delay-1" data-category="science">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=7" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-crust-sourdough-brioche.jpg" alt="Artisan rustic sourdough loaf with aerated crumb slices beside golden braided brioche on a baker table" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-science" style="font-weight:700;">CHEESE MELT SCIENCE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=7">The Crust Chemistry: Sourdough vs Brioche</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Explore the Maillard reaction, crumb open-structure, and controlled steam release that create a shatteringly crisp crust without letting melted cheese turn soggy.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=7" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 8: Mastering the Flattop Griddle (Grilled Cheese Tips) -->
+          <article class="food-card blog-card reveal-on-scroll delay-2" data-category="tips">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=8" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-flattop-steam-dome.jpg" alt="Stainless steel steam melting dome on a commercial flattop griddle with steaming sizzling artisan grilled cheese" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-tips" style="font-weight:700;">GRILLED CHEESE TIPS</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 6 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=8">Mastering the Flattop Griddle: Heat Zones &amp; Steam Domes</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Why dual-temperature surface zones and a quick splash of water under a stainless steel melting dome make all the difference between scorched bread and molten center cheese.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=8" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 9: From Farm to Griddle (Behind the Scenes) -->
+          <article class="food-card blog-card reveal-on-scroll delay-3" data-category="behind-the-scenes">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=9" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-farm-small-batch-cheese.jpg" alt="Artisan cheesemaker inspecting a golden aged farmhouse cheddar wheel in a rustic cheese cave aging cellar" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-bts" style="font-weight:700;">BEHIND THE SCENES</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=9">From Farm to Griddle: Sourcing Small-Batch Cheeses</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Meet the independent family dairy farms behind our 24-month sharp Wisconsin cheddar and learn how cave-aging and pasture grass transform every melted bite.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=9" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 10: Alpine Melts & Forest Truffles (Cheese & Flavor) -->
+          <article class="food-card blog-card reveal-on-scroll delay-1" data-category="cheese-flavor">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=10" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-alpine-truffle-melt.jpg" alt="Artisan grilled sourdough melt stuffed with sautéed forest mushrooms and molten Gruyere and Fontina cheese with truffle glaze" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-flavor" style="font-weight:700;">CHEESE &amp; FLAVOR</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=10">Alpine Melts &amp; Forest Truffles: Elevating Comfort</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Pairing caramelized cremini mushrooms with nutty Swiss Gruyère, Fontina, and Italian white truffle oil brings deep, savory umami to classic comfort sandwiches.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=10" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 11: Midnight Griddle Runs (Street Food Culture) -->
+          <article class="food-card blog-card reveal-on-scroll delay-2" data-category="culture">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=11" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-midnight-griddle-vibes.jpg" alt="Glowing late-night food truck curbside under illuminated marquee lights with friends enjoying hot melts at midnight" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-culture" style="font-weight:700;">STREET FOOD CULTURE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=11">Midnight Griddle Runs: Late-Night Food Truck Vibes</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                From bustling weekend night rallies to neon curbside stops, experience the shared laughter, aroma of sizzling butter, and vibrant community after hours.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=11" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 12: The Science of Tomato Bisque & Melts (Food & Inspiration) -->
+          <article class="food-card blog-card reveal-on-scroll delay-3" data-category="inspiration">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=12" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-perfect-pair-bisque-melt.jpg" alt="Golden grilled cheese melt being dipped into a steaming ceramic bowl of roasted tomato bisque with molten cheese pull" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-inspiration" style="font-weight:700;">FOOD &amp; INSPIRATION</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=12">The Perfect Pair: Why Tomato Bisque &amp; Melts Belong Together</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Why bright plum tomato acidity balances decadent cultured butter and aged cheese fat, making hot soup and grilled sourdough the holy grail of comfort dining.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=12" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 13: The Chemistry of the Cheese Skirt (Cheese Melt Science) -->
+          <article class="food-card blog-card reveal-on-scroll delay-1" data-category="science">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=13" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-cheese-skirt-frico.jpg" alt="Gourmet sourdough grilled cheese sizzling on a hot commercial steel flattop griddle with an expansive crispy golden lace cheese skirt" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-science" style="font-weight:700;">CHEESE MELT SCIENCE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=13">The Chemistry of the Cheese Skirt: Perfecting Griddled Frico</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Discover how allowing overflow cheese to sizzle directly on the hot steel flattop creates a crisp, deeply savory frico lace skirt prized by street food purists.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=13" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 14: Crisp Pressing Secrets (Grilled Cheese Tips) -->
+          <article class="food-card blog-card reveal-on-scroll delay-2" data-category="tips">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=14" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-panini-ribs-pressing.jpg" alt="Cast-iron panini press lifted to show bold caramelized grill ridges and molten cheese dripping from a hot gourmet sandwich" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-tips" style="font-weight:700;">GRILLED CHEESE TIPS</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=14">Crisp Pressing Secrets: Panini Ribs vs Flat-Top Searing</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Understand the textural differences between ridged contact grills and heavy cast-iron presses when melting multi-layer gourmet sandwiches to golden perfection.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=14" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 15: The Window Connection (Behind the Scenes) -->
+          <article class="food-card blog-card reveal-on-scroll delay-3" data-category="behind-the-scenes">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=15" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-window-hospitality-truck.jpg" alt="Warm and friendly chef smiling at an illuminated food truck service window handing a hot wrapped grilled cheese melt to a smiling customer" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-bts" style="font-weight:700;">BEHIND THE SCENES</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=15">The Window Connection: Why Food Truck Hospitality Feels Personal</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                There is no dining room wall separating cook from guest—just an open service window where friendships, neighborhood stories, and warm smiles are shared every service.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=15" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 16: The Umami Equilibrium (Cheese & Flavor) -->
+          <article class="food-card blog-card reveal-on-scroll delay-1" data-category="cheese-flavor">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=16" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-umami-cheddar-gruyere.jpg" alt="Gourmet sourdough grilled cheese pulled apart with molten sharp Wisconsin cheddar and creamy alpine Gruyère stretch on a rustic wood board with cheese wedges" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-flavor" style="font-weight:700;">CHEESE &amp; FLAVOR</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 6 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=16">The Umami Equilibrium: Blending Sharp Cheddar with Gruyère</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Why pairing high-tang lactic acidity with a nutty, elastic alpine cheese delivers the deepest, most well-rounded gourmet melt profile in comfort food history.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=16" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 17: The Evolution of Food Truck Culture (Street Food Culture) -->
+          <article class="food-card blog-card reveal-on-scroll delay-2" data-category="culture">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=17" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-foodtruck-culture-gourmet.jpg" alt="Vibrant urban food truck rally with artisan mobile kitchens, festival crowds, and street food culture in a bustling city plaza" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-culture" style="font-weight:700;">STREET FOOD CULTURE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 5 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=17">The Evolution of Food Truck Culture: From Novelty to Gourmet</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                How modern street food transformed from quick grab-and-go into artisan culinary hubs where chefs craft high-technique comfort foods on wheels for vibrant urban communities.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=17" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 18: Curating a Gourmet Melt Bar (Food & Inspiration) -->
+          <article class="food-card blog-card reveal-on-scroll delay-3" data-category="inspiration">
+            <div class="food-card-thumb-wrap">
+              <a href="blog-details.html?id=18" style="display:block;width:100%;height:100%;text-decoration:none;"><img src="assets/images/journal-event-catering-melt-bar.jpg" alt="Event catering platter loaded with freshly grilled gourmet melt sliders with melted cheese, tomato, and skewers on silver party trays" class="food-card-img" loading="lazy"></a>
+              <div class="food-card-tags">
+                <span class="badge badge-inspiration" style="font-weight:700;">FOOD &amp; INSPIRATION</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size:0.82rem;color:var(--text-muted);font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.35rem;">
+                ⏱️ 4 Min Read
+              </div>
+              <h3 class="food-card-title blog-card-title">
+                <a href="blog-details.html?id=18">Curating a Gourmet Melt Bar: Food Truck Catering for Events</a>
+              </h3>
+              <p class="food-card-desc blog-card-excerpt">
+                Why couples, private parties, and corporate events are swapping traditional catering buffets for interactive, made-to-order curbside grilled cheese bars.
+              </p>
+              <div class="food-card-footer">
+                <a href="blog-details.html?id=18" class="btn btn-outline btn-sm" style="font-weight:700;width:100%;text-align:center;">Read More →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- No Results Empty State -->
+        <div id="blog-no-results" style="display:none;text-align:center;padding:4rem 1rem;background:var(--bg-card);border-radius:var(--radius-md);border:1px dashed var(--border-color);margin-top:2rem;">
+          <div style="font-size:3rem;margin-bottom:0.5rem;" aria-hidden="true">📖🔍</div>
+          <h3 style="font-size:1.4rem;margin-bottom:0.4rem;">No Articles Found</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;">Try searching for "cheese", "butter", "griddle", or "culture".</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. NEWSLETTER SECTION ==================== -->
+    <section class="section-spacing journal-newsletter-section" id="journal-newsletter" style="padding-top:0;">
+      <div class="container">
+        <div class="journal-newsletter-box reveal-on-scroll">
+          <div class="journal-newsletter-content">
+            <span class="journal-eyebrow-red" style="margin-bottom:0.85rem;">JOIN THE MELT CLUB</span>
+            <h2 class="journal-newsletter-title">GET A LITTLE EXTRA CHEESY</h2>
+            <p class="journal-newsletter-desc">
+              Get our latest food stories, grilled cheese tips, and delicious inspiration delivered to your inbox.
+            </p>
+            <form id="journal-newsletter-form" class="journal-newsletter-form" novalidate>
+              <div class="journal-input-group">
+                <label for="journal-email" class="sr-only">Email address</label>
+                <input type="email" id="journal-email" name="email" class="journal-email-input" placeholder="Enter your email address..." required autocomplete="email">
+                <button type="submit" class="btn btn-primary journal-subscribe-btn">Subscribe</button>
+              </div>
+              <div id="journal-newsletter-feedback" class="journal-feedback-msg" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. FINAL CTA SECTION ==================== -->
+    <section class="section-spacing" id="journal-final-cta" style="padding-top:0;">
+      <div class="container">
+        <div class="final-contact-cta reveal-on-scroll">
+          <span class="journal-eyebrow-red" style="margin-bottom:0.75rem;">STREET-SIDE CRAVINGS</span>
+          <h2>HUNGRY FOR MORE?</h2>
+          <p>
+            Loved the stories? Discover your next favorite melt.
+          </p>
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+            <a href="menu.html" class="btn btn-primary" style="font-size:1.05rem;padding:0.9rem 2rem;font-weight:700;">Order Melts →</a>
+            <a href="find-the-truck.html" class="btn btn-outline" style="font-size:1.05rem;padding:0.9rem 2rem;font-weight:700;">Find Our Food Truck 📍</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck website.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/blog.js"></script>
+<script>
+window.addEventListener('load', () => {
+  const winW = window.innerWidth;
+  const docW = document.documentElement.scrollWidth;
+  const bodyW = document.body.scrollWidth;
+  
+  const report = [];
+  report.push('=== PAGE AUDIT ===');
+  report.push('winW: ' + winW + ', docW: ' + docW + ', bodyW: ' + bodyW);
+
+  // Check all containers
+  document.querySelectorAll('.container, .container-narrow, .container-wide, .header-container').forEach((c, idx) => {
+    const r = c.getBoundingClientRect();
+    const cs = window.getComputedStyle(c);
+    report.push(`Container[${idx}]: ${c.className}`);
+    report.push(`  left: ${r.left.toFixed(1)}, right: ${r.right.toFixed(1)}, width: ${r.width.toFixed(1)}`);
+    report.push(`  padding-left: ${cs.paddingLeft}, padding-right: ${cs.paddingRight}`);
+    report.push(`  margin-left: ${cs.marginLeft}, margin-right: ${cs.marginRight}`);
+  });
+
+  // Check elements that overflow doc width
+  const over = [];
+  document.querySelectorAll('*').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.right > winW + 1 || r.left < -1) {
+      over.push({
+        tag: el.tagName,
+        cls: el.className,
+        id: el.id,
+        left: r.left.toFixed(1),
+        right: r.right.toFixed(1),
+        width: r.width.toFixed(1)
+      });
+    }
+  });
+
+  report.push(`=== OVERFLOWING ELEMENTS (Total: ${over.length}) ===`);
+  over.slice(0, 15).forEach(o => {
+    report.push(`  <${o.tag} class="${o.cls}" id="${o.id}"> [left: ${o.left}, right: ${o.right}, width: ${o.width}]`);
+  });
+
+  const div = document.createElement('div');
+  div.id = 'audit-results';
+  div.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#000;color:#0f0;font-size:10px;font-family:monospace;z-index:9999999;padding:10px;white-space:pre-wrap;box-sizing:border-box;max-height:100vh;overflow:auto;';
+  div.textContent = report.join('\n');
+  document.body.appendChild(div);
+});
+</script></body>
+</html>
+

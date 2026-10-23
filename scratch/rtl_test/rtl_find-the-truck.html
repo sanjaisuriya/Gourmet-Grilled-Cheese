@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" dir="ltr" data-theme="light">
+<head><script>localStorage.setItem("melt_district_direction", "rtl"); document.documentElement.setAttribute("dir", "rtl");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Food Truck | The Melt District</title>
+  <meta name="description" content="Track where The Melt District food truck is parked today! View our weekly curbside stops, upcoming food festival appearances, and get turn-by-turn directions.">
+  <meta name="keywords" content="find food truck, food truck schedule, truck locations, street food tracker, curbside stops">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="../../assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/style.css?v=4.7">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link active">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link active">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-banner hero-bg-truck">
+      <div class="container">
+        <div class="page-hero-inner reveal-on-scroll">
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="active-crumb">Find Your Food Truck</span>
+          </nav>
+          <div>
+            <div class="live-status-pill" style="display:inline-flex;">
+              <span class="pulse-dot"></span>
+              <span>LIVE ROLLING STATUS: ON THE ROAD</span>
+            </div>
+          </div>
+          <h1 class="heading-hero">
+            FIND YOUR FOOD TRUCK
+          </h1>
+          <p class="lead-text" style="margin-bottom:1.15rem;max-width:720px;margin-inline:auto;">
+            Discover where our food truck is serving this week. Explore locations, check serving hours, and find today's grilled cheese specials.
+          </p>
+          <div class="page-hero-actions two-cta-row justify-center">
+            <a href="#schedule-cards-grid" class="btn btn-primary btn-sm">View Weekly Stops ↓</a>
+            <a href="#city-radar-map" class="btn btn-outline btn-sm">City Radar Map 📍</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE CURBSIDE RADAR & SCHEDULE FILTER -->
+    <section class="section-spacing" style="padding-top:clamp(2.5rem, 4vw, 4rem);">
+      <div class="container schedule-container">
+        
+        <!-- Verified Location Details & Sample Schedule Demonstration Notice -->
+        <div class="schedule-demo-disclaimer reveal-on-scroll" style="max-width:760px;margin:0 auto 2.25rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.85rem 1.25rem;display:flex;align-items:center;gap:0.85rem;box-shadow:var(--shadow-sm);font-size:0.86rem;color:var(--text-secondary);line-height:1.45;">
+          <span style="font-size:1.3rem;flex-shrink:0;" aria-hidden="true">ℹ️</span>
+          <div>
+            <strong style="color:var(--text-primary);font-weight:700;">Curbside Schedule &amp; Verified Locations (Demo Data):</strong>
+            All location names and street addresses correspond to verified real-world office parks, pedestrian streets, and brewery courtyards. Route timings and daily grilled cheese specials are presented as sample demonstration content for customer ordering and navigation simulation.
+          </div>
+        </div>
+
+        <!-- Day-of-week Selector Tabs -->
+        <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;" class="reveal-on-scroll" role="tablist" aria-label="Weekly schedule filters">
+          <button class="schedule-day-btn active" data-day="all" role="tab" aria-selected="true">All Weekly Stops</button>
+          <button class="schedule-day-btn" data-day="mon" role="tab" aria-selected="false">Monday</button>
+          <button class="schedule-day-btn" data-day="tue" role="tab" aria-selected="false">Tuesday</button>
+          <button class="schedule-day-btn" data-day="wed" role="tab" aria-selected="false">Wednesday</button>
+          <button class="schedule-day-btn" data-day="thu" role="tab" aria-selected="false">Thursday</button>
+          <button class="schedule-day-btn" data-day="fri" role="tab" aria-selected="false">Friday</button>
+          <button class="schedule-day-btn" data-day="sat" role="tab" aria-selected="false">Saturday</button>
+          <button class="schedule-day-btn" data-day="sun" role="tab" aria-selected="false">Sunday</button>
+        </div>
+
+        <!-- Schedule Cards Grid (4 & 4 Balanced Layout - 8 Total Stops) -->
+        <div class="schedule-grid-4" id="schedule-cards-grid">
+          
+          <!-- Monday Card: Bagmane Tech Park North -->
+          <div class="truck-schedule-card reveal-on-scroll delay-1" data-day="mon">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/stop-bagmane-techpark.jpg" alt="The Wisconsin 3-Cheese Gold Melt with San Marzano Bisque Cup served curbside at Bagmane Tech Park North" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#FEF3C7;color:#92400E;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🥪 MONDAY LUNCH</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>11:30 AM – 3:30 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>The Melt District Cruiser #1</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Bagmane Tech Park North</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>65/2, Byrasandra, CV Raman Nagar, Bengaluru, Karnataka 560093</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">The Wisconsin 3-Cheese Gold Melt with San Marzano Bisque Cup</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=Bagmane+Tech+Park+CV+Raman+Nagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="bagmane" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tuesday Card: ITPL Whitefield Promenade -->
+          <div class="truck-schedule-card reveal-on-scroll delay-2" data-day="tue">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/catering-hero.jpg" alt="The Golden Griddle food truck serving grilled cheese at ITPL Promenade" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#FEF3C7;color:#92400E;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">⚡ TUESDAY TECH SIZZLE</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>12:00 PM – 9:00 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>The Golden Griddle Unit #2</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">International Tech Park (ITPL) Promenade</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>Pattandur Agrahara, Whitefield Main Rd, Bengaluru, Karnataka 560066</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">Buffalo Buttermilk Fried Chicken Melt &amp; Crispy Garlic Tots</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=ITPL+Whitefield+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="whitefield" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wednesday Card: HSR Layout Sector 4 Greens -->
+          <div class="truck-schedule-card reveal-on-scroll delay-3" data-day="wed">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/blog-catering-melt-bar.jpg" alt="The Melt Bar artisan food truck trailer parked curbside at HSR Layout Sector 4 Park Greens" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#DCFCE7;color:#166534;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🌿 MIDWEEK RETREAT</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>12:00 PM – 9:30 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>The Melt District Cruiser #1</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">HSR Layout Sector 4 Park Greens</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>27th Main Rd, Sector 4, Opposite Park Gate, Bengaluru, Karnataka 560102</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">Wild Sautéed Truffle Shroom Melt &amp; Cold Blackberry Lemonade</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=Sector+4+HSR+Layout+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="hsr" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thursday Lunch Card: RMZ Ecoworld -->
+          <div class="truck-schedule-card reveal-on-scroll delay-1" data-day="thu">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/contact-hero-banner.jpg" alt="Artisan grilled cheese food truck serving molten melts curbside at RMZ Ecoworld Lakeside Amphitheatre lunch hub" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#E0E7FF;color:#3730A3;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🏢 THURSDAY LUNCH HUB</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>11:30 AM – 4:00 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>The Golden Griddle Unit #2</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">RMZ Ecoworld Lakeside Amphitheatre</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>Outer Ring Rd, Devarabisanahalli, Bellandur, Bengaluru, Karnataka 560103</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">Smoked Gouda &amp; Caramelized Onion Melt with Roasted Garlic Aioli</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=RMZ+Ecoworld+Bellandur+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="ecoworld" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thursday Evening Card: Church Street -->
+          <div class="truck-schedule-card reveal-on-scroll delay-2" data-day="thu">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/contact-delicious-happen.jpg" alt="Artisan grilled cheese food truck chef serving hot melts to guests at Church Street Pedestrian Promenade night market" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#FEE2E2;color:#991B1B;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🌙 THURSDAY NIGHT MARKET</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>4:30 PM – 10:30 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>Sizzle Wagon Express #3</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Church Street Pedestrian Promenade</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>Church St, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">4-Cheese Quattro Formaggi Melt &amp; Griddled Herb Dippers</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=Church+Street+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="church-street" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Friday Card: Cyber City (Active Today) -->
+          <div class="truck-schedule-card active-today reveal-on-scroll delay-1" data-day="fri">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/stop-cyber-city.jpg" alt="The Melt District flagship food truck stop at DLF Cyber Hub Promenade illuminated by tensile canopy lights in Gurugram" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge badge-chef" style="font-weight:700;display:inline-flex;align-items:center;gap:5px;box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+                  <span class="pulse-dot" style="width:7px;height:7px;background:#FFF;border-radius:50%;display:inline-block;"></span>
+                  🔥 ACTIVE TODAY · SIZZLING NOW
+                </span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>12:00 PM – 10:00 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>The Melt District Flagship</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Cyber City Business Plaza</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>Gate 4, Sector 24, Cyber Hub Promenade, Gurugram, Haryana 122002</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--tomato);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--tomato);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Today's Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">Jalapeño Bacon Popper Melt &amp; Hot Spiced Apple Cider Float</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=Cyber+Hub+Gurugram+Sector+24" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="cyber-city" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saturday Card: Toit Microbrewery Courtyard -->
+          <div class="truck-schedule-card reveal-on-scroll delay-2" data-day="sat">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/stop-toit-courtyard.jpg" alt="Toit Microbrewery Courtyard weekend food truck pop-up under festival lights with craft beer garden vibes in Indiranagar" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#FEF3C7;color:#B45309;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🍻 WEEKEND BREWERY POP-UP</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>1:00 PM – 11:00 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>Sizzle Wagon Express #3</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Toit Microbrewery Courtyard</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>298, 100 Feet Rd, Indiranagar Stage 1, Bengaluru, Karnataka 560038</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Weekend Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">14-Hour Smoked Texas Brisket Melt &amp; Truffle Parmesan Fries</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=Toit+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="indiranagar" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sunday Card: Koramangala 4th Block Grounds -->
+          <div class="truck-schedule-card reveal-on-scroll delay-3" data-day="sun">
+            <div class="card-img-wrap">
+              <img src="../../assets/images/gallery-foodtruck-crowd.jpg" alt="Community food truck festival at Koramangala 4th Block Open Grounds" loading="lazy">
+              <div style="position:absolute;top:12px;inset-inline-start:12px;">
+                <span class="badge" style="background:#FCE7F3;color:#9D174D;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.15);">🎪 SUNDAY FOOD FESTIVAL</span>
+              </div>
+              <div style="position:absolute;bottom:10px;inset-inline-end:12px;background:rgba(26,22,18,0.88);backdrop-filter:blur(6px);color:#FFF;padding:5px 12px;border-radius:var(--radius-sm);font-size:0.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px;box-shadow:0 2px 6px rgba(0,0,0,0.25);">
+                <span>🕒</span><span>11:00 AM – 9:00 PM</span>
+              </div>
+            </div>
+            <div style="padding:1.25rem;display:flex;flex-direction:column;flex:1;">
+              <div style="flex:1;">
+                <div class="truck-name-tag" style="display:inline-flex;align-items:center;gap:0.35rem;font-size:0.8rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.35rem;">
+                  <span>🚚</span> <span>The Melt District Flagship</span>
+                </div>
+                <h3 style="font-size:1.18rem;margin-bottom:0.35rem;font-family:var(--font-body);font-weight:800;color:var(--text-primary);line-height:1.25;">Koramangala 4th Block Open Grounds</h3>
+                <p style="color:var(--text-secondary);font-size:0.84rem;margin-bottom:0.85rem;line-height:1.45;display:flex;align-items:flex-start;gap:0.35rem;">
+                  <span style="flex-shrink:0;">📍</span> <span>80 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034</span>
+                </p>
+                <div style="background:var(--bg-secondary);padding:0.75rem 0.85rem;border-radius:var(--radius-sm);border-inline-start:3px solid var(--cheddar);font-size:0.82rem;margin-bottom:1.15rem;line-height:1.45;">
+                  <strong style="color:var(--cheddar-hover);display:flex;align-items:center;gap:0.35rem;margin-bottom:0.2rem;"><span>🧀</span> Festival Grilled Cheese Special:</strong>
+                  <span style="color:var(--text-primary);font-weight:500;">French Double-Cream Brie with Hot Honey Drizzle &amp; Salted Caramel Shakes</span>
+                </div>
+              </div>
+              <div class="two-cta-row" style="margin-top:auto;">
+                <a href="https://maps.google.com/?q=Koramangala+4th+Block+Bengaluru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;min-width:115px;justify-content:center;font-weight:700;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Get Directions ↗
+                </a>
+                <button class="btn btn-outline btn-sm map-pin-focus" data-spot="koramangala" style="min-width:105px;justify-content:center;padding:0.6rem 0.75rem;font-size:0.84rem;">
+                  Show on Map 📍
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty State (Shown when filter has no stops) -->
+          <div id="schedule-empty-state" style="display:none;grid-column:1/-1;text-align:center;padding:3.5rem 1.5rem;background:var(--bg-card);border:1px dashed var(--border-color);border-radius:var(--radius-lg);margin:1rem auto;max-width:560px;width:100%;">
+            <div style="font-size:3rem;margin-bottom:0.75rem;" aria-hidden="true">🚚💨</div>
+            <h3 style="font-size:1.35rem;font-weight:800;color:var(--text-primary);margin-bottom:0.5rem;">No Stops Scheduled For This Day</h3>
+            <p style="color:var(--text-secondary);font-size:0.92rem;margin-bottom:1.5rem;line-height:1.5;">
+              Our food trucks are in the commissary prepping fresh artisan bread and cheese batches. Check our other weekly stops!
+            </p>
+            <button class="btn btn-primary btn-sm" id="reset-schedule-filter-btn" style="display:inline-flex;margin:0 auto;font-weight:700;">
+              View All Weekly Stops ↺
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW CURBSIDE ORDERING WORKS IN 3 STEPS -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Fast, Fresh &amp; Sizzling</span>
+          <h2 class="heading-section">How Curbside Ordering Works</h2>
+          <p class="lead-text">From live street tracking to that legendary first cheese pull in 3 easy steps.</p>
+        </div>
+
+        <div class="grid-3 reveal-on-scroll">
+          <div class="feature-card" style="text-align:center;padding:2.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);">
+            <div style="width:64px;height:64px;margin:0 auto 1.25rem;border-radius:50%;background:var(--cheddar-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;border:2px solid var(--cheddar);">
+              📡
+            </div>
+            <div class="step-num" style="display:inline-block;padding:0.2rem 0.6rem;background:var(--bg-primary);border-radius:var(--radius-full);font-size:0.75rem;font-weight:800;color:var(--cheddar-hover);margin-bottom:0.75rem;border:1px solid var(--border-color);">
+              STEP 01
+            </div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.6rem;">Track Today's Spot</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin:0;">
+              Check our live radar below or Instagram daily dispatch pin at 10:00 AM to see where our truck drops stabilizer jacks.
+            </p>
+          </div>
+
+          <div class="feature-card" style="text-align:center;padding:2.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);">
+            <div style="width:64px;height:64px;margin:0 auto 1.25rem;border-radius:50%;background:var(--cheddar-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;border:2px solid var(--cheddar);">
+              🧀
+            </div>
+            <div class="step-num" style="display:inline-block;padding:0.2rem 0.6rem;background:var(--bg-primary);border-radius:var(--radius-full);font-size:0.75rem;font-weight:800;color:var(--cheddar-hover);margin-bottom:0.75rem;border:1px solid var(--border-color);">
+              STEP 02
+            </div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.6rem;">Order At Window Or Online</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin:0;">
+              Walk right up to our serving counter or pre-order through our online cart to pick up without queuing during busy lunch rushes.
+            </p>
+          </div>
+
+          <div class="feature-card" style="text-align:center;padding:2.25rem 1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);">
+            <div style="width:64px;height:64px;margin:0 auto 1.25rem;border-radius:50%;background:var(--cheddar-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;border:2px solid var(--cheddar);">
+              🔥
+            </div>
+            <div class="step-num" style="display:inline-block;padding:0.2rem 0.6rem;background:var(--bg-primary);border-radius:var(--radius-full);font-size:0.75rem;font-weight:800;color:var(--cheddar-hover);margin-bottom:0.75rem;border:1px solid var(--border-color);">
+              STEP 03
+            </div>
+            <h3 style="font-size:1.25rem;margin-bottom:0.6rem;">Hot Sear &amp; Cheese Pull</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin:0;">
+              In under 5 minutes, grab your freshly grilled sourdough melt wrapped in thermal foil with steaming tomato bisque and parmesan fries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MAP & ROUTE RADAR SECTION -->
+    <section class="section-spacing" style="background-color: var(--bg-primary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">City Route Navigation</span>
+          <h2 class="heading-section">Curbside Radar Map</h2>
+          <p class="lead-text">
+            Click any pin on our city radar to view details and jump to today's active food truck stops.
+          </p>
+        </div>
+
+        <div class="map-placeholder-box reveal-on-scroll" id="city-radar-map">
+          <!-- Stylized Interactive Vector City Map -->
+          <svg id="city-radar-svg" width="100%" height="100%" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style="background:var(--bg-card);display:block;">
+            <defs>
+              <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="var(--border-color)" stroke-width="1" opacity="0.3"/>
+              </pattern>
+            </defs>
+            <rect width="1000" height="500" fill="url(#gridPattern)"/>
+
+            <!-- Stylized River & Roads -->
+            <path d="M 0 160 Q 250 220 500 180 T 1000 320" fill="none" stroke="#93C5FD" stroke-width="24" opacity="0.25"/>
+            <path d="M 150 0 L 250 500" fill="none" stroke="var(--border-color)" stroke-width="6" opacity="0.4"/>
+            <path d="M 0 350 L 1000 280" fill="none" stroke="var(--border-color)" stroke-width="8" opacity="0.5"/>
+            <path d="M 450 0 Q 600 250 750 500" fill="none" stroke="var(--border-color)" stroke-width="6" opacity="0.4"/>
+
+            <!-- Pin 1: Cyber City (Active Today) -->
+            <g class="map-pin-group active-pin" id="pin-cyber-city" transform="translate(200, 140)" style="cursor:pointer;" tabindex="0" role="button" aria-label="Cyber City Business Plaza">
+              <circle cx="0" cy="0" r="26" fill="#F59E0B" opacity="0.25" class="pulse-ring"/>
+              <circle cx="0" cy="0" r="14" fill="#DC2626"/>
+              <text x="0" y="5" text-anchor="middle" fill="#FFF" font-size="12" font-weight="bold">🚚</text>
+              <rect x="-70" y="-45" width="140" height="28" rx="6" fill="#1C1917"/>
+              <text x="0" y="-27" text-anchor="middle" fill="#FAF7F2" font-size="11" font-weight="700">Cyber City (TODAY)</text>
+            </g>
+
+            <!-- Pin 2: Bagmane Tech Park (Monday) -->
+            <g class="map-pin-group" id="pin-bagmane" transform="translate(430, 150)" style="cursor:pointer;" tabindex="0" role="button" aria-label="Bagmane Tech Park">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-60" y="-38" width="120" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">Bagmane (Mon)</text>
+            </g>
+
+            <!-- Pin 3: Whitefield ITPL (Tuesday) -->
+            <g class="map-pin-group" id="pin-whitefield" transform="translate(860, 160)" style="cursor:pointer;" tabindex="0" role="button" aria-label="ITPL Whitefield">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-65" y="-38" width="130" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">ITPL Whitefield (Tue)</text>
+            </g>
+
+            <!-- Pin 4: HSR Layout (Wednesday) -->
+            <g class="map-pin-group" id="pin-hsr" transform="translate(630, 410)" style="cursor:pointer;" tabindex="0" role="button" aria-label="HSR Layout Sector 4 Greens">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-60" y="-38" width="120" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">HSR Greens (Wed)</text>
+            </g>
+
+            <!-- Pin 5: RMZ Ecoworld (Thursday Lunch) -->
+            <g class="map-pin-group" id="pin-ecoworld" transform="translate(750, 310)" style="cursor:pointer;" tabindex="0" role="button" aria-label="RMZ Ecoworld">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-65" y="-38" width="130" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">RMZ Ecoworld (Thu)</text>
+            </g>
+
+            <!-- Pin 6: Church Street (Thursday Evening) -->
+            <g class="map-pin-group" id="pin-church-street" transform="translate(320, 270)" style="cursor:pointer;" tabindex="0" role="button" aria-label="Church Street">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-65" y="-38" width="130" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">Church St (Thu PM)</text>
+            </g>
+
+            <!-- Pin 7: Toit Indiranagar (Saturday) -->
+            <g class="map-pin-group" id="pin-indiranagar" transform="translate(570, 220)" style="cursor:pointer;" tabindex="0" role="button" aria-label="Toit Microbrewery">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-65" y="-38" width="130" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">Toit Indiranagar (Sat)</text>
+            </g>
+
+            <!-- Pin 8: Koramangala (Sunday) -->
+            <g class="map-pin-group" id="pin-koramangala" transform="translate(470, 360)" style="cursor:pointer;" tabindex="0" role="button" aria-label="Koramangala Open Grounds">
+              <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+              <text x="0" y="4" text-anchor="middle" fill="#1C1917" font-size="10" font-weight="bold">📍</text>
+              <rect x="-65" y="-38" width="130" height="24" rx="4" fill="#1C1917" opacity="0.9"/>
+              <text x="0" y="-22" text-anchor="middle" fill="#FAF7F2" font-size="10" font-weight="600">Koramangala (Sun)</text>
+            </g>
+          </svg>
+
+          <!-- Interactive Overlay Card inside Map -->
+          <div id="map-info-popup" style="position:absolute;bottom:20px;inset-inline-end:20px;background:var(--bg-card);padding:1.25rem;border-radius:var(--radius-md);box-shadow:var(--shadow-lg);border:1px solid var(--border-color);max-width:350px;width:calc(100% - 40px);z-index:4;transition:all 0.3s cubic-bezier(0.16,1,0.3,1);">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.4rem;">
+              <span class="badge badge-chef">🔥 ACTIVE TODAY</span>
+              <span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);">🕒 12:00 PM – 10:00 PM</span>
+            </div>
+            <h4 style="font-size:1.15rem;margin-bottom:0.25rem;font-weight:800;color:var(--text-primary);">Cyber City Business Plaza</h4>
+            <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.5rem;line-height:1.4;">
+              📍 Gate 4, Sector 24, Cyber Hub Promenade
+            </p>
+            <div style="background:var(--bg-secondary);padding:0.5rem 0.65rem;border-radius:var(--radius-sm);font-size:0.8rem;margin-bottom:0.75rem;border-inline-start:3px solid var(--cheddar);">
+              <strong>Melt Special:</strong> Jalapeño Bacon Popper Melt & Hot Apple Cider Float
+            </div>
+            <div style="display:flex;gap:0.4rem;">
+              <a href="https://maps.google.com/?q=Cyber+Hub+Gurugram+Sector+24" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;text-align:center;justify-content:center;">
+                Get Directions ↗
+              </a>
+              <a href="menu.html" class="btn btn-outline btn-sm" style="justify-content:center;">
+                Menu 🧀
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURBSIDE TRUCK AMENITIES & HOSPITALITY -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="reveal-on-scroll truck-amenities-grid">
+          <div class="truck-amenities-content">
+            <span class="eyebrow">Street Hospitality</span>
+            <h2 class="heading-section" style="margin-bottom:1rem;">Curbside Truck Amenities</h2>
+            <p class="lead-text" style="margin-bottom:1.35rem;">
+              We turn ordinary office parks, plazas, and brewery courtyards into vibrant open-air comfort food havens.
+            </p>
+
+            <div class="truck-amenities-cards-grid">
+              <div style="background:var(--bg-card);padding:1.15rem;border-radius:var(--radius-md);border:1px solid var(--border-color);box-shadow:var(--shadow-sm);">
+                <div style="font-size:1.65rem;margin-bottom:0.45rem;">⚡</div>
+                <h4 style="font-size:1.02rem;margin-bottom:0.3rem;">5-Min Griddle Speed</h4>
+                <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">Dual commercial chrome flat-tops keep queue wait times under 5 minutes at lunch.</p>
+              </div>
+
+              <div style="background:var(--bg-card);padding:1.15rem;border-radius:var(--radius-md);border:1px solid var(--border-color);box-shadow:var(--shadow-sm);">
+                <div style="font-size:1.65rem;margin-bottom:0.45rem;">🪑</div>
+                <h4 style="font-size:1.02rem;margin-bottom:0.3rem;">Pop-Up Bistro Barrels</h4>
+                <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">Standing cocktail barrels, bistro umbrellas, and outdoor picnic seating provided.</p>
+              </div>
+
+              <div style="background:var(--bg-card);padding:1.15rem;border-radius:var(--radius-md);border:1px solid var(--border-color);box-shadow:var(--shadow-sm);">
+                <div style="font-size:1.65rem;margin-bottom:0.45rem;">📱</div>
+                <h4 style="font-size:1.02rem;margin-bottom:0.3rem;">Tap &amp; Cashless Pay</h4>
+                <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">Contactless UPI QR codes, Apple Pay, Google Pay, tap cards, and split tabs.</p>
+              </div>
+
+              <div style="background:var(--bg-card);padding:1.15rem;border-radius:var(--radius-md);border:1px solid var(--border-color);box-shadow:var(--shadow-sm);">
+                <div style="font-size:1.65rem;margin-bottom:0.45rem;">🐶</div>
+                <h4 style="font-size:1.02rem;margin-bottom:0.3rem;">Dog-Friendly Pups</h4>
+                <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">Fresh chilled water bowls and complimentary artisan pup cheddar snacks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="truck-amenities-media" style="margin-top:clamp(7.5rem, 11vw, 9.5rem); margin-bottom:2rem;">
+            <div class="truck-amenities-img-frame">
+              <img src="../../assets/images/blog-foodtruck-culture-gourmet.jpg" 
+                   alt="Community of guests enjoying gourmet grilled cheese at wooden outdoor bistro tables beside The Flavor Lab food truck under glowing patio bistro lights" 
+                   loading="lazy">
+            </div>
+            <div class="floating-badge truck-amenities-badge">
+              <span class="floating-badge-icon">🥂</span>
+              <div>
+                <strong class="floating-badge-title">Curbside Community</strong>
+                <span class="floating-badge-sub">Good Food, Good Vibes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOMENTS FROM THE CURBSIDE PHOTO GALLERY -->
+    <section class="section-spacing" style="background-color: var(--bg-primary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Life On Four Wheels</span>
+          <h2 class="heading-section">Moments From The Curbside</h2>
+          <p class="lead-text">A snapshot of the steam, sizzle, cheese pulls, and festival evenings around our truck.</p>
+        </div>
+
+        <div class="grid-4 reveal-on-scroll">
+          <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--border-color);background:var(--bg-card);transition:transform var(--transition-fast);">
+            <div style="height:210px;overflow:hidden;">
+              <img src="../../assets/images/curbside-flattop-sear.jpg" 
+                   alt="Food truck chef searing artisanal sourdough grilled cheese sandwiches on a 375°F flat-top chrome griddle with sizzling butter and steam" 
+                   loading="lazy"
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-normal);"
+                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1rem;">
+              <strong style="font-size:0.95rem;display:block;margin-bottom:0.25rem;">Cast-Iron Flat-Top Sear</strong>
+              <p style="font-size:0.82rem;color:var(--text-secondary);margin:0;">Clarified butter on 375°F chrome</p>
+            </div>
+          </div>
+
+          <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--border-color);background:var(--bg-card);transition:transform var(--transition-fast);">
+            <div style="height:210px;overflow:hidden;">
+              <img src="../../assets/images/curbside-cheese-pull.jpg" 
+                   alt="Artisanal toasted sourdough grilled cheese cut in half with dramatic molten Gruyère and Wisconsin white cheddar pull stretching fresh off the griddle" 
+                   loading="lazy"
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-normal);"
+                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1rem;">
+              <strong style="font-size:0.95rem;display:block;margin-bottom:0.25rem;">The Signature Cheese Pull</strong>
+              <p style="font-size:0.82rem;color:var(--text-secondary);margin:0;">Triple blend stretched to perfection</p>
+            </div>
+          </div>
+
+          <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--border-color);background:var(--bg-card);transition:transform var(--transition-fast);">
+            <div style="height:210px;overflow:hidden;">
+              <img src="../../assets/images/curbside-service-hatch.jpg" 
+                   alt="Smiling food truck chef handing freshly grilled gourmet sandwiches across the service counter to happy customers" 
+                   loading="lazy"
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-normal);"
+                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1rem;">
+              <strong style="font-size:0.95rem;display:block;margin-bottom:0.25rem;">The Service Hatch Vibe</strong>
+              <p style="font-size:0.82rem;color:var(--text-secondary);margin:0;">Smiles, hot foil packages &amp; cheer</p>
+            </div>
+          </div>
+
+          <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--border-color);background:var(--bg-card);transition:transform var(--transition-fast);">
+            <div style="height:210px;overflow:hidden;">
+              <img src="../../assets/images/toit-brewery-beer-spread.jpg" 
+                   alt="Guests enjoying craft beer pairings with burgers and fries on wooden board at outdoor twilight brewery pop-up" 
+                   loading="lazy"
+                   style="width:100%;height:100%;object-fit:cover;transition:transform var(--transition-normal);"
+                   onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1rem;">
+              <strong style="font-size:0.95rem;display:block;margin-bottom:0.25rem;">Twilight Brewery Pop-Ups</strong>
+              <p style="font-size:0.82rem;color:var(--text-secondary);margin:0;">Craft beer pairings under bistro lights</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING FOOD TRUCK FESTIVALS CALENDAR -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container container-narrow">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Special Events & Rallies</span>
+          <h2 class="heading-section">Upcoming Festival Appearances</h2>
+          <p class="lead-text">Catch our food truck at major music festivals, carnivals, and cultural pop-ups.</p>
+        </div>
+
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);" class="reveal-on-scroll">
+          <div style="display:grid;grid-template-columns:120px 1fr auto;gap:1rem;padding:1.25rem;align-items:center;border-bottom:1px solid var(--border-subtle);">
+            <div>
+              <strong style="color:var(--cheddar-hover);font-size:1.1rem;display:block;">NOV 14 - 15</strong>
+              <span style="font-size:0.75rem;color:var(--text-muted);">2-Day Carnival</span>
+            </div>
+            <div>
+              <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">Street Beat Music & Food Carnival</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);">Palace Grounds, Jayamahal Road</p>
+            </div>
+            <span class="badge badge-chef">VIP Truck Alley</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:120px 1fr auto;gap:1rem;padding:1.25rem;align-items:center;border-bottom:1px solid var(--border-subtle);">
+            <div>
+              <strong style="color:var(--tomato);font-size:1.1rem;display:block;">NOV 28</strong>
+              <span style="font-size:0.75rem;color:var(--text-muted);">Sunday 12 PM</span>
+            </div>
+            <div>
+              <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">Autumn Craft Beer & Melt Fair</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);">UB City Open Amphitheatre</p>
+            </div>
+            <span class="badge" style="background:#E0E7FF;color:#3730A3;">Confirmed</span>
+          </div>
+
+          <div style="display:grid;grid-template-columns:120px 1fr auto;gap:1rem;padding:1.25rem;align-items:center;">
+            <div>
+              <strong style="color:var(--sage);font-size:1.1rem;display:block;">DEC 12</strong>
+              <span style="font-size:0.75rem;color:var(--text-muted);">Evening Rally</span>
+            </div>
+            <div>
+              <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">The Big Cheese Pull Championship</h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);">Nandi Valley Cultural Grounds</p>
+            </div>
+            <span class="badge" style="background:#DCFCE7;color:#15803D;">Official Host</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVATE BOOKING CTA -->
+    <section class="section-spacing" style="background: radial-gradient(circle at 50% 50%, #2A241F 0%, #12100E 100%); color:#FAF7F2; text-align:center;">
+      <div class="container container-narrow reveal-on-scroll">
+        <h2 class="heading-section" style="color:#FFFFFF;margin-bottom:1rem;">
+          WANT US PARKED OUTSIDE YOUR CAMPUS OR NEIGHBORHOOD?
+        </h2>
+        <p style="color:#D6D0C7;font-size:1.15rem;margin-bottom:2rem;line-height:1.6;">
+          We take custom food truck booking requests for corporate parks, resident associations, and private celebrations. Minimum 30 guests.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Request A Food Truck Stop
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck website.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/cart.js"></script>
+
+  <!-- Interactive script for schedule filtering and map pin selection -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Filter schedule cards by day
+      const dayBtns = document.querySelectorAll('.schedule-day-btn');
+      const cards = document.querySelectorAll('.truck-schedule-card');
+      const emptyState = document.getElementById('schedule-empty-state');
+      const resetBtn = document.getElementById('reset-schedule-filter-btn');
+
+      function setScheduleDay(day) {
+        dayBtns.forEach(b => {
+          const isMatch = b.getAttribute('data-day') === day;
+          b.classList.toggle('active', isMatch);
+          b.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+        });
+
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cardDay = card.getAttribute('data-day');
+          if (day === 'all' || cardDay === day) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (emptyState) {
+          emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      dayBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          setScheduleDay(btn.getAttribute('data-day'));
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          setScheduleDay('all');
+        });
+      }
+
+      // Check URL param e.g. ?day=mon
+      const urlParams = new URLSearchParams(window.location.search);
+      const dayParam = urlParams.get('day');
+      if (dayParam && ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].includes(dayParam.toLowerCase())) {
+        setScheduleDay(dayParam.toLowerCase());
+      }
+
+      // 2. Map pin clicks & "Show on map" button
+      const pinGroups = document.querySelectorAll('.map-pin-group');
+      const popup = document.getElementById('map-info-popup');
+
+      const spotData = {
+        'bagmane': {
+          title: 'Bagmane Tech Park North',
+          badge: 'MONDAY LUNCH',
+          address: '65/2, Byrasandra, CV Raman Nagar, Bengaluru',
+          hours: '11:30 AM – 3:30 PM',
+          special: 'The Wisconsin 3-Cheese Gold Melt with San Marzano Bisque Cup',
+          desc: 'Parked beside North Lake Gate. Rapid 5-min corporate lunch queue.',
+          mapsUrl: 'https://maps.google.com/?q=Bagmane+Tech+Park+CV+Raman+Nagar+Bengaluru'
+        },
+        'whitefield': {
+          title: 'International Tech Park (ITPL)',
+          badge: 'TUESDAY TECH SIZZLE',
+          address: 'Pattandur Agrahara, Whitefield Main Rd, Bengaluru',
+          hours: '12:00 PM – 9:00 PM',
+          special: 'Buffalo Buttermilk Fried Chicken Melt & Crispy Garlic Tots',
+          desc: 'Opposite ITPL Main Avenue. Midweek tech comfort fuel all day long.',
+          mapsUrl: 'https://maps.google.com/?q=ITPL+Whitefield+Bengaluru'
+        },
+        'hsr': {
+          title: 'HSR Layout Sector 4 Greens',
+          badge: 'MIDWEEK RETREAT',
+          address: '27th Main Rd, Sector 4, Opposite Park Gate, Bengaluru',
+          hours: '12:00 PM – 9:30 PM',
+          special: 'Wild Sautéed Truffle Shroom Melt & Cold Blackberry Lemonade',
+          desc: 'Shaded parkside curbside spot with outdoor picnic umbrellas and fresh breeze.',
+          mapsUrl: 'https://maps.google.com/?q=Sector+4+HSR+Layout+Bengaluru'
+        },
+        'ecoworld': {
+          title: 'RMZ Ecoworld Lakeside',
+          badge: 'THURSDAY LUNCH HUB',
+          address: 'Outer Ring Rd, Devarabisanahalli, Bellandur, Bengaluru',
+          hours: '11:30 AM – 4:00 PM',
+          special: 'Smoked Gouda & Caramelized Onion Melt with Roasted Garlic Aioli',
+          desc: 'Parked along the lakeside boardwalk terrace. Express lunch queue under 5 mins.',
+          mapsUrl: 'https://maps.google.com/?q=RMZ+Ecoworld+Bellandur+Bengaluru'
+        },
+        'church-street': {
+          title: 'Church Street Promenade',
+          badge: 'THURSDAY NIGHT MARKET',
+          address: 'Church St, Shanthala Nagar, Ashok Nagar, Bengaluru',
+          hours: '4:30 PM – 10:30 PM',
+          special: '4-Cheese Quattro Formaggi Melt & Griddled Herb Dippers',
+          desc: 'Cobblestone pedestrian-only street fair atmosphere with acoustic music.',
+          mapsUrl: 'https://maps.google.com/?q=Church+Street+Bengaluru'
+        },
+        'cyber-city': {
+          title: 'Cyber City Business Plaza',
+          badge: '🔥 ACTIVE TODAY',
+          address: 'Gate 4, Sector 24, Cyber Hub Promenade, Gurugram',
+          hours: '12:00 PM – 10:00 PM',
+          special: 'Jalapeño Bacon Popper Melt & Hot Spiced Apple Cider Float',
+          desc: 'Sizzling on the main promenade right now! Hot cheese pulls ready in 5 mins.',
+          mapsUrl: 'https://maps.google.com/?q=Cyber+Hub+Gurugram+Sector+24'
+        },
+        'indiranagar': {
+          title: 'Toit Microbrewery Courtyard',
+          badge: 'WEEKEND POP-UP',
+          address: '298, 100 Feet Rd, Indiranagar Stage 1, Bengaluru',
+          hours: '1:00 PM – 11:00 PM',
+          special: '14-Hour Smoked Texas Brisket Melt & Truffle Parmesan Fries',
+          desc: 'Craft beer & grilled cheese pairing under glowing twilight fairy bistro lights.',
+          mapsUrl: 'https://maps.google.com/?q=Toit+Indiranagar+Bengaluru'
+        },
+        'koramangala': {
+          title: 'Koramangala 4th Block Grounds',
+          badge: 'SUNDAY FOOD FESTIVAL',
+          address: '80 Feet Road, 4th Block, Koramangala, Bengaluru',
+          hours: '11:00 AM – 9:00 PM',
+          special: 'French Double-Cream Brie with Hot Honey Drizzle & Salted Caramel Shakes',
+          desc: 'Weekend festival grounds with pop-up bistro seating and live acoustic jam.',
+          mapsUrl: 'https://maps.google.com/?q=Koramangala+4th+Block+Bengaluru'
+        }
+      };
+
+      function updateMapPopup(key) {
+        if (!spotData[key] || !popup) return;
+        const data = spotData[key];
+        const isCurrentActive = (key === 'cyber-city');
+        popup.innerHTML = `
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.4rem;">
+            <span class="badge ${isCurrentActive ? 'badge-chef' : ''}" style="${!isCurrentActive ? 'background:var(--cheddar-light);color:var(--cheddar-hover);font-weight:700;' : ''}">${data.badge}</span>
+            <span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);">🕒 ${data.hours}</span>
+          </div>
+          <h4 style="font-size:1.15rem;margin-bottom:0.25rem;font-weight:800;color:var(--text-primary);">${data.title}</h4>
+          <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.45rem;line-height:1.4;">📍 ${data.address}</p>
+          <div style="background:var(--bg-secondary);padding:0.5rem 0.65rem;border-radius:var(--radius-sm);font-size:0.8rem;margin-bottom:0.75rem;border-inline-start:3px solid var(--cheddar);">
+            <strong>Melt Special:</strong> ${data.special}
+          </div>
+          <div style="display:flex;gap:0.4rem;">
+            <a href="${data.mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="flex:1;text-align:center;justify-content:center;">
+              Get Directions ↗
+            </a>
+            <a href="menu.html" class="btn btn-outline btn-sm" style="justify-content:center;">
+              Menu 🧀
+            </a>
+          </div>
+        `;
+
+        // Highlight and elevate active pin in SVG stacking order so it renders on top
+        pinGroups.forEach(p => p.classList.remove('active-pin'));
+        const targetPin = document.getElementById(`pin-${key}`);
+        if (targetPin) {
+          targetPin.classList.add('active-pin');
+          if (targetPin.parentNode) {
+            targetPin.parentNode.appendChild(targetPin);
+          }
+        }
+
+        // Intelligently reposition information card to avoid covering the active truck/location marker
+        const pinCoords = {
+          'cyber-city': 200,
+          'bagmane': 430,
+          'church-street': 320,
+          'koramangala': 470,
+          'indiranagar': 570,
+          'hsr': 630,
+          'ecoworld': 750,
+          'whitefield': 860
+        };
+        const pinX = pinCoords[key] !== undefined ? pinCoords[key] : 200;
+
+        if (window.innerWidth > 768) {
+          if (pinX < 500) {
+            // Pin is in left half -> place information card on the right
+            popup.style.insetInlineStart = 'auto';
+            popup.style.insetInlineEnd = '20px';
+          } else {
+            // Pin is in right half -> place information card on the left
+            popup.style.insetInlineStart = '20px';
+            popup.style.insetInlineEnd = 'auto';
+          }
+        } else {
+          popup.style.insetInlineStart = '';
+          popup.style.insetInlineEnd = '';
+        }
+
+        if (typeof window.showMeltToast === 'function') {
+          window.showMeltToast(`📍 Viewing location: ${data.title}`, 'info');
+        }
+      }
+
+      pinGroups.forEach(pin => {
+        pin.addEventListener('click', () => {
+          const id = pin.id.replace('pin-', '');
+          updateMapPopup(id);
+        });
+      });
+
+      document.querySelectorAll('.map-pin-focus').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const spot = btn.getAttribute('data-spot');
+          updateMapPopup(spot);
+          const mapEl = document.getElementById('city-radar-map');
+          if (mapEl) {
+            mapEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      });
+
+      // Keep popup positioning responsive on window resize
+      window.addEventListener('resize', () => {
+        const active = document.querySelector('.map-pin-group.active-pin');
+        if (active) {
+          const key = active.id.replace('pin-', '');
+          const pinCoords = {
+            'cyber-city': 200,
+            'bagmane': 430,
+            'church-street': 320,
+            'koramangala': 470,
+            'indiranagar': 570,
+            'hsr': 630,
+            'ecoworld': 750,
+            'whitefield': 860
+          };
+          const pinX = pinCoords[key] !== undefined ? pinCoords[key] : 200;
+          if (window.innerWidth > 768) {
+            if (pinX < 500) {
+              popup.style.insetInlineStart = 'auto';
+              popup.style.insetInlineEnd = '20px';
+            } else {
+              popup.style.insetInlineStart = '20px';
+              popup.style.insetInlineEnd = 'auto';
+            }
+          } else {
+            popup.style.insetInlineStart = '';
+            popup.style.insetInlineEnd = '';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

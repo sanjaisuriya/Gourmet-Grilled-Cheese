@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    body {
+      background: #FAF7F2;
+      padding: 40px;
+      font-family: sans-serif;
+    }
+    .test-box {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      max-width: 580px;
+      border: 1px solid #ddd;
+    }
+    .variant-title {
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #B45309;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Current behavior (default dir="rtl" inheritance) -->
+  <div class="test-box">
+    <div class="variant-title">1. CURRENT DEFAULT (Inherited dir="rtl")</div>
+    <h1 class="heading-hero" style="font-size: 2.8rem; line-height: 1.05;">
+      <span class="hero-title-black">MELTED CHEESE.</span>
+      <span class="hero-title-orange" style="color:var(--cheddar);">HAPPY HEARTS.</span>
+    </h1>
+    <p class="heading-sub" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">
+      Gourmet Grilled Cheese &amp; Comfort Food, Sizzled Fresh On Wheels.
+    </p>
+    <p class="lead-text">
+      Step right up to our mobile griddle window for golden-brown, crispy grilled cheese sandwiches made with artisanal 36-hour sourdough, sweet churned butter, and molten aged cheeses that stretch with every bite. Paired with slow-roasted tomato bisque and piping hot comfort sides.
+    </p>
+  </div>
+
+  <!-- Option A: direction: ltr with text-align: right -->
+  <div class="test-box" style="direction: ltr; text-align: right;">
+    <div class="variant-title">2. OPTION A: direction: ltr; text-align: right;</div>
+    <h1 class="heading-hero" style="font-size: 2.8rem; line-height: 1.05;">
+      <span class="hero-title-black">MELTED CHEESE.</span>
+      <span class="hero-title-orange" style="color:var(--cheddar);">HAPPY HEARTS.</span>
+    </h1>
+    <p class="heading-sub" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">
+      Gourmet Grilled Cheese &amp; Comfort Food, Sizzled Fresh On Wheels.
+    </p>
+    <p class="lead-text">
+      Step right up to our mobile griddle window for golden-brown, crispy grilled cheese sandwiches made with artisanal 36-hour sourdough, sweet churned butter, and molten aged cheeses that stretch with every bite. Paired with slow-roasted tomato bisque and piping hot comfort sides.
+    </p>
+  </div>
+
+  <!-- Option B: unicode-bidi: plaintext -->
+  <div class="test-box" style="unicode-bidi: plaintext; text-align: right;">
+    <div class="variant-title">3. OPTION B: unicode-bidi: plaintext; text-align: right;</div>
+    <h1 class="heading-hero" style="font-size: 2.8rem; line-height: 1.05;">
+      <span class="hero-title-black">MELTED CHEESE.</span>
+      <span class="hero-title-orange" style="color:var(--cheddar);">HAPPY HEARTS.</span>
+    </h1>
+    <p class="heading-sub" style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">
+      Gourmet Grilled Cheese &amp; Comfort Food, Sizzled Fresh On Wheels.
+    </p>
+    <p class="lead-text">
+      Step right up to our mobile griddle window for golden-brown, crispy grilled cheese sandwiches made with artisanal 36-hour sourdough, sweet churned butter, and molten aged cheeses that stretch with every bite. Paired with slow-roasted tomato bisque and piping hot comfort sides.
+    </p>
+  </div>
+
+</body>
+</html>

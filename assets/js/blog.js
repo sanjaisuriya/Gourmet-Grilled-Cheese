@@ -551,7 +551,25 @@
     }
   ];
 
+  // Helper to sanitize heading typos such as "CONTRAST ISSUS" -> "CONTRAST ISSUES"
+  function sanitizeBlogHeading(str) {
+    if (typeof str !== 'string') return str;
+    return str.replace(/CONTRAST ISSUS/gi, 'CONTRAST ISSUES');
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    // Defensive DOM scan to fix any heading or title with "BLOG – CONTRAST ISSUS"
+    try {
+      if (document.title && /CONTRAST ISSUS/i.test(document.title)) {
+        document.title = sanitizeBlogHeading(document.title);
+      }
+      document.querySelectorAll('h1, h2, h3, h4, .heading-hero, .lead-text, .eyebrow, title, [id*="hero-title"]').forEach(el => {
+        if (el.textContent && /CONTRAST ISSUS/i.test(el.textContent)) {
+          el.textContent = sanitizeBlogHeading(el.textContent);
+        }
+      });
+    } catch (_) {}
+
     // --- 1. BLOG LISTING PAGE (FILTER & SEARCH) ---
     const blogGrid = document.getElementById('blog-posts-grid');
     const blogSearchInput = document.getElementById('blog-search-input');
@@ -623,10 +641,11 @@
       const article = MELT_ARTICLES.find(a => a.id === articleId) || MELT_ARTICLES[0];
 
       // A. Update Document Title, Breadcrumb & Header
-      document.title = `${article.title} | The Melt District`;
-      if (heroTitle) heroTitle.textContent = article.title.toUpperCase();
+      const cleanTitle = sanitizeBlogHeading(article.title);
+      document.title = `${cleanTitle} | The Melt District`;
+      if (heroTitle) heroTitle.textContent = cleanTitle.toUpperCase();
       if (heroLead) heroLead.textContent = article.lead;
-      if (heroBreadcrumb) heroBreadcrumb.textContent = article.title;
+      if (heroBreadcrumb) heroBreadcrumb.textContent = cleanTitle;
       if (eyebrow) eyebrow.textContent = article.categoryName;
       if (metaInfo) metaInfo.textContent = `Published ${article.date} • ${article.readTime}`;
 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+    
+    /* REPOSITION MAP OVERLAYS TO PREVENT OVERLAPPING WITH GOOGLE MAPS PLACE CARD */
+    .map-top-legend {
+      top: 16px !important;
+      inset-inline-end: 20px !important;
+      inset-inline-start: auto !important;
+      left: auto !important;
+      right: 20px !important;
+    }
+    
+    .map-floating-card-container {
+      bottom: 20px !important;
+      inset-inline-end: 20px !important;
+      inset-inline-start: auto !important;
+      left: auto !important;
+      right: 20px !important;
+    }
+
+    .contact-map-wrapper iframe {
+      height: 540px !important;
+    }
+  </style>
+
+</head>
+<body style="padding: 20px 0; background: var(--bg-primary);">
+  <!-- ==================== THE MELT DISTRICT MAP SECTION ==================== -->
+    <section class="section-spacing" id="melt-district-map" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Flagship &amp; Street Operations</span>
+          <h2 class="heading-section">OUR CENTRAL HUB &amp; CURBSIDE MAP</h2>
+          <p class="lead-text">
+            Visit our flagship commissary kitchen depot or follow our mobile food truck rolling across the city's top street food spots.
+          </p>
+        </div>
+
+        <!-- Location Switcher Tabs (Distinct Markers & Labels) -->
+        <div class="map-location-tabs reveal-on-scroll" role="tablist" aria-label="Select Map Location">
+          <button type="button" 
+                  class="map-loc-tab active" 
+                  id="tab-loc-hq" 
+                  role="tab" 
+                  aria-selected="true" 
+                  aria-controls="card-loc-hq"
+                  onclick="window.selectMeltMapLocation &amp;&amp; window.selectMeltMapLocation('hq')">
+            <span class="tab-marker-badge" aria-hidden="true">🏢</span>
+            <div class="tab-loc-content">
+              <span class="tab-loc-type">Central Kitchen Depot</span>
+              <strong class="tab-loc-name">The Melt District HQ</strong>
+            </div>
+            <span class="tab-status-chip chip-hq">Flagship Depot</span>
+          </button>
+
+          <button type="button" 
+                  class="map-loc-tab" 
+                  id="tab-loc-truck" 
+                  role="tab" 
+                  aria-selected="false" 
+                  aria-controls="card-loc-truck"
+                  onclick="window.selectMeltMapLocation &amp;&amp; window.selectMeltMapLocation('truck')">
+            <span class="tab-marker-badge" aria-hidden="true">🚚</span>
+            <div class="tab-loc-content">
+              <span class="tab-loc-type">Mobile Food Truck</span>
+              <strong class="tab-loc-name">Curbside Sizzle #01</strong>
+            </div>
+            <span class="tab-status-chip chip-live">
+              <span class="pulse-dot" style="width:7px;height:7px;background:#22C55E;border-radius:50%;display:inline-block;box-shadow:0 0 6px #22C55E;"></span>
+              Active Stop
+            </span>
+          </button>
+        </div>
+
+        <!-- Map & Themed Overlay Composition -->
+        <div class="contact-map-wrapper reveal-on-scroll">
+          
+          <!-- Live Interactive Map Embed (Google Maps) -->
+          <iframe 
+            id="melt-live-map-iframe"
+            src="https://maps.google.com/maps?q=42+Artisan+Way+Culinary+Lane+Bengaluru+560038&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+            title="The Melt District Central Hub &amp; Curbside Location Map" 
+            style="width:100%;height:500px;border:0;display:block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- Floating Map Top Legend Bar (Shows Active Marker Info) -->
+          <div class="map-top-legend" id="map-top-legend">
+            <span class="legend-indicator dot-hq" id="legend-dot"></span>
+            <span id="legend-label">
+              <strong>Active View:</strong> Central Commissary Depot &amp; HQ — Bengaluru
+            </span>
+          </div>
+
+          <!-- Clean Floating Location Information Cards (Desktop: floating bottom-left, Mobile: stacks below map) -->
+          <div class="map-floating-card-container">
+            
+            <!-- Card 1: The Melt District HQ (Default) -->
+            <div class="map-location-card" id="card-loc-hq" role="tabpanel" aria-labelledby="tab-loc-hq">
+              <div class="map-card-header">
+                <span class="badge" style="background:var(--cheddar-light);color:var(--cheddar-hover);font-weight:700;font-size:0.75rem;">
+                  🏢 CENTRAL COMMISSARY DEPOT
+                </span>
+                <span class="badge badge-chef" style="font-size:0.72rem;">FLAGSHIP HQ</span>
+              </div>
+              <h3 class="map-card-title">The Melt District HQ</h3>
+              <p class="map-card-address">
+                <span aria-hidden="true">📍</span> 
+                <span><strong>Verified Address:</strong> 42 Artisan Way, Culinary Lane, Bengaluru 560038</span>
+              </p>
+              <div class="map-card-meta">
+                <div>⏰ <strong>Depot Hours:</strong> Tuesday – Sunday, 7:00 AM – 8:00 PM</div>
+                <div>🍞 <strong>Operations:</strong> Artisan sourdough baking, prep &amp; tasting desk</div>
+                <div>📞 <strong>Desk Line:</strong> <a href="tel:+919876543210" style="color:inherit;font-weight:600;">+91 98765 43210</a></div>
+              </div>
+              <div class="map-card-actions two-cta-row">
+                <a href="https://www.google.com/maps/search/?api=1&query=42+Artisan+Way,+Culinary+Lane,+Bengaluru+560038" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary btn-sm" 
+                   title="Open The Melt District HQ in Google Maps">
+                  Open in Maps ↗
+                </a>
+                <a href="#contact-form-section" 
+                   class="btn btn-outline btn-sm" 
+                   title="Jump down to send our HQ desk a message">
+                  Message HQ ↓
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Mobile Food Truck (Active Curbside Stop) -->
+            <div class="map-location-card" id="card-loc-truck" role="tabpanel" aria-labelledby="tab-loc-truck" style="display:none;">
+              <div class="map-card-header">
+                <span class="badge badge-chef" style="font-size:0.75rem;">
+                  🚚 MOBILE FOOD TRUCK #01
+                </span>
+                <span class="badge badge-spicy" style="font-size:0.72rem;">ACTIVE STOP</span>
+              </div>
+              <h3 class="map-card-title">Curbside Food Truck #01</h3>
+              <p class="map-card-address">
+                <span aria-hidden="true">📍</span> 
+                <span><strong>Active Stop:</strong> Cyber City Business Plaza, Gate 4, Sector 24</span>
+              </p>
+              <div class="map-card-meta">
+                <div>⏰ <strong>Service Hours:</strong> Tuesday – Sunday, 11:30 AM – 9:30 PM</div>
+                <div>🔥 <strong>On-Site:</strong> Freshly griddled artisanal sourdough melts &amp; soup</div>
+                <div>⚡ <strong>Service:</strong> Walk-up service &amp; online pre-order pickups</div>
+              </div>
+              <div class="map-card-actions two-cta-row">
+                <a href="https://www.google.com/maps/search/?api=1&query=Cyber+City+Hub,+Sector+24" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary btn-sm" 
+                   title="Open Food Truck location in Google Maps">
+                  Open in Maps ↗
+                </a>
+                <a href="find-the-truck.html" 
+                   class="btn btn-outline btn-sm" 
+                   title="View full weekly city rotation schedule">
+                  Truck Radar →
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  <script src="../assets/js/contact.js"></script>
+</body>
+</html>

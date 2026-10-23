@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<base href="../">
+<style>
+  .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+</style>
+<script>
+window.addEventListener('load', () => {
+  const mapSec = document.getElementById('melt-district-map');
+  if (mapSec) {
+    mapSec.scrollIntoView();
+  }
+});
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Book The Food Truck | The Melt District</title>
+  <meta name="description" content="Get in touch with The Melt District food truck team. Inquire about private party catering, corporate lunch bookings, weddings, or general questions.">
+  <meta name="keywords" content="book food truck, catering inquiry, food truck contact, private party catering">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4.3">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link active">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-banner hero-bg-contact">
+      <div class="container">
+        <div class="page-hero-inner reveal-on-scroll">
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="active-crumb">Contact Us</span>
+          </nav>
+          <div>
+            <span class="eyebrow">GET IN TOUCH</span>
+          </div>
+          <h1 class="heading-hero">
+            LET’S GET CHEESY!
+          </h1>
+          <p class="lead-text" style="margin-bottom:1.15rem;">
+            Have a question, planning an event, or craving some delicious grilled cheese? We’d love to hear from you! Get in touch with our team.
+          </p>
+          <div class="page-hero-actions two-cta-row justify-center">
+            <a href="#contact-form-section" class="btn btn-primary btn-sm">Send a Message ↓</a>
+            <a href="service-details.html" class="btn btn-outline btn-sm">Catering Info →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1. QUICK CONTACT CARDS (VERIFIED DETAILS) ==================== -->
+    <section class="section-spacing" style="padding-top:clamp(2.5rem, 4vw, 4rem);padding-bottom:1.5rem;background-color:var(--bg-primary);">
+      <div class="container">
+        <div class="grid-4 quick-contact-grid reveal-on-scroll">
+          
+          <!-- Card 1: Phone -->
+          <div class="quick-contact-card">
+            <div class="qc-icon-box qc-phone">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="qc-label">Direct Phone Line</span>
+            <a href="tel:+919876543210" class="qc-value">+91 98765 43210</a>
+            <p class="qc-desc">Live truck radar updates &amp; phone orders</p>
+          </div>
+
+          <!-- Card 2: Email -->
+          <div class="quick-contact-card">
+            <div class="qc-icon-box qc-email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span class="qc-label">Verified Email</span>
+            <a href="mailto:hello@themeltdistrict.com" class="qc-value">hello@themeltdistrict.com</a>
+            <p class="qc-desc">Questions, feedback &amp; general inquiries</p>
+          </div>
+
+          <!-- Card 3: HQ Address -->
+          <div class="quick-contact-card">
+            <div class="qc-icon-box qc-location">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span class="qc-label">Central Commissary Depot</span>
+            <span class="qc-value-static">42 Artisan Way, Culinary Lane</span>
+            <p class="qc-desc">Bengaluru 560038 · Flagship Kitchen &amp; Tasting Desk</p>
+          </div>
+
+          <!-- Card 4: Hours -->
+          <div class="quick-contact-card">
+            <div class="qc-icon-box qc-hours">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="qc-label">Operating Hours</span>
+            <span class="qc-value-static">Tue – Sun: 11:30 AM – 9:30 PM</span>
+            <p class="qc-desc">Closed Mondays for artisan sourdough resting</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. GENERAL CONTACT FORM ==================== -->
+    <section class="section-spacing" id="contact-form-section" style="padding-top:1.5rem;padding-bottom:clamp(3rem, 5vw, 5rem);background-color:var(--bg-primary);">
+      <div class="container container-narrow">
+        <div style="background:var(--bg-card);padding:clamp(2rem, 5vw, 3.5rem);border-radius:var(--radius-lg);border:1.5px solid var(--border-color);box-shadow:var(--shadow-md);" class="reveal-on-scroll">
+          
+          <div class="section-header" style="margin-bottom:2.25rem;text-align:center;">
+            <span class="eyebrow eyebrow-red">Drop Us A Note</span>
+            <h2 class="heading-section" style="margin-bottom:0.5rem;">SEND US A MESSAGE</h2>
+            <p class="lead-text" style="font-size:0.95rem;max-width:620px;margin-inline:auto;">
+              Have a general inquiry, food truck route question, or feedback? Drop us a note below and our team will get back to you within 24 business hours.
+            </p>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr));gap:1.25rem;">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Maya Sharma" pattern="[a-zA-Z\s'-]+" title="Letters only" autocomplete="name" required>
+                <div class="form-error-msg" id="contact-name-error">Please enter your full name (letters only).</div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="name@domain.com" autocomplete="email" required>
+                <div class="form-error-msg" id="contact-email-error">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr));gap:1.25rem;margin-top:1rem;">
+              <!-- Phone Number (Optional) -->
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone Number (optional)</label>
+                <input type="tel" id="contact-phone" class="form-control" inputmode="numeric" pattern="[0-9]*" maxlength="15" placeholder="e.g. 9876543210 (Digits only)" autocomplete="tel">
+                <div class="form-error-msg" id="contact-phone-error">Please enter a valid phone number (7 to 15 digits).</div>
+              </div>
+
+              <!-- Enquiry Type Dropdown -->
+              <div class="form-group">
+                <label for="contact-enquiry-type" class="form-label">Enquiry Type *</label>
+                <select id="contact-enquiry-type" class="form-control" required style="cursor:pointer;">
+                  <option value="" disabled selected>Select an enquiry type...</option>
+                  <option value="general">General Question &amp; Inquiries</option>
+                  <option value="truck-location">Food Truck Schedule &amp; Curbside Stops</option>
+                  <option value="catering">Private Catering &amp; Event Booking</option>
+                  <option value="feedback">Order Feedback &amp; Suggestions</option>
+                  <option value="press">Media, Press &amp; Collaborations</option>
+                </select>
+                <div class="form-error-msg" id="contact-enquiry-error">Please select an enquiry type.</div>
+              </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group" style="margin-top:1rem;margin-bottom:1.5rem;">
+              <label for="contact-message" class="form-label">Message *</label>
+              <textarea id="contact-message" rows="5" class="form-control" placeholder="Write your question, comment, or message here (minimum 10 characters)..." required></textarea>
+              <div class="form-error-msg" id="contact-message-error">Please enter a message of at least 10 characters.</div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;box-shadow:var(--shadow-cheese);">
+              Send Message
+            </button>
+
+            <div id="contact-success-alert" class="alert-success" style="display:none;" role="alert">
+              🎉 Thanks for reaching out! We received your message and will get back to you within 24 business hours.
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. EVENT CATERING ENQUIRY SECTION ==================== -->
+    <section class="section-spacing" id="event-catering-section" style="background-color:var(--bg-secondary);">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Mobile Street Food Catering</span>
+          <h2 class="heading-section">EVENT CATERING ENQUIRY</h2>
+          <p class="lead-text">
+            Bring our gourmet grilled cheese food truck to your wedding, birthday party, corporate event, or private gathering.
+          </p>
+        </div>
+
+        <div class="catering-enquiry-grid reveal-on-scroll">
+          
+          <!-- Left Column: Event Types & Bespoke Catering Image -->
+          <div class="catering-left-column">
+            <div class="catering-event-badge-list">
+              <div class="catering-badge-item">
+                <span style="font-size:1.5rem;display:inline-block;margin-bottom:0.25rem;" aria-hidden="true">💍</span>
+                <h4>Weddings &amp; Receptions</h4>
+                <p>Late-night comfort food sliders, prosecco pairings &amp; custom bride-groom melts.</p>
+              </div>
+
+              <div class="catering-badge-item">
+                <span style="font-size:1.5rem;display:inline-block;margin-bottom:0.25rem;" aria-hidden="true">🎂</span>
+                <h4>Birthday Parties</h4>
+                <p>Interactive street food griddling right in your driveway or courtyard for all ages.</p>
+              </div>
+
+              <div class="catering-badge-item">
+                <span style="font-size:1.5rem;display:inline-block;margin-bottom:0.25rem;" aria-hidden="true">🏢</span>
+                <h4>Corporate Events</h4>
+                <p>Rapid-fire service feeding 140+ guests/hour with minimal queues and custom branding.</p>
+              </div>
+
+              <div class="catering-badge-item">
+                <span style="font-size:1.5rem;display:inline-block;margin-bottom:0.25rem;" aria-hidden="true">🎪</span>
+                <h4>Private Gatherings</h4>
+                <p>Custom cheese menus, tomato bisque shooters, parmesan fries &amp; craft beverages.</p>
+              </div>
+            </div>
+
+            <div class="catering-img-card">
+              <img src="assets/images/contact-delicious-happen.jpg" 
+                   alt="The Melt District artisan food truck chef serving freshly grilled sourdough cheese melts to event guests" 
+                   class="catering-img"
+                   loading="lazy">
+              <div style="position:absolute;bottom:1.15rem;inset-inline-start:1.15rem;background:rgba(22,19,17,0.85);backdrop-filter:blur(10px);padding:0.6rem 1.15rem;border-radius:var(--radius-sm);color:#FAF7F2;font-size:0.85rem;border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;gap:0.6rem;box-shadow:0 8px 20px rgba(0,0,0,0.35);">
+                <span style="color:var(--cheddar);font-weight:700;letter-spacing:0.04em;">★ LIVE GRIDDLE CATERING</span>
+                <span style="color:rgba(255,255,255,0.3);">|</span>
+                <span>Serving 140+ Hot Melts / Hr</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Dedicated Catering Quote Form -->
+          <div class="catering-form-card">
+            <div style="margin-bottom:1.5rem;">
+              <span class="badge badge-chef" style="margin-bottom:0.4rem;display:inline-block;">CUSTOM ESTIMATE</span>
+              <h3 style="font-size:1.45rem;margin-bottom:0.35rem;font-family:var(--font-display);">Request A Catering Quote</h3>
+              <p style="color:var(--text-secondary);font-size:0.88rem;margin:0;">
+                Tell us about your celebration and we’ll prepare an itemized catering quote within 24 hours.
+              </p>
+            </div>
+
+            <form id="catering-quote-form" novalidate>
+              
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:1rem;">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="quote-name" class="form-label">Full Name *</label>
+                  <input type="text" id="quote-name" class="form-control" placeholder="e.g. Sanjai Kumar" pattern="[a-zA-Z\s'-]+" required>
+                  <div class="form-error-msg" id="quote-name-error">Please enter your name (letters only).</div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="quote-email" class="form-label">Email Address *</label>
+                  <input type="email" id="quote-email" class="form-control" placeholder="name@domain.com" required>
+                  <div class="form-error-msg" id="quote-email-error">Please enter a valid email address.</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:1rem;margin-top:0.75rem;">
+                <!-- Phone Number -->
+                <div class="form-group">
+                  <label for="quote-phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="quote-phone" class="form-control" inputmode="numeric" placeholder="e.g. 9876543210" required>
+                  <div class="form-error-msg" id="quote-phone-error">Please enter a valid phone number.</div>
+                </div>
+
+                <!-- Event Type Dropdown -->
+                <div class="form-group">
+                  <label for="quote-event-type" class="form-label">Event Type *</label>
+                  <select id="quote-event-type" class="form-control" required style="cursor:pointer;">
+                    <option value="" disabled selected>Select event type...</option>
+                    <option value="wedding">Wedding &amp; Reception</option>
+                    <option value="birthday">Birthday Party / Milestone</option>
+                    <option value="corporate">Corporate Event / Office Lunch</option>
+                    <option value="private-gathering">Private Gathering / Festival</option>
+                    <option value="other">Other Special Event</option>
+                  </select>
+                  <div class="form-error-msg" id="quote-event-error">Please select an event type.</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:1rem;margin-top:0.75rem;">
+                <!-- Event Date -->
+                <div class="form-group">
+                  <label for="quote-date" class="form-label">Event Date *</label>
+                  <input type="date" id="quote-date" class="form-control" required>
+                  <div class="form-error-msg" id="quote-date-error">Please select your preferred event date.</div>
+                </div>
+
+                <!-- Estimated Guest Count -->
+                <div class="form-group">
+                  <label for="quote-guests" class="form-label">Estimated Guest Count *</label>
+                  <select id="quote-guests" class="form-control" required style="cursor:pointer;">
+                    <option value="" disabled selected>Select guest count...</option>
+                    <option value="50-75">50 – 75 Guests (Minimum)</option>
+                    <option value="76-125">76 – 125 Guests</option>
+                    <option value="126-200">126 – 200 Guests</option>
+                    <option value="201-350">201 – 350 Guests</option>
+                    <option value="350+">350+ Guests (Festival Scale)</option>
+                  </select>
+                  <div class="form-error-msg" id="quote-guests-error">Please select estimated guest count.</div>
+                </div>
+              </div>
+
+              <!-- Location / Venue Address -->
+              <div class="form-group" style="margin-top:0.75rem;">
+                <label for="quote-location" class="form-label">Event Location / Venue Address *</label>
+                <input type="text" id="quote-location" class="form-control" placeholder="e.g. Indiranagar Club Lawn, Bengaluru" required>
+                <div class="form-error-msg" id="quote-location-error">Please enter the event location or venue area.</div>
+              </div>
+
+              <!-- Dietary Preferences & Notes (Optional) -->
+              <div class="form-group" style="margin-top:0.75rem;margin-bottom:1.5rem;">
+                <label for="quote-notes" class="form-label">Dietary Preferences &amp; Special Requests</label>
+                <textarea id="quote-notes" rows="3" class="form-control" placeholder="Tell us about special dietary requests (gluten-free bread, vegan cheese), serving time window, or event theme..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;box-shadow:var(--shadow-cheese);">
+                Request a Quote
+              </button>
+
+              <div id="catering-success-alert" class="alert-success" style="display:none;" role="alert">
+                🎉 Catering inquiry received! Our events director will review your date and details and send an itemized quote within 24 hours.
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== THE MELT DISTRICT MAP SECTION ==================== -->
+    <section class="section-spacing" id="melt-district-map" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Flagship &amp; Street Operations</span>
+          <h2 class="heading-section">OUR CENTRAL HUB &amp; CURBSIDE MAP</h2>
+          <p class="lead-text">
+            Visit our flagship commissary kitchen depot or follow our mobile food truck rolling across the city's top street food spots.
+          </p>
+        </div>
+
+        <!-- Location Switcher Tabs (Distinct Markers & Labels) -->
+        <div class="map-location-tabs reveal-on-scroll" role="tablist" aria-label="Select Map Location">
+          <button type="button" 
+                  class="map-loc-tab active" 
+                  id="tab-loc-hq" 
+                  role="tab" 
+                  aria-selected="true" 
+                  aria-controls="card-loc-hq"
+                  onclick="window.selectMeltMapLocation &amp;&amp; window.selectMeltMapLocation('hq')">
+            <span class="tab-marker-badge" aria-hidden="true">🏢</span>
+            <div class="tab-loc-content">
+              <span class="tab-loc-type">Central Kitchen Depot</span>
+              <strong class="tab-loc-name">The Melt District HQ</strong>
+            </div>
+            <span class="tab-status-chip chip-hq">Flagship Depot</span>
+          </button>
+
+          <button type="button" 
+                  class="map-loc-tab" 
+                  id="tab-loc-truck" 
+                  role="tab" 
+                  aria-selected="false" 
+                  aria-controls="card-loc-truck"
+                  onclick="window.selectMeltMapLocation &amp;&amp; window.selectMeltMapLocation('truck')">
+            <span class="tab-marker-badge" aria-hidden="true">🚚</span>
+            <div class="tab-loc-content">
+              <span class="tab-loc-type">Mobile Food Truck</span>
+              <strong class="tab-loc-name">Curbside Sizzle #01</strong>
+            </div>
+            <span class="tab-status-chip chip-live">
+              <span class="pulse-dot" style="width:7px;height:7px;background:#22C55E;border-radius:50%;display:inline-block;box-shadow:0 0 6px #22C55E;"></span>
+              Active Stop
+            </span>
+          </button>
+        </div>
+
+        <!-- Map & Themed Overlay Composition -->
+        <div class="contact-map-wrapper reveal-on-scroll">
+          
+          <!-- Live Interactive Map Embed (Google Maps) -->
+          <iframe 
+            id="melt-live-map-iframe"
+            src="https://maps.google.com/maps?q=42+Artisan+Way+Culinary+Lane+Bengaluru+560038&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+            title="The Melt District Central Hub &amp; Curbside Location Map" 
+            style="width:100%;height:500px;border:0;display:block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- Floating Map Top Legend Bar (Shows Active Marker Info) -->
+          <div class="map-top-legend" id="map-top-legend">
+            <span class="legend-indicator dot-hq" id="legend-dot"></span>
+            <span id="legend-label">
+              <strong>Active View:</strong> Central Commissary Depot &amp; HQ — Bengaluru
+            </span>
+          </div>
+
+          <!-- Clean Floating Location Information Cards (Desktop: floating bottom-left, Mobile: stacks below map) -->
+          <div class="map-floating-card-container">
+            
+            <!-- Card 1: The Melt District HQ (Default) -->
+            <div class="map-location-card" id="card-loc-hq" role="tabpanel" aria-labelledby="tab-loc-hq">
+              <div class="map-card-header">
+                <span class="badge" style="background:var(--cheddar-light);color:var(--cheddar-hover);font-weight:700;font-size:0.75rem;">
+                  🏢 CENTRAL COMMISSARY DEPOT
+                </span>
+                <span class="badge badge-chef" style="font-size:0.72rem;">FLAGSHIP HQ</span>
+              </div>
+              <h3 class="map-card-title">The Melt District HQ</h3>
+              <p class="map-card-address">
+                <span aria-hidden="true">📍</span> 
+                <span><strong>Verified Address:</strong> 42 Artisan Way, Culinary Lane, Bengaluru 560038</span>
+              </p>
+              <div class="map-card-meta">
+                <div>⏰ <strong>Depot Hours:</strong> Tuesday – Sunday, 7:00 AM – 8:00 PM</div>
+                <div>🍞 <strong>Operations:</strong> Artisan sourdough baking, prep &amp; tasting desk</div>
+                <div>📞 <strong>Desk Line:</strong> <a href="tel:+919876543210" style="color:inherit;font-weight:600;">+91 98765 43210</a></div>
+              </div>
+              <div class="map-card-actions two-cta-row">
+                <a href="https://www.google.com/maps/search/?api=1&query=42+Artisan+Way,+Culinary+Lane,+Bengaluru+560038" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary btn-sm" 
+                   title="Open The Melt District HQ in Google Maps">
+                  Open in Maps ↗
+                </a>
+                <a href="#contact-form-section" 
+                   class="btn btn-outline btn-sm" 
+                   title="Jump down to send our HQ desk a message">
+                  Message HQ ↓
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Mobile Food Truck (Active Curbside Stop) -->
+            <div class="map-location-card" id="card-loc-truck" role="tabpanel" aria-labelledby="tab-loc-truck" style="display:none;">
+              <div class="map-card-header">
+                <span class="badge badge-chef" style="font-size:0.75rem;">
+                  🚚 MOBILE FOOD TRUCK #01
+                </span>
+                <span class="badge badge-spicy" style="font-size:0.72rem;">ACTIVE STOP</span>
+              </div>
+              <h3 class="map-card-title">Curbside Food Truck #01</h3>
+              <p class="map-card-address">
+                <span aria-hidden="true">📍</span> 
+                <span><strong>Active Stop:</strong> Cyber City Business Plaza, Gate 4, Sector 24</span>
+              </p>
+              <div class="map-card-meta">
+                <div>⏰ <strong>Service Hours:</strong> Tuesday – Sunday, 11:30 AM – 9:30 PM</div>
+                <div>🔥 <strong>On-Site:</strong> Freshly griddled artisanal sourdough melts &amp; soup</div>
+                <div>⚡ <strong>Service:</strong> Walk-up service &amp; online pre-order pickups</div>
+              </div>
+              <div class="map-card-actions two-cta-row">
+                <a href="https://www.google.com/maps/search/?api=1&query=Cyber+City+Hub,+Sector+24" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary btn-sm" 
+                   title="Open Food Truck location in Google Maps">
+                  Open in Maps ↗
+                </a>
+                <a href="find-the-truck.html" 
+                   class="btn btn-outline btn-sm" 
+                   title="View full weekly city rotation schedule">
+                  Truck Radar →
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. FREQUENTLY ASKED QUESTIONS (FAQ) ==================== -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);" id="booking-faqs">
+      <div class="container container-narrow">
+        
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Booking Clarity</span>
+          <h2 class="heading-section">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="lead-text">Everything you need to know about food truck bookings, catering availability, service areas, and reservation timelines.</p>
+        </div>
+
+        <div class="accordion reveal-on-scroll" id="contact-faq-accordion">
+          
+          <!-- Item 1: Food Truck Bookings -->
+          <div class="accordion-item open">
+            <button class="accordion-header" aria-expanded="true" aria-controls="faq-ans-1" id="faq-btn-1">
+              <span>How does food truck booking, venue arrival, and on-site setup work?</span>
+              <span class="accordion-icon" aria-hidden="true">−</span>
+            </button>
+            <div class="accordion-body" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+              <p>
+                Our food truck arrives 60 to 90 minutes before your meal service window to position, stabilize jacks, and bring our flat-top griddles to searing temperature. We are completely self-powered with onboard ultra-quiet commercial inverter generators and self-contained fresh water systems, meaning zero exterior electrical or utility hookups are required from your venue.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Catering Availability & Capacity -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-2" id="faq-btn-2">
+              <span>What is your catering capacity, serving speed, and dietary options?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
+              <p>
+                We comfortably cater events from 50 up to 500+ guests. Equipped with dual 36-inch chrome steel griddles, our experienced line cooks comfortably serve 120 to 160 custom gourmet sourdough melts per hour, keeping guest wait times under 4 minutes. We offer vegetarian, vegan, and gluten-friendly bread substitutions upon request.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Service Areas -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-3" id="faq-btn-3">
+              <span>What geographic service areas and venue locations do you cover?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+              <p>
+                We service the entire Bengaluru metropolitan area and commercial corridors within a 30 km radius of our central commissary kitchen depot in Indiranagar. For private venues, vineyard weddings, or corporate retreats beyond 30 km, custom travel arrangements can be accommodated upon request.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Advance Booking Requirements -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-4" id="faq-btn-4">
+              <span>How far in advance should we reserve our food truck date?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
+              <p>
+                For weekend weddings, corporate milestones, and peak festival dates, we advise reserving your date 3 to 6 weeks in advance to secure your preferred meal slot. For weekday corporate office lunches, we can occasionally accommodate bookings with as little as 1 to 2 weeks notice depending on schedule availability.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. FINAL CALL TO ACTION ==================== -->
+    <section class="section-spacing" style="padding-top:2rem;padding-bottom:clamp(3.5rem, 6vw, 6rem);background-color: var(--bg-primary);">
+      <div class="container">
+        <div class="final-contact-cta reveal-on-scroll">
+          <span class="eyebrow" style="margin-bottom:1rem;display:inline-block;">Reserve Your Date</span>
+          <h2 class="heading-section">LET’S MAKE YOUR EVENT EXTRA CHEESY!</h2>
+          <p>
+            Bring hot flat-top griddles, legendary molten cheese pulls, and unforgettable street food energy to your next celebration. Dates fill quickly — request your personalized catering quote today!
+          </p>
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+            <a href="#event-catering-section" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-cheese);">
+              Book Our Food Truck
+            </a>
+            <a href="service-details.html" class="btn btn-outline btn-lg">
+              Explore Menu Packages →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck website.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

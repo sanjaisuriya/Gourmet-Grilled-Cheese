@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food & Drink Menu | The Melt District</title>
+  <meta name="description" content="Explore our full menu of artisanal grilled cheese sandwiches, gourmet melts, slow-roasted tomato bisques, crispy truffle sides, and craft shakes. Prices in ₹.">
+  <meta name="keywords" content="grilled cheese menu, food truck menu, artisanal melts, tomato bisque, comfort food prices">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4.3">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link active">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">Proceed to Demo Checkout</button>
+      <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.6rem;">
+        ⚡ Hot, fresh pickup straight off the griddle window.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero-banner hero-bg-menu">
+      <div class="container">
+        <div class="page-hero-inner reveal-on-scroll">
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span class="active-crumb">Curbside Menu</span>
+          </nav>
+          <div>
+            <span class="eyebrow">Fresh Off The Sizzling Steel</span>
+          </div>
+          <h1 class="heading-hero">THE CURBSIDE MENU</h1>
+          <p class="lead-text" style="margin-bottom:1.15rem;">
+            Every melt is grilled edge-to-edge in grass-fed cultured butter and cut diagonally for dipping. Prices in Indian Rupees (₹).
+          </p>
+          <div class="page-hero-actions two-cta-row justify-center">
+            <a href="#menu-items-grid" class="btn btn-primary btn-sm">Browse Melts ↓</a>
+            <a href="contact.html" class="btn btn-outline btn-sm">Book Our Truck →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST HIGHLIGHTS BAR (SPACED DOWN FROM HERO BANNER) -->
+    <div class="menu-trust-bar">
+      <div class="container">
+        <div class="menu-trust-bar-inner">
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🧀 Wisconsin Cave-Aged Cheeses</span>
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🍞 36-Hour Sourdough Levain</span>
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🥣 Fire-Roasted Bisque Dippers</span>
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🌱 Dedicated Veg Flat-Top</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU FILTER & INTERACTIVE CONTROLS BAR -->
+    <section style="padding-block: clamp(2.5rem, 4vw, 4rem) clamp(3rem, 5vw, 5rem);">
+      <div class="container">
+        
+        <!-- Filter Bar Component -->
+        <div class="menu-filter-bar reveal-on-scroll">
+          <!-- Category Tabs Row -->
+          <div class="category-tabs" role="tablist" aria-label="Menu Category Tabs">
+            <button class="tab-btn active" data-category="all" role="tab" aria-selected="true">All Melts & Sides</button>
+            <button class="tab-btn" data-category="signature" role="tab" aria-selected="false">Signature Cheeses</button>
+            <button class="tab-btn" data-category="gourmet" role="tab" aria-selected="false">Gourmet Melts</button>
+            <button class="tab-btn" data-category="comfort" role="tab" aria-selected="false">Comfort Soups & Mac</button>
+            <button class="tab-btn" data-category="sides" role="tab" aria-selected="false">Sides & Fries</button>
+            <button class="tab-btn" data-category="drinks" role="tab" aria-selected="false">Drinks & Shakes</button>
+            <button class="tab-btn" data-category="seasonal" role="tab" aria-selected="false">Seasonal Specials</button>
+          </div>
+
+          <!-- Secondary Filter Controls Row -->
+          <div class="menu-filter-secondary">
+            <!-- Live Search Bar -->
+            <div class="menu-search-wrapper">
+              <span class="menu-search-icon" aria-hidden="true">🔍</span>
+              <input type="search" class="menu-search-input" placeholder="Search by name, cheese, or dip..." aria-label="Search menu items">
+            </div>
+
+            <!-- Dietary Preference Filter & Results Meta -->
+            <div class="menu-filter-meta">
+              <div class="menu-dietary-group">
+                <span class="dietary-label">Dietary:</span>
+                <div class="dietary-pills">
+                  <button class="diet-filter-btn active" data-diet="all">All</button>
+                  <button class="diet-filter-btn" data-diet="veg">🟢 Pure Veg</button>
+                  <button class="diet-filter-btn" data-diet="nonveg">🔴 Non-Veg</button>
+                </div>
+              </div>
+
+              <!-- Results Counter -->
+              <div id="menu-results-count" class="menu-results-counter">
+                Showing 18 dishes
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="menu-items-grid" class="grid-3">
+          <!-- 1. Classic Grilled Cheese -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/signature-melt-1.jpg" alt="Classic Grilled Cheese" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg"><span style="font-size:0.6rem;">🟢</span> VEG</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+              <div class="food-card-price-tag">₹249</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Signature Grilled Cheese</div>
+              <h3 class="food-card-title">Classic Grilled Cheese</h3>
+              <p class="food-card-desc">Golden toasted artisan country sourdough buttered edge-to-edge with melted sharp Wisconsin yellow and white cheddar.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-classic-grilled-cheese">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-classic-grilled-cheese" data-name="Classic Grilled Cheese" data-price="249" data-image="assets/images/signature-melt-1.jpg" data-category="Signature Grilled Cheese">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Three-Cheese Melt -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/signature-melt-2.jpg" alt="Three-Cheese Melt" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg"><span style="font-size:0.6rem;">🟢</span> VEG</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+              <div class="food-card-price-tag">₹289</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Signature Grilled Cheese</div>
+              <h3 class="food-card-title">Three-Cheese Melt</h3>
+              <p class="food-card-desc">A rich molten blend of aged sharp cheddar, Swiss Gruyère, and Wisconsin mozzarella on thick levain sourdough.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-three-cheese">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-three-cheese" data-name="Three-Cheese Melt" data-price="289" data-image="assets/images/signature-melt-2.jpg" data-category="Signature Grilled Cheese">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Spicy Jalapeño Melt -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/signature-melt-3.jpg" alt="Spicy Jalapeño Melt" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg"><span style="font-size:0.6rem;">🟢</span> VEG</span>
+                <span class="badge badge-spicy">🌶️ SPICY</span>
+              </div>
+              <div class="food-card-price-tag">₹319</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Signature Grilled Cheese</div>
+              <h3 class="food-card-title">Spicy Jalapeño Melt</h3>
+              <p class="food-card-desc">Fire-roasted jalapeño peppers, spicy Monterey pepper jack, whipped cream cheese, and sharp cheddar with crunchy crust.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-spicy-jalapeno">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-spicy-jalapeno" data-name="Spicy Jalapeño Melt" data-price="319" data-image="assets/images/signature-melt-3.jpg" data-category="Signature Grilled Cheese">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. BBQ Chicken Grilled Cheese -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/signature-melt-4-bbq.jpg" alt="BBQ Chicken Grilled Cheese" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-nonveg"><span style="font-size:0.6rem;">🔴</span> NON-VEG</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+              <div class="food-card-price-tag">₹369</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Gourmet Melts</div>
+              <h3 class="food-card-title">BBQ Chicken Grilled Cheese</h3>
+              <p class="food-card-desc">Tender chicken breast tossed in sweet and smoky hickory barbecue sauce, melted Dutch gouda, and red onion jam on Texas toast.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-bbq-chicken">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-bbq-chicken" data-name="BBQ Chicken Grilled Cheese" data-price="369" data-image="assets/images/signature-melt-4-bbq.jpg" data-category="Gourmet Melts">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Creamy Tomato Soup -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/comfort-tomato-soup.jpg" alt="Creamy Tomato Soup" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg"><span style="font-size:0.6rem;">🟢</span> VEG</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+              <div class="food-card-price-tag">₹189</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Classic Comfort Food</div>
+              <h3 class="food-card-title">Creamy Tomato Soup</h3>
+              <p class="food-card-desc">Slow-roasted San Marzano plum tomatoes, fresh basil purée, roasted garlic cream, served piping hot with sourdough croutons.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="comfort-creamy-tomato-soup">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="comfort-creamy-tomato-soup" data-name="Creamy Tomato Soup" data-price="189" data-image="assets/images/comfort-tomato-soup.jpg" data-category="Classic Comfort Food">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Loaded Comfort Fries -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/comfort-fries.jpg" alt="Loaded Comfort Fries" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg"><span style="font-size:0.6rem;">🟢</span> VEG</span>
+                <span class="badge badge-chef">⭐ CHEF SPECIAL</span>
+              </div>
+              <div class="food-card-price-tag">₹219</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Sides & Snacks</div>
+              <h3 class="food-card-title">Loaded Comfort Fries</h3>
+              <p class="food-card-desc">Crispy double-fried Idaho russet fries smothered in warm molten cheddar cheese sauce, herb butter, and scallions.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="side-loaded-comfort-fries">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="side-loaded-comfort-fries" data-name="Loaded Comfort Fries" data-price="219" data-image="assets/images/comfort-fries.jpg" data-category="Sides & Snacks">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Fresh Lemonade -->
+          <div class="food-card reveal-on-scroll">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/comfort-drinks.jpg" alt="Fresh Lemonade" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg"><span style="font-size:0.6rem;">🟢</span> VEG</span>
+              </div>
+              <div class="food-card-price-tag">₹129</div>
+            </div>
+            <div class="food-card-body">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--cheddar-hover); text-transform: uppercase; margin-bottom: 0.2rem;">Drinks & Shakes</div>
+              <h3 class="food-card-title">Fresh Lemonade</h3>
+              <p class="food-card-desc">Hand-squeezed Meyer lemons, real cane sugar syrup, cold filtered water, and fresh garden mint leaves over crushed ice.</p>
+              <div class="food-card-footer">
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="drink-fresh-lemonade">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="drink-fresh-lemonade" data-name="Fresh Lemonade" data-price="129" data-image="assets/images/comfort-drinks.jpg" data-category="Drinks & Shakes">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHEF COMBO BANNER -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="menu-catering-box reveal-on-scroll" style="background:var(--bg-card);border:2px dashed var(--cheddar);border-radius:var(--radius-lg);padding:clamp(2rem, 3.5vw, 3rem);">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;margin-bottom:0.5rem;">
+              <span class="eyebrow eyebrow-red" style="margin:0;">🔥 The Ultimate Duo Deal</span>
+              <span class="badge badge-chef" style="font-size:0.7rem;padding:0.25rem 0.6rem;">⭐ CHEF'S #1 PAIRING</span>
+            </div>
+            
+            <h2 class="heading-section" style="font-size: clamp(2rem, 3.2vw, 2.75rem); margin-bottom: 0.75rem; line-height: 1.15;">
+              THE MELT & SOUP COMBO
+            </h2>
+            
+            <p style="color:var(--text-secondary);font-size:1.02rem;line-height:1.6;margin-bottom:1.35rem;">
+              The quintessential curbside comfort pairing: dip any of our golden, butter-grilled artisan sourdough melts directly into a piping hot bowl of slow-simmered San Marzano tomato bisque for pure nostalgic bliss.
+            </p>
+
+            <!-- Combo Inclusions Breakdown -->
+            <div class="combo-perks-list">
+              <div class="combo-perk-item">
+                <span class="combo-perk-icon">🥪</span>
+                <div>
+                  <div class="combo-perk-title">Any Signature Grilled Cheese Melt</div>
+                  <p class="combo-perk-desc">Country sourdough toasted edge-to-edge in cultured butter with sharp Wisconsin cheddar, Gruyère, or jalapeño pepper jack.</p>
+                </div>
+              </div>
+              <div class="combo-perk-item">
+                <span class="combo-perk-icon">🥣</span>
+                <div>
+                  <div class="combo-perk-title">Fire-Roasted San Marzano Tomato Bisque (Full Bowl)</div>
+                  <p class="combo-perk-desc">Slow-roasted Italian plum tomatoes, garlic butter, fresh garden basil purée, and a velvety cream swirl crafted for dipping.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Area & Savings -->
+            <div class="combo-cta-wrap">
+              <button class="btn btn-primary add-to-cart-btn" 
+                data-id="combo-gold-bisque" 
+                data-name="The Gold Melt + Bisque Combo" 
+                data-price="438" 
+                data-image="assets/images/melt-soup-combo.jpg" 
+                data-category="Combo Special"
+                style="padding: 0.7rem 1.6rem; font-size: 0.95rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Add Combo to Cart • ₹438
+              </button>
+              
+              <div class="combo-savings-pill">
+                <span>💰</span> Save ₹50 <span style="text-decoration:line-through;color:var(--text-muted);font-weight:400;font-size:0.78rem;">₹488</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo Showcase Image -->
+          <div class="combo-image-card">
+            <span class="combo-floating-badge">
+              <span>🥣🥪</span> Melt &amp; Dip Duo
+            </span>
+            <img src="assets/images/melt-soup-combo.jpg" alt="Golden artisan grilled cheese sandwich with molten cheese pull paired with a bowl of fire-roasted San Marzano tomato bisque" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURBSIDE PAIRING GUIDE -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Curated By Chef Kabir</span>
+          <h2 class="heading-section">The Ultimate Curbside Pairings</h2>
+          <p class="lead-text">Elevate your street food experience with flavor harmonies crafted on our flattop.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Pairing 1 -->
+          <div class="food-card reveal-on-scroll delay-1" style="border-radius:var(--radius-lg);padding:2rem;display:flex;flex-direction:column;height:100%;">
+            <div style="font-size:2.4rem;margin-bottom:0.75rem;">🥣🥪</div>
+            <div style="min-height:26px;margin-bottom:0.5rem;">
+              <span class="badge badge-chef">THE GOLD STANDARD</span>
+            </div>
+            <h3 style="font-size:1.4rem;margin-bottom:0.5rem;min-height:2.2rem;">The Dip & Crunch Classic</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+              Classic Wisconsin Cheddar Melt + Fire-Roasted Tomato Bisque Bowl. The acidity of the San Marzano tomatoes slices through cultured butter fat for pure nostalgic dopamine.
+            </p>
+            <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);display:flex;justify-content:space-between;align-items:center;margin-top:auto;">
+              <span style="font-weight:700;color:var(--cheddar-hover);">Combo Total: ₹398</span>
+              <button class="btn btn-outline btn-sm add-to-cart-btn" data-id="pair-classic-bisque" data-name="Dip & Crunch Duo" data-price="398" data-category="Pairings" data-image="assets/images/home2-side-bisque.jpg">
+                Order Duo
+              </button>
+            </div>
+          </div>
+
+          <!-- Pairing 2 -->
+          <div class="food-card reveal-on-scroll delay-2" style="border-radius:var(--radius-lg);padding:2rem;display:flex;flex-direction:column;height:100%;">
+            <div style="font-size:2.4rem;margin-bottom:0.75rem;">🌶️🍹</div>
+            <div style="min-height:26px;margin-bottom:0.5rem;">
+              <span class="badge badge-spicy">SWEET HEAT CONTRAST</span>
+            </div>
+            <h3 style="font-size:1.4rem;margin-bottom:0.5rem;min-height:2.2rem;">The Pepper & Berry Spark</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+              Spicy Jalapeño Popper Melt + Hand-Muddled Blackberry Mint Lemonade. Charred chilis and molten pepper jack balanced by bubbly, icy tart fruit goodness.
+            </p>
+            <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);display:flex;justify-content:space-between;align-items:center;margin-top:auto;">
+              <span style="font-weight:700;color:var(--cheddar-hover);">Combo Total: ₹448</span>
+              <button class="btn btn-outline btn-sm add-to-cart-btn" data-id="pair-pepper-berry" data-name="Pepper & Berry Spark Duo" data-price="448" data-category="Pairings" data-image="assets/images/menu-blackberry-lemonade.jpg">
+                Order Duo
+              </button>
+            </div>
+          </div>
+
+          <!-- Pairing 3 -->
+          <div class="food-card reveal-on-scroll delay-3" style="border-radius:var(--radius-lg);padding:2rem;display:flex;flex-direction:column;height:100%;">
+            <div style="font-size:2.4rem;margin-bottom:0.75rem;">🍄🍟</div>
+            <div style="min-height:26px;margin-bottom:0.5rem;">
+              <span class="badge" style="background:#E0E7FF;color:#3730A3;">EARTHY DECADENCE</span>
+            </div>
+            <h3 style="font-size:1.4rem;margin-bottom:0.5rem;min-height:2.2rem;">The Alpine Truffle Feast</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+              Wild Mushroom & Black Truffle Melt + Parmesan Herb Truffle Fries. Rich fontina, taleggio, and white truffle glaze doubled up with piping hot Idaho russet fries.
+            </p>
+            <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);display:flex;justify-content:space-between;align-items:center;margin-top:auto;">
+              <span style="font-weight:700;color:var(--cheddar-hover);">Combo Total: ₹568</span>
+              <button class="btn btn-outline btn-sm add-to-cart-btn" data-id="pair-alpine-truffle" data-name="Alpine Truffle Feast" data-price="568" data-category="Pairings" data-image="assets/images/menu-parmesan-truffle-fries.jpg">
+                Order Duo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE CRAFT YOUR ORDER -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Curbside Perfection</span>
+          <h2 class="heading-section">How We Craft Every Melt</h2>
+          <p class="lead-text">From sourdough levain to a molten diagonal cut, here is the secret behind the city's favorite street food crunch.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Step 1 -->
+          <div class="feature-box reveal-on-scroll delay-1" style="border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;">
+            <div style="width:52px;height:52px;background:var(--cheddar-light);color:var(--cheddar-hover);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;margin-bottom:1rem;">
+              01
+            </div>
+            <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">Choose Sourdough</h4>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">
+              36-hour wild fermented country levain or gluten-friendly artisan bread sliced thick for maximum butter absorption.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="feature-box reveal-on-scroll delay-2" style="border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;">
+            <div style="width:52px;height:52px;background:var(--cheddar-light);color:var(--cheddar-hover);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;margin-bottom:1rem;">
+              02
+            </div>
+            <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">Molten Cheese Core</h4>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">
+              Layered with aged Wisconsin cheddar, nutty alpine Gruyère, or gooey mozzarella with custom gourmet fillings.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="feature-box reveal-on-scroll delay-3" style="border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;">
+            <div style="width:52px;height:52px;background:var(--cheddar-light);color:var(--cheddar-hover);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;margin-bottom:1rem;">
+              03
+            </div>
+            <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">375°F Steam Dome</h4>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">
+              Seared on seasoned chrome steel under heavy stainless domes for rapid, even melt without drying the interior.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="feature-box reveal-on-scroll delay-4" style="border-radius:var(--radius-lg);padding:2rem 1.5rem;text-align:center;">
+            <div style="width:52px;height:52px;background:var(--cheddar-light);color:var(--cheddar-hover);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;margin-bottom:1rem;">
+              04
+            </div>
+            <h4 style="font-size:1.15rem;margin-bottom:0.5rem;">Diagonal Dip & Pick Up</h4>
+            <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">
+              Cut cleanly on the bias for instant dunking into piping hot San Marzano tomato bisque. Ready in 5 minutes flat!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIETARY & KITCHEN ETHOS BANNER -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary); padding-top: 3.5rem; padding-bottom: 3.5rem;">
+      <div class="container">
+        <div style="text-align:center;max-width:720px;margin-inline:auto;margin-bottom:2.5rem;" class="reveal-on-scroll">
+          <span class="eyebrow">Our Kitchen Integrity</span>
+          <h2 class="heading-section">The Curbside Quality Promise</h2>
+        </div>
+
+        <div class="grid-4">
+          <div class="feature-box reveal-on-scroll delay-1" style="text-align:center;padding:1.75rem 1.25rem;">
+            <span style="font-size:2.2rem;display:block;margin-bottom:0.5rem;">🧀</span>
+            <h4 style="font-size:1.1rem;margin-bottom:0.35rem;">100% Real Cheese</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Cave-aged cheddar and whole milk curds with zero artificial oils or processed single-slices.</p>
+          </div>
+          <div class="feature-box reveal-on-scroll delay-2" style="text-align:center;padding:1.75rem 1.25rem;">
+            <span style="font-size:2.2rem;display:block;margin-bottom:0.5rem;">🍞</span>
+            <h4 style="font-size:1.1rem;margin-bottom:0.35rem;">36-Hour Levain Bread</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Fermented naturally with wild sourdough cultures for enhanced gut digestion and deep flavor.</p>
+          </div>
+          <div class="feature-box reveal-on-scroll delay-3" style="text-align:center;padding:1.75rem 1.25rem;">
+            <span style="font-size:2.2rem;display:block;margin-bottom:0.5rem;">🧈</span>
+            <h4 style="font-size:1.1rem;margin-bottom:0.35rem;">Cultured Grass-Fed Butter</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">High-fat European-style butter seared to golden hazelnut brown on every corner of the crust.</p>
+          </div>
+          <div class="feature-box reveal-on-scroll delay-4" style="text-align:center;padding:1.75rem 1.25rem;">
+            <span style="font-size:2.2rem;display:block;margin-bottom:0.5rem;">🌱</span>
+            <h4 style="font-size:1.1rem;margin-bottom:0.35rem;">Dedicated Veg Flat-Top</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Separate dedicated griddle section and spatulas reserved exclusively for vegetarian melts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP & OFFICE PARTY PLATTERS -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Feast For The Crew</span>
+          <h2 class="heading-section">Curbside Group & Office Platters</h2>
+          <p class="lead-text">Feeding a team meeting, watch party, or family gathering? Our heavy-duty insulated thermal boxes keep sandwiches golden, crispy, and molten hot for up to 45 minutes.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Platter 1: Office Crew Pack -->
+          <div class="food-card reveal-on-scroll delay-1" style="border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;height:100%;">
+            <div class="food-card-thumb-wrap" style="height:210px;">
+              <img src="assets/images/platter-office-lunch.jpg" alt="The Office Lunch Crew Box" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge" style="background:#E0E7FF;color:#3730A3;font-weight:700;">SERVES 5–6 GUESTS</span>
+              </div>
+              <div class="food-card-price-tag">₹1,599</div>
+            </div>
+            <div class="food-card-body" style="padding:1.75rem;display:flex;flex-direction:column;flex:1;">
+              <div style="font-size:0.75rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;margin-bottom:0.25rem;">Curbside Party Box</div>
+              <h3 style="font-size:1.35rem;margin-bottom:0.5rem;min-height:2.2rem;">The Office Lunch Crew Box</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:1.25rem;min-height:3rem;">
+                A crowd-pleasing assortment packed in thermal kraft boxes for effortless team lunches and work sessions.
+              </p>
+              <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;font-size:0.875rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.45rem;flex:1;">
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 6 Signature Half Melts (Classic & Three-Cheese)
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 2 Large Baskets of Herb Garlic Russet Fries
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 4 San Marzano Tomato Bisque Dipping Shooters
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 4 Assorted House Dipping Ramekins
+                </li>
+              </ul>
+              <button class="btn btn-primary add-to-cart-btn" style="width:100%;margin-top:auto;"
+                data-id="platter-office-crew"
+                data-name="The Office Lunch Crew Box (Serves 5-6)"
+                data-price="1599"
+                data-category="Party Platters"
+                data-image="assets/images/platter-office-lunch.jpg">
+                Order Party Box • ₹1,599
+              </button>
+            </div>
+          </div>
+
+          <!-- Platter 2: Game Day Feast -->
+          <div class="food-card reveal-on-scroll delay-2" style="border:2px solid var(--cheddar);border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-card);display:flex;flex-direction:column;height:100%;">
+            <div class="food-card-thumb-wrap" style="height:210px;">
+              <img src="assets/images/platter-game-day.jpg" alt="Game Day Griddle Feast" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge" style="background:var(--cheddar);color:#1A1A1A;font-weight:800;">⭐ MOST POPULAR</span>
+                <span class="badge" style="background:#FEE2E2;color:#DC2626;font-weight:700;">SERVES 10–12 GUESTS</span>
+              </div>
+              <div class="food-card-price-tag">₹2,999</div>
+            </div>
+            <div class="food-card-body" style="padding:1.75rem;display:flex;flex-direction:column;flex:1;">
+              <div style="font-size:0.75rem;font-weight:700;color:var(--tomato);text-transform:uppercase;margin-bottom:0.25rem;">Mega Party Feast</div>
+              <h3 style="font-size:1.35rem;margin-bottom:0.5rem;min-height:2.2rem;">The Game Day Griddle Feast</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:1.25rem;min-height:3rem;">
+                The ultimate street food celebration package with our full range of cheesy gourmet favorites and crunch sides.
+              </p>
+              <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;font-size:0.875rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.45rem;flex:1;">
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 10 Assorted Melts (Veg & Non-Veg Favorites)
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 4 Baskets of Golden Herb Potato Tots & Fries
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 8 Dipping Ramekins (Truffle Aioli, Hot Honey & Ranch)
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 6 Craft Lemonades or Sodas on Ice
+                </li>
+              </ul>
+              <button class="btn btn-primary add-to-cart-btn" style="width:100%;margin-top:auto;"
+                data-id="platter-game-day"
+                data-name="The Game Day Griddle Feast (Serves 10-12)"
+                data-price="2999"
+                data-category="Party Platters"
+                data-image="assets/images/platter-game-day.jpg">
+                Order Party Box • ₹2,999
+              </button>
+            </div>
+          </div>
+
+          <!-- Platter 3: Midnight Sweet & Savory -->
+          <div class="food-card reveal-on-scroll delay-3" style="border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;height:100%;">
+            <div class="food-card-thumb-wrap" style="height:210px;">
+              <img src="assets/images/platter-midnight-box.jpg" alt="Midnight Sweet & Savory Box" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge" style="background:#E0E7FF;color:#3730A3;font-weight:700;">SERVES 4–6 GUESTS</span>
+              </div>
+              <div class="food-card-price-tag">₹1,399</div>
+            </div>
+            <div class="food-card-body" style="padding:1.75rem;display:flex;flex-direction:column;flex:1;">
+              <div style="font-size:0.75rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;margin-bottom:0.25rem;">Late-Night Craving</div>
+              <h3 style="font-size:1.35rem;margin-bottom:0.5rem;min-height:2.2rem;">Midnight Sweet & Savory Box</h3>
+              <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:1.25rem;min-height:3rem;">
+                Crafted for night owls, movie marathons, and post-party gatherings craving both cheesy comfort and cold treats.
+              </p>
+              <ul style="list-style:none;padding:0;margin:0 0 1.5rem 0;font-size:0.875rem;color:var(--text-secondary);display:flex;flex-direction:column;gap:0.45rem;flex:1;">
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 4 Classic Wisconsin Yellow Cheddar Melts
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 2 Toasted Nutella Marshmallow Dessert Melts
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 4 Hand-Spun Decadent Chocolate Shakes or Floats
+                </li>
+                <li style="display:flex;align-items:center;gap:0.5rem;">
+                  <span style="color:var(--cheddar);font-weight:800;">✓</span> 2 Warm San Marzano Dipping Cups
+                </li>
+              </ul>
+              <button class="btn btn-primary add-to-cart-btn" style="width:100%;margin-top:auto;"
+                data-id="platter-midnight-box"
+                data-name="Midnight Sweet & Savory Box (Serves 4-6)"
+                data-price="1399"
+                data-category="Party Platters"
+                data-image="assets/images/platter-midnight-box.jpg">
+                Order Party Box • ₹1,399
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALLERGEN & DIETARY TRANSPARENCY MATRIX -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Transparency & Care</span>
+          <h2 class="heading-section">Dietary & Allergen Guide</h2>
+          <p class="lead-text">We take food allergies and dietary lifestyles with the utmost culinary seriousness. Here is how we ensure your meal is safe and delicious.</p>
+        </div>
+
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:clamp(1.5rem, 3vw, 2.5rem);box-shadow:var(--shadow-sm);" class="reveal-on-scroll">
+          <div class="dietary-matrix-grid">
+            
+            <div class="dietary-matrix-card" style="border-inline-start-color: #16A34A;">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="font-size:1.35rem;">🟢</span>
+                <h4 style="font-size:1.05rem;margin:0;">100% Pure Vegetarian Safe</h4>
+              </div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                Dedicated vegetarian chrome flat-top grill surface and green-handled spatulas. No meat or poultry juices ever touch our veg bread.
+              </p>
+            </div>
+
+            <div class="dietary-matrix-card" style="border-inline-start-color: var(--cheddar);">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="font-size:1.35rem;">🌾</span>
+                <h4 style="font-size:1.05rem;margin:0;">Gluten-Friendly Substitutes</h4>
+              </div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                Certified gluten-tested country artisan loaf available on request for any sandwich (+₹39). Grilled with sanitized dedicated tools.
+              </p>
+            </div>
+
+            <div class="dietary-matrix-card" style="border-inline-start-color: #3B82F6;">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="font-size:1.35rem;">🥛</span>
+                <h4 style="font-size:1.05rem;margin:0;">Dairy-Free & Vegan Upgrades</h4>
+              </div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                Plant-based coconut-oil and cashew mozzarella/cheddar alternatives seared in organic olive oil available for vegan foodies (+₹49).
+              </p>
+            </div>
+
+            <div class="dietary-matrix-card" style="border-inline-start-color: #E11D48;">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="font-size:1.35rem;">🥜</span>
+                <h4 style="font-size:1.05rem;margin:0;">100% Tree-Nut & Peanut Free</h4>
+              </div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                Our food truck and prep commissary are strictly 100% tree-nut and peanut-free kitchens. Zero peanut or nut oils used.
+              </p>
+            </div>
+
+            <div class="dietary-matrix-card" style="border-inline-start-color: #8B5CF6;">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="font-size:1.35rem;">🍗</span>
+                <h4 style="font-size:1.05rem;margin:0;">Halal-Certified Poultry & Bacon</h4>
+              </div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                All chicken and cured meats are 100% farm-traceable, certified halal, free of chemical nitrates, and cured with real hickory wood.
+              </p>
+            </div>
+
+            <div class="dietary-matrix-card" style="border-inline-start-color: #0D9488;">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <span style="font-size:1.35rem;">🥣</span>
+                <h4 style="font-size:1.05rem;margin:0;">Naturally Gluten-Free Bisque</h4>
+              </div>
+              <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                Our slow-simmered San Marzano tomato bisque is thickened purely with roasted vegetables and cream. Zero flour roux added!
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURBSIDE ORDERING & MENU FAQ -->
+    <section class="section-spacing">
+      <div class="container" style="max-width:860px;">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Got Questions?</span>
+          <h2 class="heading-section">Curbside Ordering FAQs</h2>
+          <p class="lead-text">Everything you need to know about our griddle speed, pickup windows, custom orders, and catering.</p>
+        </div>
+
+        <div class="accordion reveal-on-scroll">
+          <!-- FAQ 1 -->
+          <div class="accordion-item active open">
+            <button class="accordion-header" aria-expanded="true">
+              <span>How fast is each grilled cheese order prepared from scratch?</span>
+              <span class="accordion-icon">−</span>
+            </button>
+            <div class="accordion-body">
+              <p style="color:var(--text-secondary);line-height:1.6;font-size:0.95rem;">
+                Every single melt is cooked to order right on our 375°F commercial flat-top griddle! From ticket print to buzzer ring takes approximately <strong>4 to 6 minutes</strong>. This allows the heavy steam dome to trap moisture and melt the cheese into gooey perfection without burning the crisp sourdough levain crust.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Can I customize the cheeses or request an extra golden crunch?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p style="color:var(--text-secondary);line-height:1.6;font-size:0.95rem;">
+                Absolutely! We welcome cheese customization. You can ask our griddle sear master for extra brown crunch, blend Monterey Jack with 18-month Wisconsin Cheddar, or add fiery pickled jalapeños and sweet bacon jam to any melt on the menu.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Is your San Marzano Tomato Bisque soup vegetarian and gluten-free?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p style="color:var(--text-secondary);line-height:1.6;font-size:0.95rem;">
+                Yes! Our famous Fire-Roasted San Marzano Tomato Bisque is 100% vegetarian. It is naturally velvety and thick because it is made from pureed slow-roasted plum tomatoes, fresh sweet basil, and rich dairy cream—with <strong>zero flour or wheat roux</strong>. Simply request it without sourdough croutons for a 100% gluten-free bowl.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>How do party platter boxes and office pre-ordering work?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p style="color:var(--text-secondary);line-height:1.6;font-size:0.95rem;">
+                For our Curbside Party Boxes (serving 5 to 12 people), you can add them directly to your cart or call our food truck hotline 30 minutes in advance. We pack them in heavy-duty thermal insulated boxes that maintain crunch and temperature for up to 45 minutes of transit.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>What payment methods are accepted at the food truck window?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p style="color:var(--text-secondary);line-height:1.6;font-size:0.95rem;">
+                We accept all major digital UPI applications (Google Pay, PhonePe, Paytm, BHIM), all contactless Credit & Debit Cards (Visa, Mastercard, RuPay, American Express), and cash at our ordering window.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Do you bring the food truck to private weddings, birthdays, and corporate events?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p style="color:var(--text-secondary);line-height:1.6;font-size:0.95rem;">
+                Yes! Our mobile food truck is fully self-powered and self-contained, capable of catering parties from 30 up to 500+ guests. We also set up indoor Interactive Melt Stations and Bisque Shooter Bars. Visit our <a href="service-details.html" style="color:var(--cheddar-hover);font-weight:700;">Catering & Private Events</a> page for package details!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURBSIDE CALL TO ACTION -->
+    <section class="section-spacing" style="background:linear-gradient(135deg, #1A1A1A 0%, #2A2521 100%);color:#FFFFFF;padding-block:clamp(3.5rem, 6vw, 5rem);">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem;" class="reveal-on-scroll">
+          <div style="max-width:620px;">
+            <span class="eyebrow" style="color:var(--cheddar);background:rgba(244,185,66,0.15);padding:0.3rem 0.8rem;border-radius:var(--radius-full);display:inline-block;margin-bottom:0.75rem;">Catch The Sizzle Live</span>
+            <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem, 4vw, 3.2rem);color:#FFFFFF;margin-bottom:0.75rem;line-height:1.15;">
+              READY FOR THE ULTIMATE CHEESE PULL?
+            </h2>
+            <p style="color:#D1CBC3;font-size:1.05rem;line-height:1.6;margin:0;">
+              Our griddle is blazing hot today! Find our current curbside truck parking pin or book our mobile kitchen directly for your next private gathering.
+            </p>
+          </div>
+          <div class="two-cta-row">
+            <a href="find-the-truck.html" class="btn btn-primary" style="padding:0.85rem 1.6rem;font-size:0.95rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Find Today's Truck Location
+            </a>
+            <a href="service-details.html" class="btn btn-outline" style="padding:0.85rem 1.6rem;font-size:0.95rem;color:#FFFFFF;border-color:rgba(255,255,255,0.4);">
+              Book Private Catering →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck website.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

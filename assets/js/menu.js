@@ -390,7 +390,7 @@
             <div class="food-card-footer">
               <span class="food-card-price">₹${item.price}</span>
               <div class="food-card-actions">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="${item.id}" style="padding: 0.4rem 0.85rem;">
+                <button class="btn btn-outline btn-sm quick-view-btn" data-id="${item.id}">
                   Details
                 </button>
                 <button class="btn btn-primary btn-sm add-to-cart-btn" 

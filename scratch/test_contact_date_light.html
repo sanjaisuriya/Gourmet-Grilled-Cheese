@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body {
+      background: #FFFFFF;
+      color: #12100E;
+      padding: 40px;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+    .catering-form-box {
+      background: #FDFBF7;
+      padding: 30px;
+      border-radius: 16px;
+      border: 1.5px solid rgba(0, 0, 0, 0.12);
+      max-width: 650px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="catering-form-box">
+    <h3 style="margin-top:0;margin-bottom:1.5rem;font-family:var(--font-display);">Event Catering Details</h3>
+    <form id="catering-quote-form" novalidate>
+              
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:1rem;">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="quote-name" class="form-label">Full Name *</label>
+                  <input type="text" id="quote-name" class="form-control" placeholder="e.g. Sanjai Kumar" pattern="[a-zA-Z\s'-]+" required>
+                  <div class="form-error-msg" id="quote-name-error">Please enter your name (letters only).</div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-group">
+                  <label for="quote-email" class="form-label">Email Address *</label>
+                  <input type="email" id="quote-email" class="form-control" placeholder="name@domain.com" required>
+                  <div class="form-error-msg" id="quote-email-error">Please enter a valid email address.</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:1rem;margin-top:0.75rem;">
+                <!-- Phone Number -->
+                <div class="form-group">
+                  <label for="quote-phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="quote-phone" class="form-control" inputmode="numeric" placeholder="e.g. 9876543210" required>
+                  <div class="form-error-msg" id="quote-phone-error">Please enter a valid phone number.</div>
+                </div>
+
+                <!-- Event Type Dropdown -->
+                <div class="form-group">
+                  <label for="quote-event-type" class="form-label">Event Type *</label>
+                  <select id="quote-event-type" class="form-control" required style="cursor:pointer;">
+                    <option value="" disabled selected>Select event type...</option>
+                    <option value="wedding">Wedding &amp; Reception</option>
+                    <option value="birthday">Birthday Party / Milestone</option>
+                    <option value="corporate">Corporate Event / Office Lunch</option>
+                    <option value="private-gathering">Private Gathering / Festival</option>
+                    <option value="other">Other Special Event</option>
+                  </select>
+                  <div class="form-error-msg" id="quote-event-error">Please select an event type.</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr));gap:1rem;margin-top:0.75rem;">
+                <!-- Event Date -->
+                <div class="form-group">
+                  <label for="quote-date" class="form-label">Event Date *</label>
+                  <input type="date" id="quote-date" class="form-control" required>
+                  <div class="form-error-msg" id="quote-date-error">Please select your preferred event date.</div>
+                </div>
+
+                <!-- Estimated Guest Count -->
+                <div class="form-group">
+                  <label for="quote-guests" class="form-label">Estimated Guest Count *</label>
+                  <select id="quote-guests" class="form-control" required style="cursor:pointer;">
+                    <option value="" disabled selected>Select guest count...</option>
+                    <option value="50-75">50 – 75 Guests (Minimum)</option>
+                    <option value="76-125">76 – 125 Guests</option>
+                    <option value="126-200">126 – 200 Guests</option>
+                    <option value="201-350">201 – 350 Guests</option>
+                    <option value="350+">350+ Guests (Festival Scale)</option>
+                  </select>
+                  <div class="form-error-msg" id="quote-guests-error">Please select estimated guest count.</div>
+                </div>
+              </div>
+
+              <!-- Location / Venue Address -->
+              <div class="form-group" style="margin-top:0.75rem;">
+                <label for="quote-location" class="form-label">Event Location / Venue Address *</label>
+                <input type="text" id="quote-location" class="form-control" placeholder="e.g. Indiranagar Club Lawn, Bengaluru" required>
+                <div class="form-error-msg" id="quote-location-error">Please enter the event location or venue area.</div>
+              </div>
+
+              <!-- Dietary Preferences & Notes (Optional) -->
+              <div class="form-group" style="margin-top:0.75rem;margin-bottom:1.5rem;">
+                <label for="quote-notes" class="form-label">Dietary Preferences &amp; Special Requests</label>
+                <textarea id="quote-notes" rows="3" class="form-control" placeholder="Tell us about special dietary requests (gluten-free bread, vegan cheese), serving time window, or event theme..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;box-shadow:var(--shadow-cheese);">
+                Request a Quote
+              </button>
+
+              <div id="catering-success-alert" class="alert-success" style="display:none;" role="alert">
+                🎉 Catering inquiry received! Our events director will review your date and details and send an itemized quote within 24 hours.
+              </div>
+            </form>
+  </div>
+</body>
+</html>

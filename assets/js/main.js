@@ -32,10 +32,13 @@
     });
   }
 
-  // Check saved theme or system preference
+  // Check saved theme or initial markup attribute or system preference
   const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+  const initialTheme = document.documentElement.getAttribute('data-theme');
   if (savedTheme) {
     applyTheme(savedTheme);
+  } else if (initialTheme) {
+    applyTheme(initialTheme);
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     applyTheme('dark');
   } else {
@@ -60,8 +63,15 @@
     });
   }
 
-  const savedDir = localStorage.getItem(DIR_STORAGE_KEY) || 'ltr';
-  applyDirection(savedDir);
+  const savedDir = localStorage.getItem(DIR_STORAGE_KEY);
+  const initialDir = document.documentElement.getAttribute('dir');
+  if (savedDir) {
+    applyDirection(savedDir);
+  } else if (initialDir) {
+    applyDirection(initialDir);
+  } else {
+    applyDirection('ltr');
+  }
 
   // --- 3. DOM READY LISTENERS ---
   document.addEventListener('DOMContentLoaded', () => {

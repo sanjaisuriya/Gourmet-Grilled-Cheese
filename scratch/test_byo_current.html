@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../assets/css/style.css?v=5.2">
+<style>
+.reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+</style>
+</head>
+<body style="background:var(--bg-primary);padding:40px;display:flex;justify-content:center;">
+<div style="max-width:480px;width:100%;">
+<div class="byo-preview">
+              <div>
+                <span class="eyebrow" style="margin-bottom:0.5rem;">Live Kitchen Spec</span>
+                <h4 id="byo-preview-title" style="font-size:1.6rem;margin-bottom:0.75rem;">The Custom Creator Melt</h4>
+                
+                <!-- Animated Visual Sandwich Stack -->
+                <div class="byo-visual-stack" id="byo-visual-stack" aria-hidden="true">
+                  <div class="byo-stack-layer layer-bread" id="stack-layer-top-bread">🍞 Top: 36-Hour Sourdough</div>
+                  <div class="byo-stack-layer layer-cheese" id="stack-layer-cheese">🧀 White Cheddar & Mozzarella</div>
+                  <div class="byo-stack-layer layer-addon" id="stack-layer-addon">🥓 Caramelized Onion Jam</div>
+                  <div class="byo-stack-layer layer-dip" id="stack-layer-dip">🍅 Dip: Tomato Bisque</div>
+                  <div class="byo-stack-layer layer-bread" id="stack-layer-bot-bread">🍞 Base: 36-Hour Sourdough</div>
+                </div>
+
+                <div class="byo-summary-card">
+                  <div style="font-size:0.9rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Artisan Bread:</span>
+                    <strong id="byo-summary-bread">36-Hour Sourdough</strong>
+                  </div>
+                  <div style="font-size:0.9rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Cheese Duet:</span>
+                    <strong id="byo-summary-cheese">White Cheddar, Mozzarella</strong>
+                  </div>
+                  <div style="font-size:0.9rem;margin-bottom:0.6rem;display:flex;justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Gourmet Add-Ons:</span>
+                    <strong id="byo-summary-addons">Caramelized Onion Jam</strong>
+                  </div>
+                  <div style="font-size:0.9rem;display:flex;justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Dipping Sauce:</span>
+                    <strong id="byo-summary-dip">San Marzano Tomato Bisque</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:2rem;">
+                <div style="font-size:0.85rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">
+                  Calculated Melt Price:
+                </div>
+                <div id="byo-calculated-price" class="byo-price-display">₹270</div>
+                <button id="byo-add-to-cart-btn" class="btn btn-primary btn-lg" style="width:100%;box-shadow:var(--shadow-cheese);">
+                  Add Custom Melt to Cart
+                </button>
+              </div>
+            </div>
+
+          </div></div></body></html>

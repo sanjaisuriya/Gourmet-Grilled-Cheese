@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body {
+      background: #12100E;
+      color: #FAF7F2;
+      padding: 50px;
+      font-family: sans-serif;
+    }
+    .test-box {
+      background: #24201D;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+    
+    /* Option A: color-scheme: dark */
+    .opt-a input[type="date"] {
+      color-scheme: dark;
+    }
+
+    /* Option B: filter: invert(1) */
+    .opt-b input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+      cursor: pointer;
+    }
+
+    /* Option C: filter: invert(0.85) sepia(1) hue-rotate(5deg) for cheddar warm golden tint */
+    .opt-c input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(1.1);
+      cursor: pointer;
+    }
+
+    /* Current unstyled */
+    .opt-curr input[type="date"] {
+      /* default */
+    }
+  </style>
+</head>
+<body>
+  <div class="test-box opt-curr">
+    <h3>Current (Unstyled / Low Contrast)</h3>
+    <label class="form-label">Event Date *</label>
+    <input type="date" class="form-control" value="2026-10-24">
+  </div>
+
+  <div class="test-box opt-a">
+    <h3>Option A (color-scheme: dark)</h3>
+    <label class="form-label">Event Date *</label>
+    <input type="date" class="form-control" value="2026-10-24">
+  </div>
+
+  <div class="test-box opt-b">
+    <h3>Option B (filter: invert(1))</h3>
+    <label class="form-label">Event Date *</label>
+    <input type="date" class="form-control" value="2026-10-24">
+  </div>
+</body>
+</html>

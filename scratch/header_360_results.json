@@ -1,0 +1,299 @@
+{
+  "index.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "home-2.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "about.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "blog.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "blog-details.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "contact.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "find-the-truck.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "menu.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  },
+  "service-details.html": {
+    "winW": 360,
+    "scrollW": 345,
+    "header": {
+      "left": 0,
+      "right": 345,
+      "width": 345
+    },
+    "headerCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    },
+    "logo": {
+      "left": 10.390625,
+      "right": 171.578125,
+      "width": 161.1875
+    },
+    "actions": {
+      "left": 186.609375,
+      "right": 334.609375,
+      "width": 148
+    },
+    "firstSectionCont": {
+      "left": 0,
+      "right": 345,
+      "width": 345,
+      "pL": "10.4px",
+      "pR": "10.4px"
+    }
+  }
+}

@@ -132,6 +132,9 @@
   <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-drawer-header">
       <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
         <span>MELT<span class="logo-accent">DISTRICT</span></span>
       </div>
       <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
@@ -227,7 +230,7 @@
           <p class="lead-text" style="margin-bottom:1.15rem;">
             Every melt is grilled edge-to-edge in grass-fed cultured butter and cut diagonally for dipping. Prices in Indian Rupees (₹).
           </p>
-          <div style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
+          <div class="page-hero-actions two-cta-row justify-center">
             <a href="#menu-items-grid" class="btn btn-primary btn-sm">Browse Melts ↓</a>
             <a href="contact.html" class="btn btn-outline btn-sm">Book Our Truck →</a>
           </div>
@@ -235,13 +238,15 @@
       </div>
     </section>
 
-    <!-- TRUST HIGHLIGHTS BAR -->
-    <div style="background:var(--bg-secondary);border-bottom:1px solid var(--border-color);padding:0.85rem 1rem;">
-      <div class="container" style="display:flex;gap:clamp(1rem, 2.5vw, 2.25rem);justify-content:center;flex-wrap:wrap;font-size:0.88rem;color:var(--text-secondary);font-weight:600;">
-        <span style="display:inline-flex;align-items:center;gap:0.35rem;">🧀 Wisconsin Cave-Aged Cheeses</span>
-        <span style="display:inline-flex;align-items:center;gap:0.35rem;">🍞 36-Hour Sourdough Levain</span>
-        <span style="display:inline-flex;align-items:center;gap:0.35rem;">🥣 Fire-Roasted Bisque Dippers</span>
-        <span style="display:inline-flex;align-items:center;gap:0.35rem;">🌱 Dedicated Veg Flat-Top</span>
+    <!-- TRUST HIGHLIGHTS BAR (SPACED DOWN FROM HERO BANNER) -->
+    <div class="menu-trust-bar">
+      <div class="container">
+        <div class="menu-trust-bar-inner">
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🧀 Wisconsin Cave-Aged Cheeses</span>
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🍞 36-Hour Sourdough Levain</span>
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🥣 Fire-Roasted Bisque Dippers</span>
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;">🌱 Dedicated Veg Flat-Top</span>
+        </div>
       </div>
     </div>
 
@@ -305,11 +310,13 @@
               <h3 class="food-card-title">Classic Grilled Cheese</h3>
               <p class="food-card-desc">Golden toasted artisan country sourdough buttered edge-to-edge with melted sharp Wisconsin yellow and white cheddar.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-classic-grilled-cheese" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-classic-grilled-cheese" data-name="Classic Grilled Cheese" data-price="249" data-image="assets/images/signature-melt-1.jpg" data-category="Signature Grilled Cheese">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-classic-grilled-cheese">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-classic-grilled-cheese" data-name="Classic Grilled Cheese" data-price="249" data-image="assets/images/signature-melt-1.jpg" data-category="Signature Grilled Cheese">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -329,11 +336,13 @@
               <h3 class="food-card-title">Three-Cheese Melt</h3>
               <p class="food-card-desc">A rich molten blend of aged sharp cheddar, Swiss Gruyère, and Wisconsin mozzarella on thick levain sourdough.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-three-cheese" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-three-cheese" data-name="Three-Cheese Melt" data-price="289" data-image="assets/images/signature-melt-2.jpg" data-category="Signature Grilled Cheese">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-three-cheese">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-three-cheese" data-name="Three-Cheese Melt" data-price="289" data-image="assets/images/signature-melt-2.jpg" data-category="Signature Grilled Cheese">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -353,11 +362,13 @@
               <h3 class="food-card-title">Spicy Jalapeño Melt</h3>
               <p class="food-card-desc">Fire-roasted jalapeño peppers, spicy Monterey pepper jack, whipped cream cheese, and sharp cheddar with crunchy crust.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-spicy-jalapeno" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-spicy-jalapeno" data-name="Spicy Jalapeño Melt" data-price="319" data-image="assets/images/signature-melt-3.jpg" data-category="Signature Grilled Cheese">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-spicy-jalapeno">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-spicy-jalapeno" data-name="Spicy Jalapeño Melt" data-price="319" data-image="assets/images/signature-melt-3.jpg" data-category="Signature Grilled Cheese">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -377,11 +388,13 @@
               <h3 class="food-card-title">BBQ Chicken Grilled Cheese</h3>
               <p class="food-card-desc">Tender chicken breast tossed in sweet and smoky hickory barbecue sauce, melted Dutch gouda, and red onion jam on Texas toast.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-bbq-chicken" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-bbq-chicken" data-name="BBQ Chicken Grilled Cheese" data-price="369" data-image="assets/images/signature-melt-4-bbq.jpg" data-category="Gourmet Melts">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="melt-bbq-chicken">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="melt-bbq-chicken" data-name="BBQ Chicken Grilled Cheese" data-price="369" data-image="assets/images/signature-melt-4-bbq.jpg" data-category="Gourmet Melts">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -401,11 +414,13 @@
               <h3 class="food-card-title">Creamy Tomato Soup</h3>
               <p class="food-card-desc">Slow-roasted San Marzano plum tomatoes, fresh basil purée, roasted garlic cream, served piping hot with sourdough croutons.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="comfort-creamy-tomato-soup" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="comfort-creamy-tomato-soup" data-name="Creamy Tomato Soup" data-price="189" data-image="assets/images/comfort-tomato-soup.jpg" data-category="Classic Comfort Food">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="comfort-creamy-tomato-soup">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="comfort-creamy-tomato-soup" data-name="Creamy Tomato Soup" data-price="189" data-image="assets/images/comfort-tomato-soup.jpg" data-category="Classic Comfort Food">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -425,11 +440,13 @@
               <h3 class="food-card-title">Loaded Comfort Fries</h3>
               <p class="food-card-desc">Crispy double-fried Idaho russet fries smothered in warm molten cheddar cheese sauce, herb butter, and scallions.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="side-loaded-comfort-fries" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="side-loaded-comfort-fries" data-name="Loaded Comfort Fries" data-price="219" data-image="assets/images/comfort-fries.jpg" data-category="Sides & Snacks">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="side-loaded-comfort-fries">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="side-loaded-comfort-fries" data-name="Loaded Comfort Fries" data-price="219" data-image="assets/images/comfort-fries.jpg" data-category="Sides & Snacks">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -448,12 +465,16 @@
               <h3 class="food-card-title">Fresh Lemonade</h3>
               <p class="food-card-desc">Hand-squeezed Meyer lemons, real cane sugar syrup, cold filtered water, and fresh garden mint leaves over crushed ice.</p>
               <div class="food-card-footer">
-                <button class="btn btn-outline btn-sm quick-view-btn" data-id="drink-fresh-lemonade" style="padding: 0.4rem 0.85rem;">Details</button>
-                <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="drink-fresh-lemonade" data-name="Fresh Lemonade" data-price="129" data-image="assets/images/comfort-drinks.jpg" data-category="Drinks & Shakes">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                  Add to Cart
-                </button>
+                <div class="food-card-actions">
+                  <button class="btn btn-outline btn-sm quick-view-btn" data-id="drink-fresh-lemonade">Details</button>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn" data-id="drink-fresh-lemonade" data-name="Fresh Lemonade" data-price="129" data-image="assets/images/comfort-drinks.jpg" data-category="Drinks & Shakes">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add
+                  </button>
+                </div>
               </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
@@ -999,7 +1020,7 @@
               Our griddle is blazing hot today! Find our current curbside truck parking pin or book our mobile kitchen directly for your next private gathering.
             </p>
           </div>
-          <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+          <div class="two-cta-row">
             <a href="find-the-truck.html" class="btn btn-primary" style="padding:0.85rem 1.6rem;font-size:0.95rem;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               Find Today's Truck Location
@@ -1019,7 +1040,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="index.html" class="brand-logo" style="color:#FFFFFF;margin-bottom:1rem;">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
             <span>MELT<span class="logo-accent">DISTRICT</span></span>
           </a>
           <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">

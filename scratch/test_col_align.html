@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../assets/css/style.css?v=5.2">
+  <style>
+    .byo-summary-card {
+      background-color: var(--bg-card);
+      padding: 1.5rem 1.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .byo-summary-row {
+      display: grid;
+      grid-template-columns: 135px 1fr;
+      column-gap: 0.85rem;
+      align-items: baseline;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .byo-summary-label {
+      color: var(--text-muted);
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .byo-summary-value {
+      color: var(--text-primary);
+      font-weight: 700;
+      text-align: left;
+    }
+    @media (max-width: 400px) {
+      .byo-summary-row {
+        grid-template-columns: 125px 1fr;
+        column-gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body style="background:var(--bg-primary);padding:30px;">
+  <div style="max-width:440px;margin:0 auto;">
+    <div class="byo-summary-card">
+      <div class="byo-summary-row">
+        <span class="byo-summary-label">Artisan Bread:</span>
+        <strong class="byo-summary-value" id="byo-summary-bread">36-Hour Sourdough</strong>
+      </div>
+      <div class="byo-summary-row">
+        <span class="byo-summary-label">Cheese Duet:</span>
+        <strong class="byo-summary-value" id="byo-summary-cheese">Sharp White Cheddar, Wisconsin Mozzarella</strong>
+      </div>
+      <div class="byo-summary-row">
+        <span class="byo-summary-label">Gourmet Add-Ons:</span>
+        <strong class="byo-summary-value" id="byo-summary-addons">Balsamic Caramelized Onions</strong>
+      </div>
+      <div class="byo-summary-row">
+        <span class="byo-summary-label">Dipping Sauce:</span>
+        <strong class="byo-summary-value" id="byo-summary-dip">San Marzano Tomato Bisque</strong>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

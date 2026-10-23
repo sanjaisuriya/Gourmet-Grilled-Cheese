@@ -1,0 +1,28 @@
+{
+  "index.html": [],
+  "home-2.html": [
+    {
+      "tag": "DIV",
+      "cls": "sandwich-half",
+      "id": "sandwich-half-left",
+      "left": -78,
+      "right": -27.1,
+      "width": 50.9
+    },
+    {
+      "tag": "DIV",
+      "cls": "sandwich-half",
+      "id": "sandwich-half-right",
+      "left": 372.1,
+      "right": 423,
+      "width": 50.9
+    }
+  ],
+  "about.html": [],
+  "blog.html": [],
+  "blog-details.html": [],
+  "contact.html": [],
+  "find-the-truck.html": [],
+  "menu.html": [],
+  "service-details.html": []
+}

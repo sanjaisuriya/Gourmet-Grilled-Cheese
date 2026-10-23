@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="file:///c:/Users/Sanjai/Desktop/griled/">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+  </style>
+</head>
+<body data-theme="dark">
+  <div id="container-test"></div>
+  <script>
+    fetch('blog-details.html')
+      .then(res => res.text())
+      .then(text => {
+        const bodyContent = text.split('<body>')[1].split('</body>')[0];
+        document.getElementById('container-test').innerHTML = bodyContent;
+        const h1 = document.getElementById('article-hero-title');
+        const box = h1.getBoundingClientRect();
+        console.log('H1_DUMP:' + JSON.stringify({
+          width: box.width,
+          scrollWidth: h1.scrollWidth,
+          clientWidth: h1.clientWidth,
+          text: h1.innerText,
+          fontSize: window.getComputedStyle(h1).fontSize
+        }));
+      });
+  </script>
+</body>
+</html>

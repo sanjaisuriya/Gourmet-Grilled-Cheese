@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../assets/css/style.css?v=5.2">
+<style>
+.reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+</style>
+</head>
+<body style="background:var(--bg-primary);padding:30px;">
+<section id="byo-builder" class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <span class="eyebrow eyebrow-red">The Melt District Craft Lab</span>
+            <span class="handwritten-tag" style="transform:rotate(-2deg);">Your custom creation!</span>
+          </div>
+          <h2 class="heading-section">Build Your Own Melt</h2>
+          <p class="lead-text">
+            Choose your artisan bread, pair two signature cheeses, stack gourmet add-ons, select a companion dipping cup, and add your custom melt directly to the order cart.
+          </p>
+        </div>
+
+        <div class="byo-builder-container reveal-on-scroll">
+          <div class="byo-builder-grid">
+            
+            <!-- Left Configurator Options -->
+            <div class="byo-controls">
+              
+              <!-- Step 1: Artisan Bread -->
+              <div class="byo-step">
+                <h3 class="byo-step-title">
+                  <span>🍞 Step 1: Select Your Artisan Bread (Base Included)</span>
+                </h3>
+                <div class="byo-option-group" id="byo-bread-group">
+                  <button type="button" class="byo-chip selected" data-type="bread" data-name="36-Hour Sourdough" data-price="0">
+                    36-Hr Levain Sourdough (Classic +₹0)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="bread" data-name="Garlic Butter Brioche" data-price="25">
+                    Garlic Butter Brioche (+₹25)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="bread" data-name="Thick Texas Sourdough" data-price="15">
+                    Thick Texas Sourdough (+₹15)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="bread" data-name="Rustic French Batard" data-price="30">
+                    Rustic French Batard (+₹30)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Cheeses (Pick up to 2) -->
+              <div class="byo-step">
+                <h3 class="byo-step-title">
+                  <span>🧀 Step 2: Choose Any 2 Cheeses (Base ₹180)</span>
+                </h3>
+                <div class="byo-option-group" id="byo-cheese-group">
+                  <button type="button" class="byo-chip selected" data-type="cheese" data-name="Sharp White Cheddar" data-price="0">
+                    Sharp White Cheddar (+₹0)
+                  </button>
+                  <button type="button" class="byo-chip selected" data-type="cheese" data-name="Wisconsin Mozzarella" data-price="0">
+                    Wisconsin Mozzarella (+₹0)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Beechwood Smoked Gouda" data-price="30">
+                    Smoked Dutch Gouda (+₹30)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Normandy French Brie" data-price="40">
+                    Normandy French Brie (+₹40)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Spicy Pepper Jack" data-price="25">
+                    Spicy Pepper Jack (+₹25)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Alps Mountain Fontina" data-price="35">
+                    Alps Mountain Fontina (+₹35)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Gourmet Add-Ons -->
+              <div class="byo-step">
+                <h3 class="byo-step-title">
+                  <span>🥓 Step 3: Gourmet Add-Ons (Select Any)</span>
+                </h3>
+                <div class="byo-option-group" id="byo-addons-group">
+                  <button type="button" class="byo-chip selected" data-type="addon" data-name="Balsamic Caramelized Onions" data-price="40">
+                    Caramelized Onion Jam (+₹40)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="Fire-Roasted Jalapeños" data-price="30">
+                    Roasted Jalapeños (+₹30)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="Italian Truffle Butter" data-price="60">
+                    Truffle Butter Glaze (+₹60)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="Hickory Smoked Bacon" data-price="80">
+                    Hickory Smoked Bacon (+₹80)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="14-Hour Braised Brisket" data-price="120">
+                    14-Hr Braised Brisket (+₹120)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4: Dipping Sauce -->
+              <div class="byo-step" style="margin-bottom:0;">
+                <h3 class="byo-step-title">
+                  <span>🍅 Step 4: Companion Dipping Cup</span>
+                </h3>
+                <div class="byo-option-group" id="byo-dip-group">
+                  <button type="button" class="byo-chip selected" data-type="dip" data-name="San Marzano Tomato Bisque" data-price="50">
+                    Tomato Bisque Shooter (+₹50)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="dip" data-name="Chipotle Garlic Aioli" data-price="35">
+                    Chipotle Garlic Aioli (+₹35)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="dip" data-name="Habanero Hot Honey" data-price="45">
+                    Chili Hot Honey Cup (+₹45)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="dip" data-name="No Dipping Sauce" data-price="0">
+                    No Dipping Sauce (₹0)
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Live Preview, Sandwich Stack & Price Calculation -->
+            <div class="byo-preview">
+              <div>
+                <span class="eyebrow" style="margin-bottom:0.5rem;">Live Kitchen Spec</span>
+                <h4 id="byo-preview-title" style="font-size:1.6rem;margin-bottom:0.75rem;">The Custom Creator Melt</h4>
+                
+                <!-- Animated Visual Sandwich Stack -->
+                <div class="byo-visual-stack" id="byo-visual-stack" aria-hidden="true">
+                  <div class="byo-stack-layer layer-bread" id="stack-layer-top-bread">🍞 Top: 36-Hour Sourdough</div>
+                  <div class="byo-stack-layer layer-cheese" id="stack-layer-cheese">🧀 White Cheddar & Mozzarella</div>
+                  <div class="byo-stack-layer layer-addon" id="stack-layer-addon">🥓 Caramelized Onion Jam</div>
+                  <div class="byo-stack-layer layer-dip" id="stack-layer-dip">🍅 Dip: Tomato Bisque</div>
+                  <div class="byo-stack-layer layer-bread" id="stack-layer-bot-bread">🍞 Base: 36-Hour Sourdough</div>
+                </div>
+
+                <div class="byo-summary-card">
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Artisan Bread:</span>
+                    <strong class="byo-summary-value" id="byo-summary-bread">36-Hour Sourdough</strong>
+                  </div>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Cheese Duet:</span>
+                    <strong class="byo-summary-value" id="byo-summary-cheese">Sharp White Cheddar, Wisconsin Mozzarella</strong>
+                  </div>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Gourmet Add-Ons:</span>
+                    <strong class="byo-summary-value" id="byo-summary-addons">Balsamic Caramelized Onions</strong>
+                  </div>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Dipping Sauce:</span>
+                    <strong class="byo-summary-value" id="byo-summary-dip">San Marzano Tomato Bisque</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:2rem;">
+                <div style="font-size:0.85rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">
+                  Calculated Melt Price:
+                </div>
+                <div id="byo-calculated-price" class="byo-price-display">₹270</div>
+                <button id="byo-add-to-cart-btn" class="btn btn-primary btn-lg" style="width:100%;box-shadow:var(--shadow-cheese);">
+                  Add Custom Melt to Cart
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section></body></html>

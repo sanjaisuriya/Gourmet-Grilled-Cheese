@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <base href="../">
+  <style>
+    .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+  </style>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Secret to the Ultimate Golden Crunch: Butter vs. Mayo Decoded | The Melt District</title>
+  <meta name="description" content="Discover the food science of grilling the crispiest sandwich crust. Learn why cultured butter, griddle heat zones, and low-moisture sourdough create the ultimate crunch.">
+  <meta name="keywords" content="grilled cheese crunch, butter vs mayo, grilled cheese recipe, food truck cooking secret">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4.2">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Interactive BYO sandwich builder & 24-inch cheese pull</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls (Icons Only for Toggles & Uniform Height/Radius) -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle (Icon Only) -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle (Icon Only) -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button (Icon + Cart Count Badge) -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA (Matching 42px Height & Pill Corner Radius) -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (Icon Only) -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link active">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">Proceed to Demo Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- ARTICLE PAGE HERO BANNER -->
+    <section class="page-hero-banner hero-bg-blog-details" id="article-hero-banner">
+      <div class="container">
+        <div class="page-hero-inner reveal-on-scroll">
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="blog.html">The Melt Journal</a>
+            <span>/</span>
+            <span class="active-crumb" id="article-breadcrumb-title">The Art of the Perfect Cheese Pull</span>
+          </nav>
+          <div>
+            <span class="eyebrow" id="article-eyebrow">Cheese Melt Science</span>
+          </div>
+          <h1 class="heading-hero" id="article-hero-title">
+            THE ART OF THE PERFECT CHEESE PULL
+          </h1>
+          <p class="lead-text" id="article-hero-lead" style="margin-bottom:1.15rem;">
+            The physics and temperature dynamics behind achieving an elastic, 24-inch cheese pull with Wisconsin cheddar and alpine gruyere.
+          </p>
+          <div class="page-hero-actions two-cta-row justify-center">
+            <a href="blog.html" class="btn btn-outline btn-sm">← Back to all stories</a>
+            <a href="menu.html" class="btn btn-primary btn-sm">Order Melts →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE META & BODY -->
+    <section class="section-spacing" style="padding-top:2.5rem;padding-bottom:2rem;">
+      <div class="container container-narrow">
+        <div class="reveal-on-scroll">
+          
+          <!-- Author & Meta Box -->
+          <div class="article-author-meta-bar">
+            <div class="article-author-info">
+              <img src="assets/images/mobile-story-chef.jpg" alt="Chef Kabir" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--cheddar);">
+              <div>
+                <strong style="display:block;font-size:0.95rem;color:var(--text-primary);line-height:1.2;margin-bottom:0.2rem;">Chef Kabir Saxena</strong>
+                <span id="article-meta-info" class="article-meta-text">Published October 16, 2026 • 4 Min Read</span>
+              </div>
+            </div>
+
+            <!-- Social Share Bar -->
+            <div class="article-share-bar">
+              <span class="share-label">Share:</span>
+              <button class="social-btn share-btn" data-network="twitter" aria-label="Share on Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </button>
+              <button class="social-btn share-btn" data-network="whatsapp" aria-label="Share on WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </button>
+              <button class="social-btn share-btn" data-network="copy" aria-label="Copy article link" title="Copy link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LARGE HERO IMAGE -->
+    <section style="margin-bottom: clamp(2.5rem, 4vw, 4rem);">
+      <div class="container">
+        <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);max-height:550px;" class="reveal-on-scroll is-revealed">
+          <img id="article-hero-image" src="assets/images/journal-cheese-pull-molten.jpg" alt="The Art of the Perfect Cheese Pull" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY & SIDEBAR CONTENT -->
+    <section class="section-spacing" style="padding-top:0;">
+      <div class="container">
+        <div class="article-layout-grid reveal-on-scroll">
+          
+          <!-- Sticky Table of Contents Sidebar -->
+          <aside style="position:sticky;top:100px;background:var(--bg-secondary);padding:1.5rem;border-radius:var(--radius-md);border:1px solid var(--border-color);" class="reveal-on-scroll">
+            <h4 style="font-size:1.05rem;margin-bottom:1rem;color:var(--text-primary);border-bottom:1px solid var(--border-color);padding-bottom:0.5rem;">
+              TABLE OF CONTENTS
+            </h4>
+            <nav id="article-toc-nav" style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.85rem;">
+              <a href="#section-1-1" class="toc-link active" style="color:var(--text-secondary);">1. The Protein Matrix: Casein Micelles in Motion</a>
+              <a href="#section-1-2" class="toc-link" style="color:var(--text-secondary);">2. The 145°F Serving Window</a>
+              <a href="#section-1-3" class="toc-link" style="color:var(--text-secondary);">3. Dual-Layer Stacking for Tensile Strength</a>
+            </nav>
+            <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border-color);">
+              <a href="menu.html" class="btn btn-primary btn-sm" style="width:100%;">Order This Sandwich</a>
+            </div>
+          </aside>
+
+          <!-- Main Article Reading Flow -->
+          <article id="article-body-content" style="font-size:1.1rem;line-height:1.8;color:var(--text-secondary);" class="reveal-on-scroll">
+            
+            <p style="font-size:1.2rem;color:var(--text-primary);font-weight:500;margin-bottom:2rem;line-height:1.7;">
+              The physics and temperature dynamics behind achieving an elastic, 24-inch cheese pull with Wisconsin cheddar and alpine gruyere.
+            </p>
+
+            <h2 id="section-1-1" style="font-family:var(--font-display);font-size:2rem;color:var(--text-primary);margin-top:2.5rem;margin-bottom:1rem;line-height:1.2;">
+              1. THE PROTEIN MATRIX: CASEIN MICELLES IN MOTION
+            </h2>
+            <p style="margin-bottom:1.5rem;line-height:1.8;">
+              When cheese melts, calcium phosphate bonds between casein protein micelles loosen. Low-moisture whole-milk mozzarella and young alpine cheeses have the ideal protein-to-fat ratio that allows them to stretch into long, continuous ribbons without snapping.
+            </p>
+
+            <!-- Pro Tip Box -->
+            <div style="background:var(--cheddar-light);border-inline-start:4px solid var(--cheddar-hover);padding:1.5rem;border-radius:var(--radius-sm);margin-bottom:2rem;color:var(--text-primary);">
+              <strong style="font-size:1rem;display:block;margin-bottom:0.25rem;">🧀 Food Truck Chef Tip:</strong>
+              <p style="font-size:0.95rem;margin:0;line-height:1.6;">
+                Always grate cheese from cold whole blocks. Pre-shredded cheese contains potato starch and cellulose anti-caking dust that interferes with casein protein strands from fusing into a glossy, uninterrupted 24-inch ribbon.
+              </p>
+            </div>
+
+            <h2 id="section-1-2" style="font-family:var(--font-display);font-size:2rem;color:var(--text-primary);margin-top:2.5rem;margin-bottom:1rem;line-height:1.2;">
+              2. THE 145°F SERVING WINDOW
+            </h2>
+            <p style="margin-bottom:1.5rem;line-height:1.8;">
+              Pull your sandwich too hot (above 170°F) and the cheese flows like liquid soup. Let it cool below 125°F and the fats re-solidify. The sweet spot for an elastic, camera-ready cheese pull is between 140°F and 148°F.
+            </p>
+
+            <!-- Dedicated In-Article Photo Break -->
+            <div style="border-radius:var(--radius-md);overflow:hidden;margin-block:2rem;box-shadow:var(--shadow-md);">
+              <img src="assets/images/perfect-cheese-melt-feature.jpg" alt="Artisanal golden-brown sourdough grilled cheese sandwich cut diagonally with rich melted cheese stretch and gentle steam" style="width:100%;height:auto;max-height:520px;object-fit:cover;display:block;">
+              <div style="background:var(--bg-card);padding:0.75rem 1.25rem;font-size:0.88rem;color:var(--text-muted);font-style:italic;border-top:1px solid var(--border-color);line-height:1.5;">
+                Golden toasted artisan sourdough cut on rustic oak with thick, velvety melted cheese stretch and gentle steam.
+              </div>
+            </div>
+
+            <h2 id="section-1-3" style="font-family:var(--font-display);font-size:2rem;color:var(--text-primary);margin-top:2.5rem;margin-bottom:1rem;line-height:1.2;">
+              3. DUAL-LAYER STACKING FOR TENSILE STRENGTH
+            </h2>
+            <p style="margin-bottom:1.5rem;line-height:1.8;">
+              We place shredded low-moisture mozzarella directly against both toasted sourdough faces to anchor the stretch, while layering sharp 18-month Wisconsin cheddar in the molten center for intense flavor.
+            </p>
+
+            <!-- Author Bio Card -->
+            <div style="background:var(--bg-card);border:1px solid var(--border-color);padding:2rem;border-radius:var(--radius-md);margin-top:3.5rem;display:flex;gap:1.5rem;align-items:center;">
+              <img src="assets/images/mobile-story-chef.jpg" alt="Chef Kabir" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--cheddar);">
+              <div>
+                <h4 style="font-size:1.2rem;margin-bottom:0.25rem;">About Chef Kabir Saxena</h4>
+                <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.5;margin:0;">
+                  Culinary director and co-founder of The Melt District. Obsessed with cheese science, local dairy sourcing, and the perfect golden sear.
+                </p>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED ARTICLES GRID -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Keep Reading</span>
+          <h2 class="heading-section">Related Food Stories</h2>
+        </div>
+
+        <div class="grid-3" id="related-articles-grid">
+          <div class="food-card reveal-on-scroll is-revealed delay-1">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/journal-cheese-pull-molten.jpg" alt="Cheese pull anatomy" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge" style="background:#FEF3C7;color:#92400E;">CHEESE GUIDE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h4 style="font-size:1.15rem;margin-bottom:0.4rem;">
+                <a href="blog-details.html?id=1">The Anatomy of a 24-Inch Pull: Why Curd Moisture Matters</a>
+              </h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+                How we blend low-moisture mozzarella, fontina, and alpine Gruyère for elasticity.
+              </p>
+              <a href="blog-details.html?id=1" class="btn btn-outline btn-sm">Read Article →</a>
+            </div>
+          </div>
+
+          <div class="food-card reveal-on-scroll is-revealed delay-2">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/journal-tomato-bisque-creamy.jpg" alt="Tomato bisque soup" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge" style="background:#FEE2E2;color:#991B1B;">SOUP RECIPE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h4 style="font-size:1.15rem;margin-bottom:0.4rem;">
+                <a href="blog-details.html?id=12">Our 6-Hour Roasted San Marzano Bisque Recipe</a>
+              </h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+                The official slow-cooked recipe for our velvety sweet tomato dipping soup.
+              </p>
+              <a href="blog-details.html?id=12" class="btn btn-outline btn-sm">Read Article →</a>
+            </div>
+          </div>
+
+          <div class="food-card reveal-on-scroll is-revealed delay-3">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/journal-behind-scenes.jpg" alt="Fresh bakery sourdough bread loaves" class="food-card-img" loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge" style="background:#E0E7FF;color:#3730A3;">CULTURE</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h4 style="font-size:1.15rem;margin-bottom:0.4rem;">
+                <a href="blog-details.html?id=3">5:00 AM Bakery Runs: A Day in the Food Truck Life</a>
+              </h4>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">
+                From early morning sourdough pickups to late-night griddle scraping routines.
+              </p>
+              <a href="blog-details.html?id=3" class="btn btn-outline btn-sm">Read Article →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic American comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1 (Landing)</a>
+            <a href="home-2.html" class="footer-link">Home 2 (Melt Experience)</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck website.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/blog.js"></script>
+
+<script>
+window.addEventListener('load', () => {
+  const wide = [];
+  document.querySelectorAll('*').forEach(el => {
+    if (el.scrollWidth > 375 || el.getBoundingClientRect().right > 375) {
+      const rect = el.getBoundingClientRect();
+      wide.push({
+        tag: el.tagName,
+        cls: el.className,
+        id: el.id,
+        scrollWidth: el.scrollWidth,
+        clientWidth: el.clientWidth,
+        rectRight: rect.right,
+        rectWidth: rect.width
+      });
+    }
+  });
+  const pre = document.createElement('pre');
+  pre.id = 'diag-results';
+  pre.textContent = JSON.stringify(wide, null, 2);
+  document.body.appendChild(pre);
+});
+</script>
+</body>
+</html>

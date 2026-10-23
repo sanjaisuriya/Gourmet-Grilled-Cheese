@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div id="output" style="font-size:12px;font-family:monospace;white-space:pre;background:#fff;color:#000;padding:10px;"></div>
+  
+  <section class="section-spacing" style="background-color: var(--bg-secondary);">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="eyebrow eyebrow-red">Special Events & Rallies</span>
+        <h2 class="heading-section">Upcoming Festival Appearances</h2>
+        <p class="lead-text">Catch our food truck at major music festivals, carnivals, and cultural pop-ups.</p>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);" id="fest-list">
+        <div style="display:grid;grid-template-columns:120px 1fr auto;gap:1rem;padding:1.25rem;align-items:center;border-bottom:1px solid var(--border-subtle);" class="row-item">
+          <div>
+            <strong style="color:var(--cheddar-hover);font-size:1.1rem;display:block;">NOV 14 - 15</strong>
+            <span style="font-size:0.75rem;color:var(--text-muted);">2-Day Carnival</span>
+          </div>
+          <div>
+            <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">Street Beat Music & Food Carnival</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Palace Grounds, Jayamahal Road</p>
+          </div>
+          <span class="badge badge-chef">VIP Truck Alley</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:120px 1fr auto;gap:1rem;padding:1.25rem;align-items:center;border-bottom:1px solid var(--border-subtle);" class="row-item">
+          <div>
+            <strong style="color:var(--tomato);font-size:1.1rem;display:block;">NOV 28</strong>
+            <span style="font-size:0.75rem;color:var(--text-muted);">Sunday 12 PM</span>
+          </div>
+          <div>
+            <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">Autumn Craft Beer & Melt Fair</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">UB City Open Amphitheatre</p>
+          </div>
+          <span class="badge" style="background:#E0E7FF;color:#3730A3;">Confirmed</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:120px 1fr auto;gap:1rem;padding:1.25rem;align-items:center;" class="row-item">
+          <div>
+            <strong style="color:var(--sage);font-size:1.1rem;display:block;">DEC 12</strong>
+            <span style="font-size:0.75rem;color:var(--text-muted);">Evening Rally</span>
+          </div>
+          <div>
+            <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">The Big Cheese Pull Championship</h4>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Nandi Valley Cultural Grounds</p>
+          </div>
+          <span class="badge" style="background:#DCFCE7;color:#15803D;">Official Host</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const out = [];
+      out.push('window.innerWidth = ' + window.innerWidth);
+      out.push('body.clientWidth = ' + document.body.clientWidth);
+      out.push('body.scrollWidth = ' + document.body.scrollWidth);
+      const container = document.querySelector('.container');
+      out.push('container.offsetWidth = ' + container.offsetWidth);
+      const fest = document.getElementById('fest-list');
+      out.push('fest-list.offsetWidth = ' + fest.offsetWidth);
+      out.push('fest-list.scrollWidth = ' + fest.scrollWidth);
+      document.querySelectorAll('.row-item').forEach((row, i) => {
+        out.push('row[' + i + '].scrollWidth = ' + row.scrollWidth + ', offsetWidth = ' + row.offsetWidth);
+        Array.from(row.children).forEach((child, j) => {
+          out.push('  child[' + j + ']: ' + child.tagName + '.' + child.className + ' offsetWidth=' + child.offsetWidth + ' minContent=' + child.innerText.substring(0, 15));
+        });
+      });
+      document.getElementById('output').textContent = out.join('\n');
+    });
+  </script>
+</body>
+</html>

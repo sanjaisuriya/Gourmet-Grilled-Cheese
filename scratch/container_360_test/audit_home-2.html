@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Signature Melt Experience | The Melt District Food Truck</title>
+  <meta name="description" content="Meet your new comfort food obsession. Handcrafted gourmet grilled cheese sandwiches with aged alpine cheeses, 36-hour levain sourdough, and interactive melt customization.">
+  <meta name="keywords" content="gourmet grilled cheese, signature melts, artisan cheeses, cheese pull, comfort food truck, tomato bisque, sourdough melts">
+  
+      <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%23F4B942%22><path d=%22M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z%22/></svg>">
+  <link rel="alternate icon" href="assets/images/favicon.svg">
+  
+  <!-- Theme & Direction Early Initialization (Zero Flash) -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('melt_district_theme');
+      if (t) {
+        document.documentElement.setAttribute('data-theme', t);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      var d = localStorage.getItem('melt_district_direction');
+      if (d) {
+        document.documentElement.setAttribute('dir', d);
+      }
+    })();
+  </script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=5.7">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="The Melt District Home">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <!-- Home Dropdown Menu -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="index.html" class="nav-dropdown-item" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 1: Food Truck Landing</span>
+                <span class="dropdown-tag">Main</span>
+              </div>
+              <p class="dropdown-item-desc">Big Cheese, signature melts, comfort combos & curbside story</p>
+            </a>
+            <a href="home-2.html" class="nav-dropdown-item active" role="menuitem">
+              <div class="dropdown-item-title">
+                <span>Home 2: Signature Melt Experience</span>
+                <span class="dropdown-tag" style="background:#FEE2E2;color:#DC2626;">Gourmet</span>
+              </div>
+              <p class="dropdown-item-desc">Editorial split hero, BYO melt studio & 24-inch cheese pull lab</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="find-the-truck.html" class="nav-link">Find The Truck</a>
+        <a href="service-details.html" class="nav-link">Catering</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Dark / Light Mode Toggle -->
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL / LTR Toggle -->
+        <button class="icon-btn rtl-toggle-btn" aria-label="Switch layout direction (RTL / LTR)" title="Switch layout direction">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"/>
+            <path d="M4 7h16"/>
+            <path d="M16 21l4-4-4-4"/>
+            <path d="M20 17H4"/>
+          </svg>
+        </button>
+
+        <!-- Cart Drawer Button -->
+        <button class="icon-btn cart-btn open-cart-btn" aria-label="Shopping Cart" title="View Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+
+        <!-- Primary Booking CTA -->
+        <a href="contact.html" class="btn btn-primary header-cta-btn" title="Book Our Food Truck">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Book Truck</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="icon-btn mobile-menu-btn" aria-label="Open mobile navigation menu" title="Open Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size:1.5rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+        </svg>
+        <span>MELT<span class="logo-accent">DISTRICT</span></span>
+      </div>
+      <button class="icon-btn mobile-drawer-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav-links">
+      <div class="mobile-dropdown-group open">
+        <button class="mobile-dropdown-toggle active" aria-expanded="true">
+          <span>Home Pages</span>
+          <svg class="mobile-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">
+            <strong>Home 1: Food Truck Landing</strong>
+            <span>Main Street Truck, Combos & Curbside Vibe</span>
+          </a>
+          <a href="home-2.html" class="mobile-sublink active">
+            <strong>Home 2: Signature Melt Experience</strong>
+            <span>Interactive BYO Sandwiches & Cheese Pull</span>
+          </a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About Us & Crew <span>→</span></a>
+      <a href="menu.html" class="mobile-nav-link">Complete Food Menu <span>→</span></a>
+      <a href="find-the-truck.html" class="mobile-nav-link">Find The Truck Schedule <span>→</span></a>
+      <a href="service-details.html" class="mobile-nav-link">Catering & Private Events <span>→</span></a>
+      <a href="blog.html" class="mobile-nav-link">Stories & Blog <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & Bookings <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-outline open-cart-btn" style="width:100%;justify-content:space-between;">
+        <span>View Melt Cart</span>
+        <span class="cart-count" style="position:static;display:inline-flex;">0</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="width:100%;">Book Private Catering</a>
+    </div>
+  </div>
+
+  <!-- Drawer Backdrop -->
+  <div class="drawer-backdrop"></div>
+
+  <!-- ==================== SHOPPING CART DRAWER ==================== -->
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cheddar)" stroke-width="2.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Your Melt Order</span>
+      </div>
+      <button class="icon-btn cart-drawer-close" aria-label="Close cart drawer">✕</button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-promo-box">
+        <input type="text" class="cart-promo-input" placeholder="Promo (e.g. CHEDDAR20)" aria-label="Promo Code">
+        <button class="btn btn-dark btn-sm">Apply</button>
+      </div>
+      <div class="cart-summary-line">
+        <span>Items Subtotal:</span>
+        <span class="cart-subtotal-val">₹0</span>
+      </div>
+      <div class="cart-summary-line cart-discount-line" style="display:none;color:var(--sage);">
+        <span>Discount:</span>
+        <span class="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-line cart-summary-total">
+        <span>Order Subtotal:</span>
+        <span class="cart-total-val">₹0</span>
+      </div>
+      <button class="btn btn-primary cart-checkout-btn" style="width:100%;">
+        Proceed to Demo Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT (HOME 2 EDITORIAL) ==================== -->
+  <main id="main-content">
+
+    <!-- 1. EDITORIAL ASYMMETRICAL HERO SECTION -->
+    <section class="hero-home2" aria-labelledby="hero-title-2">
+      <div class="container">
+        <div class="hero-home2-layout">
+          
+          <!-- Left Editorial Narrative Column -->
+          <div class="hero-home2-content">
+            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="handwritten-sticker" style="transform:rotate(-2deg);">
+                ✨ Small-Batch Street Gastronomy
+              </span>
+              <span style="font-size:0.85rem;font-weight:700;color:var(--tomato);text-transform:uppercase;letter-spacing:0.08em;">
+                Fresh Daily Commissary
+              </span>
+            </div>
+
+            <h1 id="hero-title-2" class="heading-hero" style="font-size: clamp(2.4rem, 4.4vw, 3.8rem);line-height:1.02;margin-bottom:1rem;">
+              MEET YOUR NEW<br>
+              <span style="color:var(--tomato);position:relative;display:inline-block;width:fit-content;align-self:flex-start;">
+                <span style="position:relative;z-index:1;">COMFORT FOOD</span>
+                <svg viewBox="0 0 180 14" fill="none" preserveAspectRatio="none" style="position:absolute;bottom:-10px;left:0;width:100%;height:10px;pointer-events:none;z-index:0;" aria-hidden="true">
+                  <path d="M2 10C50 2 130 2 178 10" stroke="var(--cheddar)" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+              </span><br>
+              OBSESSION.
+            </h1>
+
+            <p class="lead-text" style="font-size:1.05rem;line-height:1.6;color:var(--text-secondary);margin-bottom:1.5rem;max-width:500px;">
+              Our gourmet grilled cheese sandwiches are handcrafted with 36-hr wild sourdough levain, artisan cheeses, and 100% grass-fed butter sear.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="hero-home2-cta-group two-cta-row">
+              <a href="#signature-collection" class="btn btn-primary" style="box-shadow:var(--shadow-cheese);">
+                <span>Explore Signature Melts</span>
+                <span style="font-size:1.1rem;display:inline-block;transition:transform 0.2s;">↓</span>
+              </a>
+              <a href="#byo-builder" class="btn btn-outline">
+                <span>Build Your Own Melt</span>
+                <span style="font-size:1.1rem;">🛠️</span>
+              </a>
+            </div>
+
+            <!-- Key Proof Points -->
+            <div class="hero-home2-stats-grid">
+              <div>
+                <strong style="font-family:var(--font-display);font-size:1.45rem;color:var(--cheddar-hover);line-height:1;display:block;">36-HR</strong>
+                <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;">Levain Sourdough</span>
+              </div>
+              <div>
+                <strong style="font-family:var(--font-display);font-size:1.45rem;color:var(--tomato);line-height:1;display:block;">100%</strong>
+                <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;">Grass-Fed Butter</span>
+              </div>
+              <div>
+                <strong style="font-family:var(--font-display);font-size:1.45rem;color:var(--sage);line-height:1;display:block;">24-INCH</strong>
+                <span style="font-size:0.78rem;color:var(--text-muted);font-weight:600;">Elastic Pull Tech</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Cinematic Sandwich Hero Visual with Handwritten Labels -->
+          <div class="hero-home2-media" style="align-self: flex-start; margin-top: 0.25rem; max-width: 630px;">
+            <div class="hero-cinematic-card">
+              
+              <!-- Floating Handwritten Badges / Stickers -->
+              <div class="hero-sticker-1">
+                <span class="handwritten-sticker handwritten-sticker-red">
+                  ⚠️ Warning: Insanely Melty!
+                </span>
+              </div>
+
+              <div class="hero-sticker-2">
+                <span class="handwritten-sticker">
+                  🧈 100% Grass-Fed Butter Sear
+                </span>
+              </div>
+
+              <div class="hero-sticker-3">
+                <span class="handwritten-sticker handwritten-sticker-dark">
+                  ⭐ 24" Stretch Guarantee
+                </span>
+              </div>
+
+              <div class="hero-sticker-4">
+                <span class="handwritten-sticker" style="background:var(--bg-card);color:var(--text-primary);border:1.5px solid var(--border-color);">
+                  🥖 36-Hr Wild Levain
+                </span>
+              </div>
+
+              <!-- Main Hero Image: Close-up stacked gourmet grilled cheese with cheese strings on dark slate -->
+              <div class="hero-photo-wrap">
+                <img src="assets/images/home2-hero-reserve.jpg" 
+                     alt="Ultra-clear close-up of The Golden Reserve Melt stacked on dark slate board with golden sourdough crust, molten artisan cheddar and fontina pull, and rustic herb garnish" 
+                     fetchpriority="high">
+              </div>
+
+              <!-- Bottom Glassmorphic Caption Bar -->
+              <div class="hero-caption-bar">
+                <div class="hero-caption-title-wrap">
+                  <strong class="hero-caption-title">
+                    The Golden Reserve Melt
+                  </strong>
+                </div>
+                <div class="hero-caption-action-wrap">
+                  <span class="hero-caption-price">₹369</span>
+                  <button class="btn btn-primary btn-sm add-to-cart-btn hero-caption-btn"
+                          data-id="melt-golden-reserve"
+                          data-name="The Golden Reserve Melt"
+                          data-price="369"
+                          data-image="assets/images/home2-hero-reserve.jpg"
+                          data-category="Signature Grilled Cheese">
+                    Quick Order
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Full Width Interactive Cheese Flavor Profile Selector -->
+          <div class="interactive-cheese-meter" style="grid-column: 1 / -1; margin-top: 2rem; width: 100%;">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:0.75rem;">
+              <span style="font-size:0.85rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">
+                🧀 Sample A Cheese Flavor Profile:
+              </span>
+              <span class="handwritten-tag" style="font-size:1.2rem;">Click to taste notes ➔</span>
+            </div>
+            <div class="cheese-pills">
+              <button class="cheese-pill active" data-flavor="aged-cheddar">18-Month Vermont Cheddar</button>
+              <button class="cheese-pill" data-flavor="smoked-gouda">Beechwood Smoked Gouda</button>
+              <button class="cheese-pill" data-flavor="french-brie">Normandy Double-Cream Brie</button>
+              <button class="cheese-pill" data-flavor="fontina">Swiss Alps Fontina</button>
+            </div>
+            <p id="cheese-flavor-desc" style="font-size:0.92rem;color:var(--text-secondary);margin-top:0.85rem;padding-top:0.85rem;border-top:1px dashed var(--border-color);line-height:1.5;">
+              <strong>18-Month Vermont Cheddar:</strong> Bold, crumbly, and crystallized with natural tyrosine umami notes that slice through rich buttered crust.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SIGNATURE GRILLED CHEESE COLLECTION -->
+    <section id="signature-collection" class="section-spacing">
+      <div class="container">
+        
+        <!-- Section Header with Required Headings -->
+        <div class="section-header reveal-on-scroll">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <span class="eyebrow eyebrow-red">The 2026 Curated Melt Roster</span>
+            <span class="handwritten-tag" style="font-size:1.2rem;transform:rotate(-3deg);">Sizzled fresh to order!</span>
+          </div>
+          <h2 class="heading-section" style="font-size:clamp(2.4rem, 5vw, 3.8rem);">Grilled Cheese, Reinvented.</h2>
+          <p class="lead-text" style="font-size:1.2rem;color:var(--text-secondary);font-weight:600;margin-top:0.25rem;">
+            Bold flavors. Premium ingredients. Unforgettable melts.
+          </p>
+        </div>
+
+        <!-- 9 Gourmet Grilled Cheese Sandwiches (Unique Photos, Complete Editorial Cards) -->
+        <div class="grid-3">
+
+          <!-- Card 1: Alpine Fontina & Wild Forest Mushroom -->
+          <article class="food-card reveal-on-scroll delay-1">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/home2-melt-mushroom.jpg" 
+                   alt="French Alpine Fontina and Wild Forest Mushroom grilled cheese sandwich" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg">🟢 VEG</span>
+                <span class="badge badge-chef">TRUFFLE CRUST</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Alpine Fontina & Wild Mushroom</h3>
+              <p class="food-card-desc">
+                Pan-roasted brown cremini and chanterelle mushrooms, pungent Italian Fontina, melted Taleggio, and a kiss of white truffle garlic butter on thick sourdough.
+              </p>
+              <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;margin-bottom:1.25rem;border-left:3px solid var(--cheddar);">
+                <span style="color:var(--text-muted);font-weight:600;">Pairing Companion:</span> 
+                <strong>Fire-Roasted Tomato Bisque Shooter</strong>
+              </div>
+              <div class="food-card-footer">
+                <span style="font-size:1.4rem;font-family:var(--font-display);color:var(--cheddar-hover);">₹389</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                  data-id="melt-alpine-fontina" 
+                  data-name="Alpine Fontina & Wild Mushroom" 
+                  data-price="389" 
+                  data-image="assets/images/home2-melt-mushroom.jpg" 
+                  data-category="Signature Grilled Cheese">
+                  Order This Melt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Double-Cream Brie & Chili Spiced Hot Honey -->
+          <article class="food-card reveal-on-scroll delay-2">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/home2-melt-brie.jpg" 
+                   alt="Normandy Double-Cream Brie and chili spiced hot honey melt on rustic wood" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg">🟢 VEG</span>
+                <span class="badge" style="background:#FEE2E2;color:#DC2626;">SWEET & HEAT</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Normandy Brie & Spiced Hot Honey</h3>
+              <p class="food-card-desc">
+                Velvety French double-cream Brie, wafer-thin Granny Smith apple batons, fresh garden thyme, and habanero-infused organic wildflower honey on rustic French batard.
+              </p>
+              <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;margin-bottom:1.25rem;border-left:3px solid var(--tomato);">
+                <span style="color:var(--text-muted);font-weight:600;">Pairing Companion:</span> 
+                <strong>Sparkling Spiced Pear & Honey Cider</strong>
+              </div>
+              <div class="food-card-footer">
+                <span style="font-size:1.4rem;font-family:var(--font-display);color:var(--cheddar-hover);">₹369</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                  data-id="melt-brie-hothoney" 
+                  data-name="Normandy Brie & Spiced Hot Honey" 
+                  data-price="369" 
+                  data-image="assets/images/home2-melt-brie.jpg" 
+                  data-category="Signature Grilled Cheese">
+                  Order This Melt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: 14-Hour Braised Beef Short Rib & Smoked Gouda -->
+          <article class="food-card reveal-on-scroll delay-3">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/home2-melt-shortrib.jpg" 
+                   alt="Slow braised beef short rib melt with melted smoked gouda" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-nonveg">🔴 NON-VEG</span>
+                <span class="badge badge-chef">SLOW BRAISED</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Braised Short Rib & Smoked Gouda</h3>
+              <p class="food-card-desc">
+                Tender 14-hour red wine braised beef short rib shreds, Dutch beechwood smoked gouda, balsamic-caramelized shallot jam, and horseradish aioli on griddled Texas toast.
+              </p>
+              <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;margin-bottom:1.25rem;border-left:3px solid var(--cheddar);">
+                <span style="color:var(--text-muted);font-weight:600;">Pairing Companion:</span> 
+                <strong>Rosemary-Truffle Parmesan Fries</strong>
+              </div>
+              <div class="food-card-footer">
+                <span style="font-size:1.4rem;font-family:var(--font-display);color:var(--cheddar-hover);">₹449</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                  data-id="melt-braised-shortrib" 
+                  data-name="Braised Short Rib & Smoked Gouda" 
+                  data-price="449" 
+                  data-image="assets/images/home2-melt-shortrib.jpg" 
+                  data-category="Signature Grilled Cheese">
+                  Order This Melt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Four-Cheese Golden Parmesan Crunch Melt -->
+          <article class="food-card reveal-on-scroll delay-1">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/home2-melt-fourcheese.jpg" 
+                   alt="Four-cheese golden parmesan crunch grilled cheese melt with rich molten cheeses and smoky roasted garlic tomato dipping companion" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg">🟢 VEG</span>
+                <span class="badge" style="background:#FEF3C7;color:#92400E;">4-CHEESE BLEND</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Four-Cheese Golden Crunch</h3>
+              <p class="food-card-desc">
+                18-month sharp Vermont white cheddar, whole-milk mozzarella, Swiss Gruyère, and Havarti silk, enclosed in an inside-out parmesan-butter blistered sourdough crust.
+              </p>
+              <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;margin-bottom:1.25rem;border-left:3px solid var(--cheddar);">
+                <span style="color:var(--text-muted);font-weight:600;">Pairing Companion:</span> 
+                <strong>Smoky Roasted Garlic Dipping Sauce</strong>
+              </div>
+              <div class="food-card-footer">
+                <span style="font-size:1.4rem;font-family:var(--font-display);color:var(--cheddar-hover);">₹349</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                  data-id="melt-four-cheese" 
+                  data-name="Four-Cheese Golden Crunch" 
+                  data-price="349" 
+                  data-image="assets/images/home2-melt-fourcheese.jpg" 
+                  data-category="Signature Grilled Cheese">
+                  Order This Melt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Nashville Hot Chicken & Pepper Jack -->
+          <article class="food-card reveal-on-scroll delay-2">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/home2-melt-nashville.jpg" 
+                   alt="Nashville hot fried chicken melt with melted pepper jack cheese" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-nonveg">🔴 NON-VEG</span>
+                <span class="badge badge-spicy">HOT CRUNCH</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Nashville Hot Chicken & Jack</h3>
+              <p class="food-card-desc">
+                Buttermilk-brined crispy fried chicken breast dusted in spicy cayenne oil, melted Monterey Pepper Jack, house sweet-and-spicy pickles, and cooling buttermilk ranch.
+              </p>
+              <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;margin-bottom:1.25rem;border-left:3px solid var(--tomato);">
+                <span style="color:var(--text-muted);font-weight:600;">Pairing Companion:</span> 
+                <strong>Craft Vanilla Bean Gelato Root Beer Float</strong>
+              </div>
+              <div class="food-card-footer">
+                <span style="font-size:1.4rem;font-family:var(--font-display);color:var(--cheddar-hover);">₹429</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                  data-id="melt-nashville-chicken" 
+                  data-name="Nashville Hot Chicken & Jack" 
+                  data-price="429" 
+                  data-image="assets/images/home2-melt-nashville.jpg" 
+                  data-category="Signature Grilled Cheese">
+                  Order This Melt
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Heirloom Tomato, Burrata Silk & Genovese Basil -->
+          <article class="food-card reveal-on-scroll delay-3">
+            <div class="food-card-thumb-wrap">
+              <img src="assets/images/home2-melt-burrata.jpg" 
+                   alt="Heirloom tomato and fresh burrata cheese artisanal melt" 
+                   class="food-card-img" 
+                   loading="lazy">
+              <div class="food-card-tags">
+                <span class="badge badge-veg">🟢 VEG</span>
+                <span class="badge" style="background:#DCFCE7;color:#15803D;">FRESH HERBS</span>
+              </div>
+            </div>
+            <div class="food-card-body">
+              <h3 class="food-card-title">Heirloom Tomato & Burrata Silk</h3>
+              <p class="food-card-desc">
+                Slow-roasted heirloom beefsteak tomatoes, hand-torn fresh Italian burrata cream, scratch-made Genovese pine-nut pesto, and 12-year barrel Modena balsamic drizzle.
+              </p>
+              <div style="background:var(--bg-secondary);padding:0.75rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;margin-bottom:1.25rem;border-left:3px solid var(--sage);">
+                <span style="color:var(--text-muted);font-weight:600;">Pairing Companion:</span> 
+                <strong>Chilled Blackberry Mint Iced Tea</strong>
+              </div>
+              <div class="food-card-footer">
+                <span style="font-size:1.4rem;font-family:var(--font-display);color:var(--cheddar-hover);">₹379</span>
+                <button class="btn btn-primary btn-sm add-to-cart-btn" 
+                  data-id="melt-burrata-heirloom" 
+                  data-name="Heirloom Tomato & Burrata Silk" 
+                  data-price="379" 
+                  data-image="assets/images/home2-melt-burrata.jpg" 
+                  data-category="Signature Grilled Cheese">
+                  Order This Melt
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE CHEESE SOMMELIER: ARTISAN DAIRY EXPLORER -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow">Dairy Provenance & Terroir</span>
+          <h2 class="heading-section">The Cheese Sommelier</h2>
+          <p class="lead-text">
+            Why ordinary processed cheese slices never touch our griddles. We source artisanal wheels cave-aged for depth, melting elasticity, and rich natural umami.
+          </p>
+        </div>
+
+        <div class="sommelier-grid reveal-on-scroll">
+          
+          <!-- Cheese 1 -->
+          <div class="sommelier-card active">
+            <div class="sommelier-icon-wrap">🧀</div>
+            <span style="font-size:0.75rem;font-weight:700;color:var(--cheddar-hover);text-transform:uppercase;letter-spacing:0.05em;">Origin: Vermont, USA</span>
+            <h3 style="font-size:1.35rem;margin-block:0.35rem 0.75rem;">18-Mo White Cheddar</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.5;margin-bottom:1rem;">
+              Unpasteurized whole milk curd aged in pinewood racks. Full of natural crunchy tyrosine crystals that release savory hazelnut and butterscotch finishes.
+            </p>
+            <div class="sommelier-metrics">
+              <div style="display:flex;justify-content:space-between;font-weight:600;">
+                <span>Sharpness Profile:</span>
+                <span style="color:var(--cheddar-hover);">9.5 / 10</span>
+              </div>
+              <div class="sommelier-meter-bar">
+                <div class="sommelier-meter-fill" style="width:95%;"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);">
+                <span>Optimal Melt: <strong>140°F</strong></span>
+                <span>Best With: <strong>Hot Honey & Apple</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cheese 2 -->
+          <div class="sommelier-card">
+            <div class="sommelier-icon-wrap" style="background-color:var(--tomato-light);color:var(--tomato);">🪵</div>
+            <span style="font-size:0.75rem;font-weight:700;color:var(--tomato);text-transform:uppercase;letter-spacing:0.05em;">Origin: Gouda, Holland</span>
+            <h3 style="font-size:1.35rem;margin-block:0.35rem 0.75rem;">Beechwood Smoked Gouda</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.5;margin-bottom:1rem;">
+              Cold-smoked over raw beechwood chips for 48 hours. Produces a creamy, buttery interior with deep campfire resonance that marries barbecue brisket.
+            </p>
+            <div class="sommelier-metrics">
+              <div style="display:flex;justify-content:space-between;font-weight:600;">
+                <span>Smokiness Profile:</span>
+                <span style="color:var(--tomato);">9.0 / 10</span>
+              </div>
+              <div class="sommelier-meter-bar">
+                <div class="sommelier-meter-fill" style="width:90%;background:linear-gradient(90deg, #DC2626, #F59E0B);"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);">
+                <span>Optimal Melt: <strong>135°F</strong></span>
+                <span>Best With: <strong>Braised Short Rib</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cheese 3 -->
+          <div class="sommelier-card">
+            <div class="sommelier-icon-wrap" style="background-color:var(--sage-light);color:var(--sage);">🏔️</div>
+            <span style="font-size:0.75rem;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:0.05em;">Origin: Aosta Valley, Alps</span>
+            <h3 style="font-size:1.35rem;margin-block:0.35rem 0.75rem;">Alpine Fontina & Gruyère</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.5;margin-bottom:1rem;">
+              High-altitude mountain pasture milk rich in carotene. Melts into molten velvet silk with earthy wild mushroom notes and unprecedented stretch elasticity.
+            </p>
+            <div class="sommelier-metrics">
+              <div style="display:flex;justify-content:space-between;font-weight:600;">
+                <span>Stretch Elasticity:</span>
+                <span style="color:var(--sage);">10 / 10</span>
+              </div>
+              <div class="sommelier-meter-bar">
+                <div class="sommelier-meter-fill" style="width:100%;background:linear-gradient(90deg, #15803D, #F59E0B);"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);">
+                <span>Optimal Melt: <strong>148°F</strong></span>
+                <span>Best With: <strong>Wild Truffle Mushrooms</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cheese 4 -->
+          <div class="sommelier-card">
+            <div class="sommelier-icon-wrap" style="background-color:#FEF3C7;color:#D97706;">🧈</div>
+            <span style="font-size:0.75rem;font-weight:700;color:#D97706;text-transform:uppercase;letter-spacing:0.05em;">Origin: Normandy, France</span>
+            <h3 style="font-size:1.35rem;margin-block:0.35rem 0.75rem;">Normandy Double-Cream Brie</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.5;margin-bottom:1rem;">
+              Enriched with fresh pasture cream for a decadent 60% butterfat ratio. Bloomy rind gives mushroom aromas that liquefy gracefully across warm sourdough.
+            </p>
+            <div class="sommelier-metrics">
+              <div style="display:flex;justify-content:space-between;font-weight:600;">
+                <span>Creaminess Index:</span>
+                <span style="color:#D97706;">9.8 / 10</span>
+              </div>
+              <div class="sommelier-meter-bar">
+                <div class="sommelier-meter-fill" style="width:98%;"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);">
+                <span>Optimal Melt: <strong>120°F</strong></span>
+                <span>Best With: <strong>Hot Chili Honey</strong></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE 24-INCH CHEESE PULL SHOWCASE (INTERACTIVE STRETCH LAB) -->
+    <section class="section-spacing" style="background-color: #12100E; color: #FAF7F2; position:relative; overflow:hidden;">
+      <div class="container">
+        
+        <div style="max-width:800px;margin-inline:auto;text-align:center;margin-bottom:3rem;" class="reveal-on-scroll">
+          <span class="eyebrow eyebrow-red" style="background:rgba(220,38,38,0.25);color:#FCA5A5;border-color:rgba(220,38,38,0.5);">
+            Thermodynamic Gastronomy
+          </span>
+          <h2 class="heading-section" style="color:#FFFFFF;margin-block:0.5rem 1rem;">
+            THE PHYSICS OF THE 24-INCH CHEESE PULL
+          </h2>
+          <p style="color:#D6D0C7;font-size:1.15rem;line-height:1.65;">
+            An epic cheese stretch isn't social media luck. It is the result of milk casein protein chains aligned at exactly 145°F core griddle temperature under a sealed steam dome.
+          </p>
+        </div>
+
+        <!-- Interactive Stretch Simulator Widget -->
+        <div class="stretch-lab-card reveal-on-scroll delay-1">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+            <div>
+              <span class="handwritten-tag" style="color:var(--cheddar);font-size:1.4rem;">
+                🧀 Interactive Cheese Stretch Simulator:
+              </span>
+              <p style="font-size:0.9rem;color:#A8A29E;margin-top:0.25rem;">
+                Drag the slider below or click the quick stretch milestones to test our stretch threshold.
+              </p>
+            </div>
+            <div style="display:flex;gap:0.5rem;">
+              <button class="btn btn-dark btn-sm stretch-preset-btn" data-inches="6">6" Warm Up</button>
+              <button class="btn btn-dark btn-sm stretch-preset-btn" data-inches="14">14" The Ribbon</button>
+              <button class="btn btn-tomato btn-sm stretch-preset-btn" data-inches="24">24" Legend</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Visual Pull Stage -->
+          <div class="stretch-visual-display">
+            <div class="stretch-sandwich-halves">
+              <!-- Left Sourdough Half -->
+              <div class="sandwich-half" id="sandwich-half-left" style="transform: translateX(-40px);">
+                🍞
+              </div>
+              <!-- Elastic Cheese Ribbon -->
+              <div class="stretch-cheese-ribbon" id="stretch-cheese-ribbon" style="width: 120px; height: 18px;"></div>
+              <!-- Right Sourdough Half -->
+              <div class="sandwich-half" id="sandwich-half-right" style="transform: translateX(40px);">
+                🥪
+              </div>
+            </div>
+
+            <!-- Current Stretch Gauge Callout -->
+            <div style="margin-top:1.5rem;text-align:center;">
+              <div id="stretch-inch-badge" style="font-family:var(--font-display);font-size:3.5rem;color:var(--cheddar);line-height:1;">
+                14 INCHES
+              </div>
+              <div id="stretch-fact-text" style="font-size:0.95rem;color:#FCD34D;font-weight:600;margin-top:0.4rem;">
+                "The Golden Ribbon: Casein peptide bonds elongate into continuous molten fibers."
+              </div>
+            </div>
+
+            <!-- Stretch Range Slider Control -->
+            <input type="range" min="4" max="24" value="14" class="stretch-slider-control" id="stretch-range-slider" aria-label="Simulate cheese stretch length in inches" style="margin-top:1.5rem;">
+            <div class="stretch-ruler-marks">
+              <span>4" (Crust Fracture)</span>
+              <span>10" (Elastic Core)</span>
+              <span>18" (Crowd Gathers)</span>
+              <span>24" (World Record Stretch)</span>
+            </div>
+          </div>
+
+          <!-- 3 Science Pillars Grid -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1.5rem;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,0.1);padding-top:2rem;">
+            <div>
+              <strong style="color:var(--cheddar);font-size:1.1rem;display:block;margin-bottom:0.35rem;">1. pH 5.2 Curd Balance</strong>
+              <p style="font-size:0.85rem;color:#A8A29E;line-height:1.5;">Exact calcium phosphate demobilization ensures continuous protein strings without grease separation.</p>
+            </div>
+            <div>
+              <strong style="color:var(--tomato);font-size:1.1rem;display:block;margin-bottom:0.35rem;">2. Griddle Steam Dome</strong>
+              <p style="font-size:0.85rem;color:#A8A29E;line-height:1.5;">Filtered water vaporizes under 6-inch spun steel cloches, melting deep cheese layers before bread can scorch.</p>
+            </div>
+            <div>
+              <strong style="color:var(--sage);font-size:1.1rem;display:block;margin-bottom:0.35rem;">3. Triple Fat Emulsion</strong>
+              <p style="font-size:0.85rem;color:#A8A29E;line-height:1.5;">Grass-fed clarified butter on the griddle, light Japanese Kewpie sear on bread, and alpine milk fat inside.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE BUILD-YOUR-OWN GRILLED CHEESE (BYO STUDIO) -->
+    <section id="byo-builder" class="section-spacing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+            <span class="eyebrow eyebrow-red">The Melt District Craft Lab</span>
+            <span class="handwritten-tag" style="transform:rotate(-2deg);">Your custom creation!</span>
+          </div>
+          <h2 class="heading-section">Build Your Own Melt</h2>
+          <p class="lead-text">
+            Choose your artisan bread, pair two signature cheeses, stack gourmet add-ons, select a companion dipping cup, and add your custom melt directly to the order cart.
+          </p>
+        </div>
+
+        <div class="byo-builder-container reveal-on-scroll">
+          <div class="byo-builder-grid">
+            
+            <!-- Left Configurator Options -->
+            <div class="byo-controls">
+              
+              <!-- Step 1: Artisan Bread -->
+              <div class="byo-step">
+                <h3 class="byo-step-title">
+                  <span>🍞 Step 1: Select Your Artisan Bread (Base Included)</span>
+                </h3>
+                <div class="byo-option-group" id="byo-bread-group">
+                  <button type="button" class="byo-chip selected" data-type="bread" data-name="36-Hour Sourdough" data-price="0">
+                    36-Hr Levain Sourdough (Classic +₹0)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="bread" data-name="Garlic Butter Brioche" data-price="25">
+                    Garlic Butter Brioche (+₹25)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="bread" data-name="Thick Texas Sourdough" data-price="15">
+                    Thick Texas Sourdough (+₹15)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="bread" data-name="Rustic French Batard" data-price="30">
+                    Rustic French Batard (+₹30)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Cheeses (Pick up to 2) -->
+              <div class="byo-step">
+                <h3 class="byo-step-title">
+                  <span>🧀 Step 2: Choose Any 2 Cheeses (Base ₹180)</span>
+                </h3>
+                <div class="byo-option-group" id="byo-cheese-group">
+                  <button type="button" class="byo-chip selected" data-type="cheese" data-name="Sharp White Cheddar" data-price="0">
+                    Sharp White Cheddar (+₹0)
+                  </button>
+                  <button type="button" class="byo-chip selected" data-type="cheese" data-name="Wisconsin Mozzarella" data-price="0">
+                    Wisconsin Mozzarella (+₹0)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Beechwood Smoked Gouda" data-price="30">
+                    Smoked Dutch Gouda (+₹30)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Normandy French Brie" data-price="40">
+                    Normandy French Brie (+₹40)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Spicy Pepper Jack" data-price="25">
+                    Spicy Pepper Jack (+₹25)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="cheese" data-name="Alps Mountain Fontina" data-price="35">
+                    Alps Mountain Fontina (+₹35)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Gourmet Add-Ons -->
+              <div class="byo-step">
+                <h3 class="byo-step-title">
+                  <span>🥓 Step 3: Gourmet Add-Ons (Select Any)</span>
+                </h3>
+                <div class="byo-option-group" id="byo-addons-group">
+                  <button type="button" class="byo-chip selected" data-type="addon" data-name="Balsamic Caramelized Onions" data-price="40">
+                    Caramelized Onion Jam (+₹40)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="Fire-Roasted Jalapeños" data-price="30">
+                    Roasted Jalapeños (+₹30)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="Italian Truffle Butter" data-price="60">
+                    Truffle Butter Glaze (+₹60)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="Hickory Smoked Bacon" data-price="80">
+                    Hickory Smoked Bacon (+₹80)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="addon" data-name="14-Hour Braised Brisket" data-price="120">
+                    14-Hr Braised Brisket (+₹120)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4: Dipping Sauce -->
+              <div class="byo-step" style="margin-bottom:0;">
+                <h3 class="byo-step-title">
+                  <span>🍅 Step 4: Companion Dipping Cup</span>
+                </h3>
+                <div class="byo-option-group" id="byo-dip-group">
+                  <button type="button" class="byo-chip selected" data-type="dip" data-name="San Marzano Tomato Bisque" data-price="50">
+                    Tomato Bisque Shooter (+₹50)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="dip" data-name="Chipotle Garlic Aioli" data-price="35">
+                    Chipotle Garlic Aioli (+₹35)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="dip" data-name="Habanero Hot Honey" data-price="45">
+                    Chili Hot Honey Cup (+₹45)
+                  </button>
+                  <button type="button" class="byo-chip" data-type="dip" data-name="No Dipping Sauce" data-price="0">
+                    No Dipping Sauce (₹0)
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Live Preview, Sandwich Stack & Price Calculation -->
+            <div class="byo-preview">
+              <div>
+                <span class="eyebrow" style="margin-bottom:0.5rem;">Live Kitchen Spec</span>
+                <h4 id="byo-preview-title" style="font-size:1.6rem;margin-bottom:0.75rem;">The Custom Creator Melt</h4>
+                
+                <!-- Animated Visual Sandwich Stack -->
+                <div class="byo-visual-stack" id="byo-visual-stack" aria-hidden="true">
+                  <div class="byo-stack-layer layer-bread" id="stack-layer-top-bread">🍞 Top: 36-Hour Sourdough</div>
+                  <div class="byo-stack-layer layer-cheese" id="stack-layer-cheese">🧀 White Cheddar & Mozzarella</div>
+                  <div class="byo-stack-layer layer-addon" id="stack-layer-addon">🥓 Caramelized Onion Jam</div>
+                  <div class="byo-stack-layer layer-dip" id="stack-layer-dip">🍅 Dip: Tomato Bisque</div>
+                  <div class="byo-stack-layer layer-bread" id="stack-layer-bot-bread">🍞 Base: 36-Hour Sourdough</div>
+                </div>
+
+                <div class="byo-summary-card">
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Artisan Bread:</span>
+                    <strong class="byo-summary-value" id="byo-summary-bread">36-Hour Sourdough</strong>
+                  </div>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Cheese Duet:</span>
+                    <strong class="byo-summary-value" id="byo-summary-cheese">Sharp White Cheddar, Wisconsin Mozzarella</strong>
+                  </div>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Gourmet Add-Ons:</span>
+                    <strong class="byo-summary-value" id="byo-summary-addons">Balsamic Caramelized Onions</strong>
+                  </div>
+                  <div class="byo-summary-row">
+                    <span class="byo-summary-label">Dipping Sauce:</span>
+                    <strong class="byo-summary-value" id="byo-summary-dip">San Marzano Tomato Bisque</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:2rem;">
+                <div style="font-size:0.85rem;color:var(--text-muted);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;">
+                  Calculated Melt Price:
+                </div>
+                <div id="byo-calculated-price" class="byo-price-display">₹270</div>
+                <button id="byo-add-to-cart-btn" class="btn btn-primary btn-lg" style="width:100%;box-shadow:var(--shadow-cheese);">
+                  Add Custom Melt to Cart
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. CURATED COMFORT COMPANIONS (SIDES & SIPS) -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">The Essential Sidekicks</span>
+          <h2 class="heading-section">Comfort Food Companions</h2>
+          <p class="lead-text">
+            No melt is complete without a piping hot soup shooter, loaded fries, or cold-shaken craft refreshment.
+          </p>
+        </div>
+
+        <div class="grid-4 reveal-on-scroll">
+          
+          <!-- Side 1: Fire-Roasted San Marzano Tomato Bisque -->
+          <div class="food-card">
+            <div class="food-card-thumb-wrap" style="aspect-ratio:4/3;">
+              <img src="assets/images/home2-side-bisque.jpg" 
+                   alt="Bowl of creamy fire roasted San Marzano tomato bisque" 
+                   class="food-card-img" 
+                   loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">San Marzano Tomato Bisque</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;flex:1;">
+                Slow-roasted Italian plum tomatoes, fresh basil purée, heavy cream float, and crunchy garlic sourdough croutons.
+              </p>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" style="width:100%;"
+                data-id="side-tomato-bisque"
+                data-name="San Marzano Tomato Bisque"
+                data-price="169"
+                data-image="assets/images/home2-side-bisque.jpg"
+                data-category="Comfort Sides">
+                Add To Order (+₹169)
+              </button>
+            </div>
+          </div>
+
+          <!-- Side 2: Rosemary-Truffle Parmesan Fries -->
+          <div class="food-card">
+            <div class="food-card-thumb-wrap" style="aspect-ratio:4/3;">
+              <img src="assets/images/home2-side-fries.jpg" 
+                   alt="Crispy golden french fries dusted with rosemary and parmesan" 
+                   class="food-card-img" 
+                   loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">Rosemary Truffle Fries</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;flex:1;">
+                Double-fried Idaho Russet potatoes tossed in fragrant white truffle oil, sea salt, fresh rosemary, and grated aged pecorino.
+              </p>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" style="width:100%;"
+                data-id="side-truffle-fries"
+                data-name="Rosemary Truffle Fries"
+                data-price="199"
+                data-image="assets/images/home2-side-fries.jpg"
+                data-category="Comfort Sides">
+                Add To Order (+₹199)
+              </button>
+            </div>
+          </div>
+
+          <!-- Side 3: Aged Farmhouse Cheese Board -->
+          <div class="food-card">
+            <div class="food-card-thumb-wrap" style="aspect-ratio:4/3;">
+              <img src="assets/images/home2-side-cheeseboard.jpg" 
+                   alt="Artisanal aged cheese board with cheddar wedge and grapes" 
+                   class="food-card-img" 
+                   loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">Artisan Cheese & Honeycomb</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;flex:1;">
+                Tri-tasting wedges of sharp cheddar, smoked gouda, and brie served with raw wildflower honeycomb, walnuts, and crackers.
+              </p>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" style="width:100%;"
+                data-id="side-cheese-tasting"
+                data-name="Artisan Cheese & Honeycomb"
+                data-price="289"
+                data-image="assets/images/home2-side-cheeseboard.jpg"
+                data-category="Comfort Sides">
+                Add To Order (+₹289)
+              </button>
+            </div>
+          </div>
+
+          <!-- Side 4: Rustic Levain Garlic Toast -->
+          <div class="food-card">
+            <div class="food-card-thumb-wrap" style="aspect-ratio:4/3;">
+              <img src="assets/images/home2-side-garlictoast.jpg" 
+                   alt="Fresh baked rustic sourdough bread loaves" 
+                   class="food-card-img" 
+                   loading="lazy">
+            </div>
+            <div class="food-card-body">
+              <h3 style="font-size:1.15rem;margin-bottom:0.35rem;">Charred Garlic Levain</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;flex:1;">
+                Thick slices of 36-hour levain sourdough brushed with confit roasted garlic butter, parsley, and flaky sea salt.
+              </p>
+              <button class="btn btn-primary btn-sm add-to-cart-btn" style="width:100%;"
+                data-id="side-garlic-levain"
+                data-name="Charred Garlic Levain"
+                data-price="149"
+                data-image="assets/images/home2-side-garlictoast.jpg"
+                data-category="Comfort Sides">
+                Add To Order (+₹149)
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BEHIND THE GRIDDLE: THE STREET FOOD JOURNAL -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="about-split-grid reveal-on-scroll">
+          
+          <!-- Journal Story -->
+          <div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="eyebrow">Behind The Flattop</span>
+              <span class="handwritten-tag" style="font-size:1.3rem;">Curbside culinary ritual</span>
+            </div>
+            <h2 class="heading-section" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem);margin-bottom:1.25rem;">
+              The 5:00 AM Bakery Run & Sizzling Steel
+            </h2>
+            <p class="lead-text" style="font-size:1.1rem;margin-bottom:1.25rem;line-height:1.65;">
+              Before our truck rolls into your district, our chefs are hand-slicing whole wheels of alpine cheese, simmering twenty gallons of San Marzano tomato bisque, and picking up blistering hot sourdough batards still crackling from the bakery deck.
+            </p>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.65;margin-bottom:2rem;">
+              Every sandwich we sear is balanced like a fine-dining plate: the crunch of slow-caramelized crust, the molten elasticity of grass-fed dairy, and the sweet or acidic punch that cuts through rich warmth.
+            </p>
+
+            <div style="display:flex;gap:2rem;flex-wrap:wrap;">
+              <div>
+                <strong style="font-family:var(--font-display);font-size:2.8rem;color:var(--cheddar-hover);line-height:1;display:block;">375°F</strong>
+                <span style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Optimal Griddle Sear Temp</span>
+              </div>
+              <div style="border-left:1px solid var(--border-color);padding-left:2rem;">
+                <strong style="font-family:var(--font-display);font-size:2.8rem;color:var(--tomato);line-height:1;display:block;">100%</strong>
+                <span style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Plant-Based Packaging</span>
+              </div>
+              <div style="border-left:1px solid var(--border-color);padding-left:2rem;">
+                <strong style="font-family:var(--font-display);font-size:2.8rem;color:var(--sage);line-height:1;display:block;">450+</strong>
+                <span style="font-size:0.85rem;color:var(--text-muted);font-weight:600;">Daily Happy Melters</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Polaroid-Style Food Truck Photography Montage -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;">
+            
+            <div class="polaroid-frame">
+              <img src="assets/images/home2-story-chef.jpg" 
+                   alt="Chef at the sizzling flattop griddle" 
+                   style="width:100%;height:220px;object-fit:cover;border-radius:2px;" 
+                   loading="lazy">
+              <div class="polaroid-caption">Chef searing at 375°F 🍳</div>
+            </div>
+
+            <div class="polaroid-frame polaroid-frame-alt" style="margin-top:2rem;">
+              <img src="assets/images/home2-story-trucknight.jpg" 
+                   alt="Vintage airstream food truck illuminated at dusk" 
+                   style="width:100%;height:220px;object-fit:cover;border-radius:2px;" 
+                   loading="lazy">
+              <div class="polaroid-caption">Curbside night lights 🚚</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CRITICS & STREET FOOD PRESS RAVE -->
+    <section class="section-spacing" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="eyebrow eyebrow-red">Dispatches From The Food Press</span>
+          <h2 class="heading-section">Critics Rave, Crowds Line Up</h2>
+          <p class="lead-text">Recognized across national food journals, culinary podcasts, and street food reviews.</p>
+        </div>
+
+        <div class="grid-3">
+          
+          <!-- Review 1 -->
+          <div class="critic-card reveal-on-scroll delay-1">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+              <span class="critic-publication">THE DAILY BITE</span>
+              <span style="color:var(--cheddar);font-size:1rem;">★★★★★</span>
+            </div>
+            <p style="font-size:1.05rem;line-height:1.65;color:var(--text-secondary);margin-bottom:1.5rem;flex:1;">
+              "The Melt District has cracked the culinary code. The crispness of the sourdough contrasts with the molten Gruyère so perfectly that it ruins all other sandwiches for you."
+            </p>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px dashed var(--border-color);">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" 
+                   alt="Reviewer Marcus Cole portrait" 
+                   style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+              <div>
+                <strong style="font-size:0.95rem;display:block;">Marcus Cole</strong>
+                <span style="font-size:0.8rem;color:var(--text-muted);">Lead Street Food Columnist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="critic-card reveal-on-scroll delay-2">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+              <span class="critic-publication" style="color:var(--tomato);">CURBSIDE CULINARY</span>
+              <span style="color:var(--tomato);font-size:1rem;">★★★★★</span>
+            </div>
+            <p style="font-size:1.05rem;line-height:1.65;color:var(--text-secondary);margin-bottom:1.5rem;flex:1;">
+              "Their French Brie & Hot Honey Melt is a genuine masterclass in flavor balancing. I waited in line for 25 minutes in the rain, and I would gladly do it again tomorrow."
+            </p>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px dashed var(--border-color);">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" 
+                   alt="Reviewer Elena Rostova portrait" 
+                   style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+              <div>
+                <strong style="font-size:0.95rem;display:block;">Elena Rostova</strong>
+                <span style="font-size:0.8rem;color:var(--text-muted);">Culinary Journalist & Author</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="critic-card reveal-on-scroll delay-3">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+              <span class="critic-publication" style="color:var(--sage);">STREET ALCHEMY PODCAST</span>
+              <span style="color:var(--sage);font-size:1rem;">★★★★★</span>
+            </div>
+            <p style="font-size:1.05rem;line-height:1.65;color:var(--text-secondary);margin-bottom:1.5rem;flex:1;">
+              "The tomato bisque alone is worth a national pilgrimage. Silky, deeply roasted, and fragrant with fresh sweet basil. A genuine triumph of comfort gastronomy."
+            </p>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px dashed var(--border-color);">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" 
+                   alt="Reviewer Chef Kabir Saxena portrait" 
+                   style="width:44px;height:44px;border-radius:50%;object-fit:cover;">
+              <div>
+                <strong style="font-size:0.95rem;display:block;">Chef Kabir Saxena</strong>
+                <span style="font-size:0.8rem;color:var(--text-muted);">Host, Street Alchemy Podcast</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. PRIVATE CATERING & LIVE MELT BAR -->
+    <section class="section-spacing" style="background: radial-gradient(circle at 50% 50%, #2A241F 0%, #12100E 100%); color:#FAF7F2; text-align:center;">
+      <div class="container container-narrow reveal-on-scroll">
+        <span class="handwritten-sticker handwritten-sticker-red" style="margin-bottom:1rem;transform:rotate(-2deg);">
+          🎉 VIP Curbside Catering Experiences
+        </span>
+        <h2 class="heading-section" style="color:#FFFFFF;margin-bottom:1rem;font-size:clamp(2.4rem, 5vw, 3.8rem);">
+          HOST A LIVE CHEESE-MELT STATION AT YOUR EVENT
+        </h2>
+        <p style="color:#D6D0C7;font-size:1.15rem;margin-bottom:2.25rem;line-height:1.65;">
+          Elevate your wedding, corporate milestone, or private birthday with our mobile pop-up griddle bar. Guests customize their melts while our chefs sear them fresh under steam domes.
+        </p>
+        <div class="banner-cta-group two-cta-row justify-center">
+          <a href="service-details.html" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-cheese);">
+            View Catering Packages
+          </a>
+          <a href="contact.html" class="btn btn-outline btn-lg" style="color:#FAF7F2;border-color:rgba(255,255,255,0.3);">
+            Inquire For Event Dates
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" aria-label="The Melt District Home" style="margin-bottom:1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8l7 3.5-7 3.5-7-3.5 7-3.5zM4 9.3l7 3.5v7l-7-3.5V9.3zm9 10.5v-7l7-3.5v7l-7 3.5z"/>
+            </svg>
+            <span>MELT<span class="logo-accent">DISTRICT</span></span>
+          </a>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1.25rem;line-height:1.6;">
+            A premier gourmet food truck bringing nostalgic comfort foods, aged cheese alchemy, and golden griddled perfection to your neighborhood curbside.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Explore Navigation -->
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">Home 1: Food Truck Landing</a>
+            <a href="home-2.html" class="footer-link">Home 2: Signature Melt Experience</a>
+            <a href="about.html" class="footer-link">About Brand & Story</a>
+            <a href="menu.html" class="footer-link">Food & Drink Menu</a>
+            <a href="find-the-truck.html" class="footer-link">Truck Locations & Map</a>
+            <a href="service-details.html" class="footer-link">Private Catering Packages</a>
+          </div>
+        </div>
+
+        <!-- Truck Operating Hours -->
+        <div class="footer-col">
+          <h4>TRUCK HOURS</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Mon – Fri:</strong> 11:30 AM – 9:30 PM
+          </p>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:0.6rem;">
+            <strong>Sat – Sun:</strong> 12:00 PM – 11:00 PM
+          </p>
+          <p style="color:var(--cheddar);font-size:0.85rem;font-weight:700;margin-top:1rem;">
+            📍 Commissary Kitchen & Depot:<br>
+            <span style="color:#B8B2A8;font-weight:400;">42 Artisan Way, Culinary Lane, Bengaluru</span>
+          </p>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-col">
+          <h4>THE MELT CLUB</h4>
+          <p style="color:#B8B2A8;font-size:0.9rem;margin-bottom:1rem;">
+            Get secret pop-up location pins and 20% off your first sandwich order.
+          </p>
+          <form class="footer-newsletter-form">
+            <div style="display:flex;gap:0.4rem;">
+              <input type="email" placeholder="Your email address" required style="flex:1;padding:0.65rem 0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-sm);color:#FFFFFF;font-size:0.85rem;" aria-label="Email Address">
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 The Melt District Food Truck Co. All Rights Reserved. Customer-facing food truck experience.
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="about.html" class="footer-link">Privacy Policy</a>
+          <a href="about.html" class="footer-link">Terms of Service</a>
+          <button class="back-to-top-btn" style="color:var(--cheddar);font-weight:700;background:none;border:none;cursor:pointer;" aria-label="Scroll back to top of page">
+            Back to Top ↑
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Files -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cart.js"></script>
+
+  <!-- Interactive script for Home 2: Cheese Flavor Profile, 24-Inch Stretch Lab & BYO Configurator -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. Cheese Flavor Profile Selector
+      const flavorDescriptions = {
+        'aged-cheddar': '<strong>18-Month Vermont Cheddar:</strong> Bold, crumbly, and crystallized with natural tyrosine umami notes that slice through rich buttered crust.',
+        'smoked-gouda': '<strong>Beechwood Smoked Gouda:</strong> Naturally beechwood-smoked with a butterscotch finish that pairs heavenly with slow-braised barbecue meats.',
+        'french-brie': '<strong>Normandy Double-Cream Brie:</strong> Silky, mushroomy bloomy rind cheese with 60% butterfat that melts into velvet and balances spiced chili honey.',
+        'fontina': '<strong>Swiss Alps Fontina:</strong> Pungent, herbaceous mountain cheese that produces an elastic 24-inch stretch without snapping or grease separation.'
+      };
+
+      const pills = document.querySelectorAll('.cheese-pill');
+      const descEl = document.getElementById('cheese-flavor-desc');
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const flavor = pill.getAttribute('data-flavor');
+          if (descEl && flavorDescriptions[flavor]) {
+            descEl.innerHTML = flavorDescriptions[flavor];
+          }
+        });
+      });
+
+      // 2. Interactive 24-Inch Cheese Stretch Lab Simulator
+      const stretchSlider = document.getElementById('stretch-range-slider');
+      const stretchBadge = document.getElementById('stretch-inch-badge');
+      const stretchFact = document.getElementById('stretch-fact-text');
+      const cheeseRibbon = document.getElementById('stretch-cheese-ribbon');
+      const leftSandwich = document.getElementById('sandwich-half-left');
+      const rightSandwich = document.getElementById('sandwich-half-right');
+      const presetButtons = document.querySelectorAll('.stretch-preset-btn');
+
+      const stretchMilestones = {
+        4: "Crust Fracture: Golden sourdough separates, exposing steaming molten core.",
+        6: "The Warm-Up: Initial cheese pull begins as fat emulsion holds firm.",
+        10: "Elastic Core: Low-moisture whole milk curds elongate into silky strings.",
+        14: "The Golden Ribbon: Casein peptide bonds elongate into continuous molten fibers.",
+        18: "The Crowd Gatherer: People at adjacent food truck tables pull out their phones.",
+        24: "The Legendary Melt District Pull: 24 full inches achieved without snapping!"
+      };
+
+      function updateStretch(inches) {
+        inches = Math.max(4, Math.min(24, Number(inches)));
+        if (stretchSlider) stretchSlider.value = inches;
+        if (stretchBadge) stretchBadge.textContent = `${inches} INCHES`;
+
+        // Calculate visual pixel stretch
+        const baseWidth = 40 + (inches * 14); // 96px to 376px
+        const ribbonHeight = Math.max(8, 24 - (inches * 0.6)); // gets thinner as it stretches
+        const offset = (baseWidth / 2) + 10;
+
+        if (cheeseRibbon) {
+          cheeseRibbon.style.width = `${baseWidth}px`;
+          cheeseRibbon.style.height = `${ribbonHeight}px`;
+        }
+        if (leftSandwich) leftSandwich.style.transform = `translateX(-${offset}px)`;
+        if (rightSandwich) rightSandwich.style.transform = `translateX(${offset}px)`;
+
+        // Find closest milestone description
+        let bestKey = 14;
+        let minDiff = 999;
+        Object.keys(stretchMilestones).forEach(k => {
+          const diff = Math.abs(inches - Number(k));
+          if (diff < minDiff) {
+            minDiff = diff;
+            bestKey = k;
+          }
+        });
+        if (stretchFact) stretchFact.textContent = `"${stretchMilestones[bestKey]}"`;
+      }
+
+      if (stretchSlider) {
+        stretchSlider.addEventListener('input', (e) => {
+          updateStretch(e.target.value);
+        });
+      }
+
+      presetButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const inches = Number(btn.getAttribute('data-inches'));
+          updateStretch(inches);
+        });
+      });
+
+      // Initial stretch state
+      updateStretch(14);
+
+      // 3. Build-Your-Own Sandwiches (BYO) Configurator Engine
+      const BASE_PRICE = 180;
+      let selectedBread = { name: '36-Hour Sourdough', price: 0 };
+      let selectedCheeses = [
+        { name: 'Sharp White Cheddar', price: 0 },
+        { name: 'Wisconsin Mozzarella', price: 0 }
+      ];
+      let selectedAddons = [{ name: 'Balsamic Caramelized Onions', price: 40 }];
+      let selectedDip = { name: 'San Marzano Tomato Bisque', price: 50 };
+
+      function updateBYOSummary() {
+        let total = BASE_PRICE + selectedBread.price + selectedDip.price;
+        selectedCheeses.forEach(c => total += c.price);
+        selectedAddons.forEach(a => total += a.price);
+
+        const priceEl = document.getElementById('byo-calculated-price');
+        const breadEl = document.getElementById('byo-summary-bread');
+        const cheeseEl = document.getElementById('byo-summary-cheese');
+        const addonEl = document.getElementById('byo-summary-addons');
+        const dipEl = document.getElementById('byo-summary-dip');
+
+        // Visual Stack Elements
+        const topBreadEl = document.getElementById('stack-layer-top-bread');
+        const cheeseLayerEl = document.getElementById('stack-layer-cheese');
+        const addonLayerEl = document.getElementById('stack-layer-addon');
+        const dipLayerEl = document.getElementById('stack-layer-dip');
+        const botBreadEl = document.getElementById('stack-layer-bot-bread');
+
+        if (priceEl) priceEl.textContent = `₹${total}`;
+        if (breadEl) breadEl.textContent = selectedBread.name;
+        if (cheeseEl) cheeseEl.textContent = selectedCheeses.map(c => c.name).join(', ') || 'None';
+        if (addonEl) addonEl.textContent = selectedAddons.map(a => a.name).join(', ') || 'None';
+        if (dipEl) dipEl.textContent = selectedDip.name;
+
+        if (topBreadEl) topBreadEl.textContent = `🍞 Top: ${selectedBread.name}`;
+        if (botBreadEl) botBreadEl.textContent = `🍞 Base: ${selectedBread.name}`;
+        if (cheeseLayerEl) cheeseLayerEl.textContent = `🧀 ${selectedCheeses.map(c => c.name).join(' & ') || 'Single Cheese'}`;
+        if (addonLayerEl) {
+          if (selectedAddons.length > 0) {
+            addonLayerEl.style.display = 'block';
+            addonLayerEl.textContent = `🥓 ${selectedAddons.map(a => a.name).join(', ')}`;
+          } else {
+            addonLayerEl.style.display = 'none';
+          }
+        }
+        if (dipLayerEl) {
+          if (selectedDip.name !== 'No Dipping Sauce') {
+            dipLayerEl.style.display = 'block';
+            dipLayerEl.textContent = `🍅 Side: ${selectedDip.name}`;
+          } else {
+            dipLayerEl.style.display = 'none';
+          }
+        }
+      }
+
+      // Bread Chips Click
+      document.querySelectorAll('#byo-bread-group .byo-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('#byo-bread-group .byo-chip').forEach(c => c.classList.remove('selected'));
+          chip.classList.add('selected');
+          selectedBread = {
+            name: chip.getAttribute('data-name'),
+            price: Number(chip.getAttribute('data-price'))
+          };
+          updateBYOSummary();
+        });
+      });
+
+      // Cheese Chips Click (Max 2)
+      document.querySelectorAll('#byo-cheese-group .byo-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          const name = chip.getAttribute('data-name');
+          const price = Number(chip.getAttribute('data-price'));
+          const exists = selectedCheeses.some(c => c.name === name);
+
+          if (exists) {
+            if (selectedCheeses.length > 1) {
+              selectedCheeses = selectedCheeses.filter(c => c.name !== name);
+              chip.classList.remove('selected');
+            } else {
+              if (window.showMeltToast) {
+                window.showMeltToast('You must select at least 1 cheese for your melt!', 'error');
+              }
+            }
+          } else {
+            if (selectedCheeses.length >= 2) {
+              const removed = selectedCheeses.shift();
+              document.querySelectorAll('#byo-cheese-group .byo-chip').forEach(c => {
+                if (c.getAttribute('data-name') === removed.name) c.classList.remove('selected');
+              });
+            }
+            selectedCheeses.push({ name, price });
+            chip.classList.add('selected');
+          }
+          updateBYOSummary();
+        });
+      });
+
+      // Addons Chips Click (Toggleable)
+      document.querySelectorAll('#byo-addons-group .byo-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          const name = chip.getAttribute('data-name');
+          const price = Number(chip.getAttribute('data-price'));
+          const exists = selectedAddons.some(a => a.name === name);
+
+          if (exists) {
+            selectedAddons = selectedAddons.filter(a => a.name !== name);
+            chip.classList.remove('selected');
+          } else {
+            selectedAddons.push({ name, price });
+            chip.classList.add('selected');
+          }
+          updateBYOSummary();
+        });
+      });
+
+      // Dip Chips Click (Single Choice)
+      document.querySelectorAll('#byo-dip-group .byo-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('#byo-dip-group .byo-chip').forEach(c => c.classList.remove('selected'));
+          chip.classList.add('selected');
+          selectedDip = {
+            name: chip.getAttribute('data-name'),
+            price: Number(chip.getAttribute('data-price'))
+          };
+          updateBYOSummary();
+        });
+      });
+
+      // Add BYO to Cart Button
+      const addBYOBtn = document.getElementById('byo-add-to-cart-btn');
+      if (addBYOBtn) {
+        addBYOBtn.addEventListener('click', () => {
+          let total = BASE_PRICE + selectedBread.price + selectedDip.price;
+          selectedCheeses.forEach(c => total += c.price);
+          selectedAddons.forEach(a => total += a.price);
+
+          const cheeseLabel = selectedCheeses.map(c => c.name.split(' ')[0]).join(' & ');
+          const customMelt = {
+            id: 'byo-' + Date.now(),
+            name: `Custom Melt (${selectedBread.name.split(' ')[0]} + ${cheeseLabel})`,
+            price: total,
+            image: 'assets/images/home2-byo-melt.jpg',
+            category: 'Build Your Own Melt',
+            qty: 1
+          };
+
+          if (window.addToMeltCart) {
+            window.addToMeltCart(customMelt);
+          }
+          if (window.openCartDrawer) {
+            window.openCartDrawer();
+          }
+        });
+      }
+
+      updateBYOSummary();
+    });
+  </script>
+<script>
+window.addEventListener('load', () => {
+  const winW = window.innerWidth;
+  const docW = document.documentElement.scrollWidth;
+  const bodyW = document.body.scrollWidth;
+  
+  const report = [];
+  report.push('=== PAGE AUDIT ===');
+  report.push('winW: ' + winW + ', docW: ' + docW + ', bodyW: ' + bodyW);
+
+  // Check all containers
+  document.querySelectorAll('.container, .container-narrow, .container-wide, .header-container').forEach((c, idx) => {
+    const r = c.getBoundingClientRect();
+    const cs = window.getComputedStyle(c);
+    report.push(`Container[${idx}]: ${c.className}`);
+    report.push(`  left: ${r.left.toFixed(1)}, right: ${r.right.toFixed(1)}, width: ${r.width.toFixed(1)}`);
+    report.push(`  padding-left: ${cs.paddingLeft}, padding-right: ${cs.paddingRight}`);
+    report.push(`  margin-left: ${cs.marginLeft}, margin-right: ${cs.marginRight}`);
+  });
+
+  // Check elements that overflow doc width
+  const over = [];
+  document.querySelectorAll('*').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.right > winW + 1 || r.left < -1) {
+      over.push({
+        tag: el.tagName,
+        cls: el.className,
+        id: el.id,
+        left: r.left.toFixed(1),
+        right: r.right.toFixed(1),
+        width: r.width.toFixed(1)
+      });
+    }
+  });
+
+  report.push(`=== OVERFLOWING ELEMENTS (Total: ${over.length}) ===`);
+  over.slice(0, 15).forEach(o => {
+    report.push(`  <${o.tag} class="${o.cls}" id="${o.id}"> [left: ${o.left}, right: ${o.right}, width: ${o.width}]`);
+  });
+
+  const div = document.createElement('div');
+  div.id = 'audit-results';
+  div.style.cssText = 'position:fixed;top:0;left:0;width:100%;background:#000;color:#0f0;font-size:10px;font-family:monospace;z-index:9999999;padding:10px;white-space:pre-wrap;box-sizing:border-box;max-height:100vh;overflow:auto;';
+  div.textContent = report.join('\n');
+  document.body.appendChild(div);
+});
+</script></body>
+</html>
